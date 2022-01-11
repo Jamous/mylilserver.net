@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>MyLilServer.net -homepage</title>
+    </head>
+    <header><h1>Welcome to MyLilServer.net</h1></header>
+
+<nav>
+            <h2>Navagation</h2>
+
+    <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="#resume">Resume</a></li>
+
+
+    <!-- <li><a href="https://downloadmoreram.com/download.html">Download More Ram</a></li> -->
+    <li><a href="#contact">Contact</a></li>
+
+    </ul>
+    <a href="media/full_size/main.jpg"> <img src="media/main.jpg" width="150"  ></a>
+    <a href="media/full_size/server_1.jpg"><img src="media/server_1.jpg" width="150"></a>
+    <a href="media/full_size/server_2.jpg"><img src="media/server_2.jpg" width="150"></a>
+    <a href="media/full_size/server_3.jpg"><img src="media/server_3.jpg" width="150"></a>
+
+ </nav>
+
+<content>
+    <a id="about">
+        <h3>The purpose of this website</h3>
+        <tab>
+        MyLilServer.net is a software and networking testing ground, made by Jamous Bitrick, with the express intent to learn about server side programming, content creation and system management. 
+        You will see tabs on the left hand side of the screen, each of these jumps to a diffrent page, or another section in this page.
+        </tab>
+       
+       <h3>How this site is built</h3>
+        <tab>
+        This site is built using basic HTML 5 and css, written completly from scratch using Visual Studio code, and VIM. All development is done within a linux enviroment. It is not fancy, but it will do.
+        <p>
+        The site itself is hosted on a Ubuntu 18.10 server, runing apache2. I run the server headless, and remote into it via ssh and ftp to upload and manage files. Why Ubuntu 18.10, and not an LTS version?
+        Because i plan to periodicaly change the host OS, to have a better grasp on the diffreinces between linux distrubutions. This is made easier, as all of my servers are running as virtual machines inside of an ESXI (6.7.0)
+        enviroment, which allows for easy deployment, backup, and copying of machines, preventing potential down time.
+        <p>
+        On the networking side of things i have two routers, one for my home Wi-Fi network, and one to act (almost like) a DMZ for my LAN, the network the servers are located in. (At one point i may build a "Honney Pot" to catch incomeing traffic.)
+        My LAN Router opperates on an old x86 based machine, runing PfSense, a very powerfull x86 router based on FreeBSD. The PfSense router handles many functions, including Port Forwarding and the local firewall.
+        Behind the PfSense router I have 2 switches, one going to sevearl other machines, and 1 going to my ESXI server which hosts a virtual switch. I have 98 IP addresses alocated to DHCP while the rest are static. My ESXI server, and all services running on it are assigned static IP address.
+        <p>
+        Outside of my network I have a public IP, however it is still a dynamic address, so it can change from time to time. To get around this issue I have my domain registerd with NoIp. NoIp provides a Dynamic DNS service.
+        My PfSense router will update NoIp if the public address changes, and they will change the ip address that mylilserver.net points to. In addition I use Port Redirect, which allows me to handle diffrent types of requests. 
+        <p>
+        (With normal HTTP requests, incomming traffic will be looking for port 80. However i would like to have a diffrent URL for diffrent servers on my local network. A simple work around for this is to port redirect. So i can translate a request from looking for port 80, and send it looking for port 8080.
+        When my local router sees a request coming into port 8080, i knows to redirect it to a unique local IP on port 80. Allowing communicatoin between the two, seprate from the regular line of communicatoin.)
+        </tab>
+        <p>
+        <h4>Technologies used</h4>
+        <ul>
+            <li>PfSense 2.4</li>
+            <li>IPTables firewall</li>
+            <li>ESXI 6.7.0</li>
+            <li>Ubuntu 18.10</li>
+            <li>No Ip Dynamic Domain Name Service</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>VIM</li>
+            <li>Visual Studio Code</li>
+            <li>IPv4 subnetting</li>
+            <li>IPv4 static addressing</li>
+            <li>IPv4 Dynamic Host Configuration Protocol addressing</li>
+            <li>Port Forwarding</li>
+        </ul>
+
+
+           <h3>Known Bugs</h3>
+           <ul>
+        <li>Currently, when using advanced port forwarding, the URL will redirect to publicIp:Port (Ex 75.32.110.63:8080) instead of showing the fully qualified domain name (ex. <a href="http://wvru.mylilserver.net">wvur.mylilserver.net</a>).</li>
+      
+        <li>There is currently no SSL/HTTPS version for this site. Please use the regular unsecure HTTP:// version for now.</li>
+       
+        <li>This site may or may not throw a certificate error. If it does please report it to me so i can try and track it down.</li>
+        </ul>
+        <p>
+        If you find any bugs, please report them to the site administrator at mbitrick@yahoo.com
+
+
+
+
+        <a id="resume">
+            <h3>Resume</h3>
+            <code>"I am fascinated by information technology and take every opportunity to build my technical knowledge. My most gratifying learning experiences have been with using Linux hardening, local area networks intrusion detection, Cisco routers, and in-home webservers. In addition to course work, I am active in the community and I hold several professional certifications. 
+                    I am very exited about the prospect to work as part of a team and contribute my expertise in network and system security."
+            </code>
+            <p>
+            Below i am including a link to my resume, which is up to date. I am always welcome to a friendly inquiry. Please find the checksum values for the files on the page linked below as well.
+            <br><br>
+            <a href="resume/">Resume</a>
+            <a href="https://www.linkedin.com/in/jamousbitrick/">LinkedIn</a>
+            
+        </a>
+
+        
+    <div class="footer">
+        <a id="contact">
+        <h5>Contact</h5>
+        Email: <a href="mailto:mbitrick@yahoo.com">mbitrick@yahoo.com</a>
+    </div>
+   </content>
+</html>
