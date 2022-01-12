@@ -25,6 +25,7 @@ Jamous has been in the IT field academically for 4 years, and full time professi
 
 | *Biz Net Technologies Inc*    - July 2021 - Present
 | Network Engineer
+
         * Maintain an ISP network
         * Support fiber to the home (FTTH) clients
         * Layout upgrade and maintance plans

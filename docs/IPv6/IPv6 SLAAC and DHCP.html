@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IPv6 SLAAC and DHCP &mdash; MyLilServer.net  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Current MyLilServer.net" href="../MyLilServer/current.html" />
+    <link rel="prev" title="Cisco AnyConnect idle timeout" href="../cisco/timeout.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> MyLilServer.net
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">About Jamous</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/resume.html">Resume</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Cisco</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cisco/timeout.html">Cisco AnyConnect idle timeout</a></li>
+</ul>
+<p class="caption"><span class="caption-text">IPv6</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">IPv6 SLAAC and DHCP</a></li>
+</ul>
+<p class="caption"><span class="caption-text">MyLilServer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../MyLilServer/current.html">Current MyLilServer.net</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MyLilServer/originial.html">Original MyLilServer.net</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Raspberry Pi projects</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pi/billboard.html">Digital Billboard</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MyLilServer.net</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>IPv6 SLAAC and DHCP</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/IPv6/IPv6 SLAAC and DHCP.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="ipv6-slaac-and-dhcp">
+<h1>IPv6 SLAAC and DHCP<a class="headerlink" href="#ipv6-slaac-and-dhcp" title="Permalink to this headline"></a></h1>
+<dl class="simple">
+<dt>Types of IPv6 addresses in Windows 10</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>DHCP: DHCP is the DHCPv6 address assigned to the machine.</dt><dd><ul>
+<li><p>DHCP can run at the same time as SLAAC or independently.</p></li>
+<li><p>Does not provide default gateway information unless a router is connected to the network for Router Solicitation and Router advertisement (RS and RA.)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Temporary: If SLAAC is enabled on the network a host may elect to use a SLACC address for communications with the outside world</dt><dd><ul>
+<li><p>There can be multiple temporary SLAAC address on a machine, and individual programs can grab ones</p></li>
+<li><p>Buggy programs or process stuck in loops can open hundreds of temporary addresses.</p></li>
+<li><dl class="simple">
+<dt>A good short read on temporary addresses</dt><dd><ul>
+<li><p><a class="reference external" href="https://rakhesh.com/networks/why-multiple-temporary-ipv6-addresses-when-using-slaac/">https://rakhesh.com/networks/why-multiple-temporary-ipv6-addresses-when-using-slaac/</a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Public: SLAAC IPV6 address</dt><dd><ul>
+<li><p>Can coexist with DHCPv6 address</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Other: The other address is the Link local address</dt><dd><ul>
+<li><p>All IPv6 nodes will always have a link local address for neighbor discovery</p></li>
+<li><dl class="simple">
+<dt>Uses EUI-64</dt><dd><ul>
+<li><p>This is why the host portion of the Public and Other address are identical</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../cisco/timeout.html" class="btn btn-neutral float-left" title="Cisco AnyConnect idle timeout" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../MyLilServer/current.html" class="btn btn-neutral float-right" title="Current MyLilServer.net" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      <span class="lastupdated">Last updated on Jan 12, 2022.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

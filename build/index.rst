@@ -31,6 +31,12 @@ test edit
 
 .. toctree::
    :maxdepth: 2
+   :caption: IPv6
+
+   IPv6/dhcp
+
+.. toctree::
+   :maxdepth: 2
    :caption: MyLilServer
 
    MyLilServer/current
