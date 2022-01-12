@@ -45,7 +45,19 @@
 </ul>
 <p class="caption"><span class="caption-text">IPv6</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">IPv6 SLAAC and DHCP</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">IPv6 SLAAC and DHCP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#types-of-ipv6-addresses-in-windows-10">Types of IPv6 addresses in Windows 10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-process-of-addressing-an-ipv6-node">The process of addressing an IPv6 node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#types-of-stateless-address-autoconfiguration-slaac">Types of Stateless Address Autoconfiguration (SLAAC)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ipv6-solicited-node-multicast-addresses">IPv6 solicited-node multicast addresses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#router-advertisement">Router Advertisement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuring-static-ipv6-addresses">Configuring static IPv6 addresses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configure-stateful-autoconfiguration-with-windows-dhcpv6-in-juniper">Configure stateful autoconfiguration with Windows DHCPv6 in Juniper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lab-setup">Lab setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#examples-of-packets-discussed-in-this-article">Examples of packets discussed in this article</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">MyLilServer</span></p>
 <ul>
@@ -83,8 +95,10 @@
              
   <div class="section" id="ipv6-slaac-and-dhcp">
 <h1>IPv6 SLAAC and DHCP<a class="headerlink" href="#ipv6-slaac-and-dhcp" title="Permalink to this headline"></a></h1>
-<dl class="simple">
-<dt>Types of IPv6 addresses in Windows 10</dt><dd><ul class="simple">
+<div class="section" id="types-of-ipv6-addresses-in-windows-10">
+<h2>Types of IPv6 addresses in Windows 10<a class="headerlink" href="#types-of-ipv6-addresses-in-windows-10" title="Permalink to this headline"></a></h2>
+<blockquote>
+<div><ul class="simple">
 <li><dl class="simple">
 <dt>DHCP: DHCP is the DHCPv6 address assigned to the machine.</dt><dd><ul>
 <li><p>DHCP can run at the same time as SLAAC or independently.</p></li>
@@ -130,11 +144,13 @@
 </dl>
 </li>
 </ul>
-</dd>
-</dl>
+</div></blockquote>
 <img alt="../_images/windows_addresses_1.png" src="../_images/windows_addresses_1.png" />
-<dl class="simple">
-<dt>The process of addressing an IPv6 node:</dt><dd><ol class="arabic simple">
+</div>
+<div class="section" id="the-process-of-addressing-an-ipv6-node">
+<h2>The process of addressing an IPv6 node<a class="headerlink" href="#the-process-of-addressing-an-ipv6-node" title="Permalink to this headline"></a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>Once connected, a new node creates a Link Local address for neighbor discovery</p></li>
 <li><dl class="simple">
 <dt>The node will send a Neighbor Solicitation (NS) messages to verify the address is not in use</dt><dd><ul class="simple">
@@ -172,8 +188,12 @@
 </li>
 <li><p>From this point the node will finish autoconfiguring using either SLAAC or DHCPv6</p></li>
 </ol>
-</dd>
-<dt>Types of Stateless Address Autoconfiguration (SLAAC)</dt><dd><ul class="simple">
+</div></blockquote>
+</div>
+<div class="section" id="types-of-stateless-address-autoconfiguration-slaac">
+<h2>Types of Stateless Address Autoconfiguration (SLAAC)<a class="headerlink" href="#types-of-stateless-address-autoconfiguration-slaac" title="Permalink to this headline"></a></h2>
+<blockquote>
+<div><ul class="simple">
 <li><dl class="simple">
 <dt>EUI-64: Converts MAC address into the host address of an IPv6 address</dt><dd><ul>
 <li><dl class="simple">
@@ -196,8 +216,12 @@
 </dl>
 </li>
 </ul>
-</dd>
-<dt>IPv6 solicited-node multicast addresses</dt><dd><ul class="simple">
+</div></blockquote>
+</div>
+<div class="section" id="ipv6-solicited-node-multicast-addresses">
+<h2>IPv6 solicited-node multicast addresses<a class="headerlink" href="#ipv6-solicited-node-multicast-addresses" title="Permalink to this headline"></a></h2>
+<blockquote>
+<div><ul class="simple">
 <li><dl class="simple">
 <dt>A node will take the last 24 bits (last 6 hex characters) and append them to ff02::1:ff to create their solicited-node multicast address.</dt><dd><ul>
 <li><p>This is how all IPv6 nodes can be in a multicast message without broadcast.</p></li>
@@ -214,11 +238,13 @@
 </li>
 <li><p>Every node also has a “solicited node multicast address” as explained above. Each node also adopts one of these addresses.</p></li>
 </ul>
-</dd>
-</dl>
+</div></blockquote>
 <img alt="../_images/table_1.png" src="../_images/table_1.png" />
-<dl class="simple">
-<dt>Router Advertisement</dt><dd><ul class="simple">
+</div>
+<div class="section" id="router-advertisement">
+<h2>Router Advertisement<a class="headerlink" href="#router-advertisement" title="Permalink to this headline"></a></h2>
+<blockquote>
+<div><ul class="simple">
 <li><dl class="simple">
 <dt>A Router Advertisement (RA) is sent from a router to a node every 200 seconds, or in response to a received Router Solicitation (RS). The RA can contain the following information:</dt><dd><ul>
 <li><p>IPv6 subnet in use on the network.</p></li>
@@ -264,11 +290,13 @@
 </dl>
 </li>
 </ul>
-</dd>
-</dl>
+</div></blockquote>
 <img alt="../_images/RA_2.png" src="../_images/RA_2.png" />
-<dl class="simple">
-<dt>Configuring static IPv6 addresses</dt><dd><ul class="simple">
+</div>
+<div class="section" id="configuring-static-ipv6-addresses">
+<h2>Configuring static IPv6 addresses<a class="headerlink" href="#configuring-static-ipv6-addresses" title="Permalink to this headline"></a></h2>
+<blockquote>
+<div><ul class="simple">
 <li><p>We can configure static IP address in IPv6 just like in IPv4, the only consideration is the top 128 addresses in a /64 subnet are reserved anycast addresses.</p></li>
 <li><dl class="simple">
 <dt>If router advertisements have been setup on the router we can configure a static IP (and DNS) on a node without defining the default gateway.</dt><dd><ul>
@@ -278,8 +306,7 @@
 </dl>
 </li>
 </ul>
-</dd>
-</dl>
+</div></blockquote>
 <img alt="../_images/static_3.png" src="../_images/static_3.png" />
 <img alt="../_images/static_4.png" src="../_images/static_4.png" />
 <p>Configure Stateless addressing (SLAAC) in Juniper
@@ -316,8 +343,11 @@ This setup is fairly straightforward, you will need too:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>Configure stateful autoconfiguration with Windows DHCPv6 in Juniper</dt><dd><ul class="simple">
+</div>
+<div class="section" id="configure-stateful-autoconfiguration-with-windows-dhcpv6-in-juniper">
+<h2>Configure stateful autoconfiguration with Windows DHCPv6 in Juniper<a class="headerlink" href="#configure-stateful-autoconfiguration-with-windows-dhcpv6-in-juniper" title="Permalink to this headline"></a></h2>
+<blockquote>
+<div><ul class="simple">
 <li><dl class="simple">
 <dt>This setup is like the stateless setup, plus one more command</dt><dd><ul>
 <li><dl class="simple">
@@ -341,8 +371,7 @@ This setup is fairly straightforward, you will need too:</p>
 </dl>
 </li>
 </ul>
-</dd>
-</dl>
+</div></blockquote>
 <img alt="../_images/static_5.png" src="../_images/static_5.png" />
 <img alt="../_images/lease_6.png" src="../_images/lease_6.png" />
 <dl class="simple">
@@ -391,7 +420,9 @@ This setup is fairly straightforward, you will need too:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Lab setup</p>
+</div>
+<div class="section" id="lab-setup">
+<h2>Lab setup<a class="headerlink" href="#lab-setup" title="Permalink to this headline"></a></h2>
 <dl class="simple">
 <dt>Everything in this document was tested and verified working in a GNS3 environment.</dt><dd><ul class="simple">
 <li><p>You can view a recorded walkthrough of this lab here: <a class="reference external" href="https://www.youtube.com/watch?v=vFBpYX2VE0A">https://www.youtube.com/watch?v=vFBpYX2VE0A</a></p></li>
@@ -478,8 +509,10 @@ This setup is fairly straightforward, you will need too:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Examples of packets discussed in this article
-Neighbor Solicitation message</p>
+</div>
+<div class="section" id="examples-of-packets-discussed-in-this-article">
+<h2>Examples of packets discussed in this article<a class="headerlink" href="#examples-of-packets-discussed-in-this-article" title="Permalink to this headline"></a></h2>
+<p>Neighbor Solicitation message</p>
 <img alt="../_images/ex_1.png" src="../_images/ex_1.png" />
 <p>Neighbor Advertisement message</p>
 <img alt="../_images/ex_2.png" src="../_images/ex_2.png" />
@@ -487,8 +520,11 @@ Neighbor Solicitation message</p>
 <img alt="../_images/ex_3.png" src="../_images/ex_3.png" />
 <p>Router advertisement</p>
 <img alt="../_images/ex_4.png" src="../_images/ex_4.png" />
-<dl class="simple">
-<dt>Resources:</dt><dd><ul class="simple">
+</div>
+<div class="section" id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline"></a></h2>
+<blockquote>
+<div><ul class="simple">
 <li><p>Article on Windows temporary addresses: <a class="reference external" href="https://rakhesh.com/networks/why-multiple-temporary-ipv6-addresses-when-using-slaac/">https://rakhesh.com/networks/why-multiple-temporary-ipv6-addresses-when-using-slaac/</a></p></li>
 <li><p>EUI-64 video: <a class="reference external" href="https://www.youtube.com/watch?v=eMe88FqiPso">https://www.youtube.com/watch?v=eMe88FqiPso</a></p></li>
 <li><p>Multicast address video: <a class="reference external" href="https://www.youtube.com/watch?v=nTsD9BxmjaQ">https://www.youtube.com/watch?v=nTsD9BxmjaQ</a></p></li>
@@ -512,8 +548,8 @@ Neighbor Solicitation message</p>
 <li><p>A PDF copy of this article: <a class="reference external" href="https://github.com/Jamous/IPv6_windows_juniper/blob/main/IPv6_SLACC_and_DHCP.pdf">https://github.com/Jamous/IPv6_windows_juniper/blob/main/IPv6_SLACC_and_DHCP.pdf</a></p></li>
 <li><p>Join the discussion over on Spiceworks: <a class="reference external" href="https://community.spiceworks.com/topic/2344441-ipv6-slaac-and-dhcpv6-inside-of-a-windows-domain-with-juniper-routers">https://community.spiceworks.com/topic/2344441-ipv6-slaac-and-dhcpv6-inside-of-a-windows-domain-with-juniper-routers</a></p></li>
 </ul>
-</dd>
-</dl>
+</div></blockquote>
+</div>
 </div>
 
 

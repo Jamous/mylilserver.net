@@ -2,7 +2,7 @@ IPv6 SLAAC and DHCP
 ===========================================
 
 Types of IPv6 addresses in Windows 10
--------------------------------------
+-----------------
 	* DHCP: DHCP is the DHCPv6 address assigned to the machine.
 		* DHCP can run at the same time as SLAAC or independently.
 		* Does not provide default gateway information unless a router is connected to the network for Router Solicitation and Router advertisement (RS and RA.)
@@ -22,8 +22,7 @@ Types of IPv6 addresses in Windows 10
 
 
 
-The process of addressing an IPv6 node
----------------------------------------
+The process of addressing an IPv6 node:
 	#. Once connected, a new node creates a Link Local address for neighbor discovery
 	#. The node will send a Neighbor Solicitation (NS) messages to verify the address is not in use
 		* NOTE: If an address is in use, then the link local address will need to be manually configured, autoconfiguration will stop at this point. Because Link local uses EUI-64, which is based off the mac address of the NIC it can only create one link local address
@@ -39,7 +38,6 @@ The process of addressing an IPv6 node
 
 
 Types of Stateless Address Autoconfiguration (SLAAC)
-----------------------------------------------------
 	* EUI-64: Converts MAC address into the host address of an IPv6 address
 		* A great video on EUI-64
 			* `https://www.youtube.com/watch?v=eMe88FqiPso <https://www.youtube.com/watch?v=eMe88FqiPso>`_
@@ -50,7 +48,6 @@ Types of Stateless Address Autoconfiguration (SLAAC)
 
 
 IPv6 solicited-node multicast addresses
----------------------------------------
 	* A node will take the last 24 bits (last 6 hex characters) and append them to ff02::1:ff to create their solicited-node multicast address.
 		* This is how all IPv6 nodes can be in a multicast message without broadcast.
 		* A great video on multicast addresses
@@ -62,7 +59,6 @@ IPv6 solicited-node multicast addresses
 
 
 Router Advertisement
---------------------
 	* A Router Advertisement (RA) is sent from a router to a node every 200 seconds, or in response to a received Router Solicitation (RS). The RA can contain the following information:
 		* IPv6 subnet in use on the network.
 		* The On-Link flag (L) state
@@ -83,7 +79,6 @@ Router Advertisement
 
 
 Configuring static IPv6 addresses
----------------------------------
 	* We can configure static IP address in IPv6 just like in IPv4, the only consideration is the top 128 addresses in a /64 subnet are reserved anycast addresses.
 	* If router advertisements have been setup on the router we can configure a static IP (and DNS) on a node without defining the default gateway.
 		* The RA will define the gateway for our machine.
@@ -129,7 +124,6 @@ Juniper config example ::
 
 
 Configure stateful autoconfiguration with Windows DHCPv6 in Juniper
---------------------------------------------------------------------
 	* This setup is like the stateless setup, plus one more command
 		* Under router-advertisement, interface, prefix we need to specify no-autonomous
 			* This changes the A flag in the Router Advertisement message to unset, and hosts will not use SLAAC
@@ -179,7 +173,7 @@ Juniper config example ::
 
 
 Lab setup
----------
+
 Everything in this document was tested and verified working in a GNS3 environment.
 	* You can view a recorded walkthrough of this lab here: `https://www.youtube.com/watch?v=vFBpYX2VE0A <https://www.youtube.com/watch?v=vFBpYX2VE0A>`_
 	* Configs for this lab can be found here: `https://github.com/Jamous/IPv6_windows_juniper <https://github.com/Jamous/IPv6_windows_juniper>`_
@@ -253,7 +247,6 @@ Juniper config example ::
 
 
 Examples of packets discussed in this article
----------------------------------------------
 Neighbor Solicitation message
 
 .. image:: media/ex_1.png
@@ -272,8 +265,7 @@ Router advertisement
 
 
 
-Resources
----------
+Resources:
 	* Article on Windows temporary addresses: `https://rakhesh.com/networks/why-multiple-temporary-ipv6-addresses-when-using-slaac/ <https://rakhesh.com/networks/why-multiple-temporary-ipv6-addresses-when-using-slaac/>`_
 	* EUI-64 video: `https://www.youtube.com/watch?v=eMe88FqiPso <https://www.youtube.com/watch?v=eMe88FqiPso>`_
 	* Multicast address video: `https://www.youtube.com/watch?v=nTsD9BxmjaQ <https://www.youtube.com/watch?v=nTsD9BxmjaQ>`_
