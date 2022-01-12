@@ -20,7 +20,7 @@ test edit
    :maxdepth: 2
    :caption: About Jamous
    
-   about/contact
+   about/media
    about/resume
 
 .. toctree::
