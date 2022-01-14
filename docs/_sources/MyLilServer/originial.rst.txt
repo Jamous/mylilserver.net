@@ -7,4 +7,4 @@ I decided to retire this project in favor of building a more up to date site tha
 
 The old project has been migrated to github and can bee seen at the link below.  
 
-`Original MyLilServer <https://originial.mylilserver.net>`_
+`Original MyLilServer <https://original.mylilserver.net>`_
