@@ -281,6 +281,8 @@ Resources
 	* Threads and articles on Link Local addresses:
 		* `https://learningnetwork.cisco.com/s/question/0D53i00000Slspi/could-someone-please-explain-me-the-sentence-bellow-a-linklocal-unicast-ipv6-address-is-used-as-the-default-gateway-by-hosts-in-a-local-network-is-the-above-sentence-correct-can-anyone-give-an-example-to-help-me-understand-it-tks <https://learningnetwork.cisco.com/s/question/0D53i00000Slspi/could-someone-please-explain-me-the-sentence-bellow-a-linklocal-unicast-ipv6-address-is-used-as-the-default-gateway-by-hosts-in-a-local-network-is-the-above-sentence-correct-can-anyone-give-an-example-to-help-me-understand-it-tks>`_
 		* `https://www.juniper.net/documentation/en_US/junos/topics/topic-map/ipv6-interfaces-neighbor-discovery.html <https://www.juniper.net/documentation/en_US/junos/topics/topic-map/ipv6-interfaces-neighbor-discovery.html>`_
+	* Artile on dual stack networks for domain admins
+		* `https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/ipv6-for-the-windows-administrator-how-name-resolution-works-in/ba-p/256713 <https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/ipv6-for-the-windows-administrator-how-name-resolution-works-in/ba-p/256713>`_
 	* Lab resourses
 		* Lab files on Github: `https://github.com/Jamous/IPv6_windows_juniper <https://github.com/Jamous/IPv6_windows_juniper>`_
 		* Lab video on Youtube: `https://www.youtube.com/watch?v=vFBpYX2VE0A <https://www.youtube.com/watch?v=vFBpYX2VE0A>`_

@@ -51,4 +51,5 @@ Jamous has been in the IT field academically for 4 years, and full time professi
         * Alpha Phi Omega, National Service Fraternity, actively engaged in community service initiatives.
 
 **Certifications**
-        * Cisco CCNA: R&S
+        * Cisco CCNA
+	* Juniper JNCIA-Junos
