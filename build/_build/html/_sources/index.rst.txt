@@ -37,6 +37,12 @@ test edit
 
 .. toctree::
    :maxdepth: 2
+   :caption: Juniper
+
+   juniper/jncissp
+
+.. toctree::
+   :maxdepth: 2
    :caption: MyLilServer
 
    MyLilServer/current

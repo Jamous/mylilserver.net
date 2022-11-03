@@ -21,6 +21,11 @@ Jamous has been in the IT field academically for 4 years, and full time professi
 | GPA: 3.2        
 | Honors: Dean’s List
 
+**Certifications**
+        * Cisco CCNA
+	* Juniper JNCIS-SP
+	* Juniper JNCIA-Junos
+
 **Work Experience**
 
 | *Biz Net Technologies Inc*    - July 2021 - Present
@@ -49,7 +54,3 @@ Jamous has been in the IT field academically for 4 years, and full time professi
 **Leadership and Engagement**
         * Eagle scout, Boy Scouts of America, Troop 720
         * Alpha Phi Omega, National Service Fraternity, actively engaged in community service initiatives.
-
-**Certifications**
-        * Cisco CCNA
-	* Juniper JNCIA-Junos

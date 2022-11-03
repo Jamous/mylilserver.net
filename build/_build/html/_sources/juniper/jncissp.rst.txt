@@ -1,0 +1,8 @@
+JNCIS-SP Study Guide
+=============================================
+
+Back in 2013 Juniper released 3 JNCIS-SP study guide PDF books. They are no longer listed on Juniper’s website, so I am sharing them here, as they are a great resource. You can view each book by clicking the respective link below.
+
+| :download:`JNCIS-SP study guide part 1 <_static/JNCIS-SP-Part1_2013.pdf>`.
+| :download:`JNCIS-SP study guide part 2 <_static/JNCIS-SP-Part2_2013.pdf>`.
+| :download:`JNCIS-SP study guide part 3 <_static/JNCIS-SP-Part3_2013.pdf>`.
