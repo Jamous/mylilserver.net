@@ -270,7 +270,9 @@ Router advertisement
 
 .. image:: media/ex_4.png
 
-
+IPv6 Windows domain with Juniper vMX video
+------------------------------------------
+.. youtube:: vFBpYX2VE0A
 
 Resources
 ---------
