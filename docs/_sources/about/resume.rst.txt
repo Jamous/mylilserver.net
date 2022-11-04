@@ -1,6 +1,6 @@
 Resume
 ===========================================
-.. image:: _static/small_suit.png
+.. image:: _static/resume/small_suit.png
 
 **Summary**
 

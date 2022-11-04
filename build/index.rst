@@ -18,38 +18,23 @@ While I have had many servers running on it, everything from Debian to Windows, 
    :caption: About Jamous
    
    about/media
+   about/mylilserver
    about/resume
 
 .. toctree::
    :maxdepth: 2
-   :caption: Cisco
-   
-   cisco/timeout
+   :caption: Automation
+
+   automation/loggerinner
+   automation/ssh
 
 .. toctree::
    :maxdepth: 2
-   :caption: IPv6
+   :caption: Networking Articles
 
-   IPv6/dhcp
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Juniper
-
-   juniper/jncissp
-
-.. toctree::
-   :maxdepth: 2
-   :caption: MyLilServer
-
-   MyLilServer/current
-   MyLilServer/originial
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Raspberry Pi projects
- 
-   pi/billboard
+   networkArticles/timeout
+   networkArticles/dhcp
+   networkArticles/jncissp
 
 .. toctree::
    :maxdepth: 2
@@ -58,3 +43,9 @@ While I have had many servers running on it, everything from Debian to Windows, 
    rnetworks/rnetworks
    rnetworks/GNS3Juniper
    rnetworks/other
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Other projects
+ 
+   otherProjects/billboard   
