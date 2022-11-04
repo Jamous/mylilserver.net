@@ -13,9 +13,6 @@ MyLilServer started as a small project back in 2018 with the purchase a of an Ol
 
 While I have had many servers running on it, everything from Debian to Windows, my oldest project achievement is the original MyLilServer website. MyLilServer is an almost text based site, written in HTML and using some CSS from scratch. The virtual server was Ubuntu 18.10 running Apache. This server has been decommissioned and the project abandoned, however it is uploaded `here <https://originial.mylilserver.net>`_. It taught me about Networking, ports, Network Area Translation, and so much more.
 
-test edit
-
-
 .. toctree::
    :maxdepth: 2
    :caption: About Jamous
@@ -53,3 +50,11 @@ test edit
    :caption: Raspberry Pi projects
  
    pi/billboard
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Regular Networks
+ 
+   rnetworks/rnetworks
+   rnetworks/GNS3Juniper
+   rnetworks/other
