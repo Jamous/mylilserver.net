@@ -41,7 +41,8 @@ While I have had many servers running on it, everything from Debian to Windows, 
    :caption: Regular Networks
  
    rnetworks/rnetworks
-   rnetworks/GNS3Juniper
+   rnetworks/GNS3
+   rnetworks/Juniper
    rnetworks/other
 
 .. toctree::
