@@ -1,4 +1,4 @@
-cp .nojkelly  docs/
+cp .nojekyll  docs/
 cp CNAME docs/
 git add .
 git commit -m "Website update"
