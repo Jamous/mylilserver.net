@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Network automation via SSH &mdash; MyLilServer.net  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>Ubiquiti Edgerouter notes &mdash; MyLilServer.net  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -15,8 +15,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Cisco AnyConnect idle timeout" href="../networkArticles/timeout.html" />
-    <link rel="prev" title="Automate logging into websites" href="loggerinner.html" /> 
+    <link rel="next" title="About" href="../rnetworks/rnetworks.html" />
+    <link rel="prev" title="Mirkotik notes" href="mikrotik.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -41,17 +41,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../about/resume.html">Resume</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Automation</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="loggerinner.html">Automate logging into websites</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Network automation via SSH</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../automation/loggerinner.html">Automate logging into websites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../automation/ssh.html">Network automation via SSH</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Networking Articles</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../networkArticles/timeout.html">Cisco AnyConnect idle timeout</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../networkArticles/dhcp.html">IPv6 SLAAC and DHCP - Juniper</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../networkArticles/jncissp.html">JNCIS-SP Study Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../networkArticles/mikrotik.html">Mirkotik notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../networkArticles/ubiquiti.html">Ubiquiti Edgerouter notes</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="timeout.html">Cisco AnyConnect idle timeout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dhcp.html">IPv6 SLAAC and DHCP - Juniper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jncissp.html">JNCIS-SP Study Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mikrotik.html">Mirkotik notes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Ubiquiti Edgerouter notes</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Regular Networks</span></p>
 <ul>
@@ -79,9 +79,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Network automation via SSH</li>
+      <li>Ubiquiti Edgerouter notes</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/automation/ssh.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/networkArticles/ubiquiti.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -89,18 +89,25 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="network-automation-via-ssh">
-<h1>Network automation via SSH<a class="headerlink" href="#network-automation-via-ssh" title="Permalink to this headline"></a></h1>
-<p>SSH automation is a SSH automation script developed by Jamous Bitrick for Biz Net Technologies Inc. This script accepts an input of Hosts and commands in two sepreate line-delimited text files. It also accepts and securely stores a login username and password for the duration the script is running. This script will open an SSH connection to each host and input the commands in the commands file. For more details, see the github page at the link below.</p>
-<p><a class="reference external" href="https://github.com/Jamous/Automation-Scripting">https://github.com/Jamous/Automation-Scripting</a></p>
+  <div class="section" id="ubiquiti-edgerouter-notes">
+<h1>Ubiquiti Edgerouter notes<a class="headerlink" href="#ubiquiti-edgerouter-notes" title="Permalink to this headline"></a></h1>
+<div class="line-block">
+<div class="line">#### Show MAC address table for switched interfaces:</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">/sbin/switch</span> <span class="pre">dump</span></code></div>
+<div class="line"><a class="reference external" href="https://www.reddit.com/r/Ubiquiti/comments/13rmowg/erx_switch_show_mac_table/">https://www.reddit.com/r/Ubiquiti/comments/13rmowg/erx_switch_show_mac_table/</a></div>
+</div>
+<div class="line-block">
+<div class="line">#### Start tcpdump and save to file</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">tcpdump</span> <span class="pre">-i</span> <span class="pre">eth0</span> <span class="pre">-w</span> <span class="pre">output.pcap</span></code></div>
+</div>
 </div>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="loggerinner.html" class="btn btn-neutral float-left" title="Automate logging into websites" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../networkArticles/timeout.html" class="btn btn-neutral float-right" title="Cisco AnyConnect idle timeout" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="mikrotik.html" class="btn btn-neutral float-left" title="Mirkotik notes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../rnetworks/rnetworks.html" class="btn btn-neutral float-right" title="About" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

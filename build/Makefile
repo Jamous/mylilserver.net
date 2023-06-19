@@ -14,6 +14,11 @@ help:
 
 .PHONY: help Makefile
 
+#Make clean - remove old build files and make from scratch
+clean:
+	rm -rf /var/www/html/build/_build/*	
+	rm -rf /var/www/html/docs/*
+
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
 %: Makefile
