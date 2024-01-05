@@ -17,8 +17,8 @@ FS S3400 series switches
 #### Load config from file ::
 	
 	Switch-1#copy tftp running-config
-	TFTP server IP address: 216.252.192.167
-	Source configuration file name: startup1.cfg
+	TFTP server IP address: [IPv4 address]
+	Source configuration file name: [name of file]
 	Success.
 
 
