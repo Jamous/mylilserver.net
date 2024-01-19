@@ -7,6 +7,109 @@ Show MAC address table
 | ``sudo /sbin/switch dump``
 | https://www.reddit.com/r/Ubiquiti/comments/13rmowg/erx_switch_show_mac_table/
 
+
+IPv6 router advertisements to clients (staticly assigned)
+---------------------------------------------------------
+#### Manually assign interface address, and set RA to advertise slaac configuration ::
+
+    interfaces {
+        ethernet eth0 {
+            address 2001:db8::1/64
+            address 192.168.10.1/24
+            duplex auto
+            ipv6 {
+                router-advert {
+                    prefix 2001:db8::/64 {
+                        autonomous-flag true
+                    }
+                }
+            }
+            speed auto
+        }
+    }
+
+IPv6 firewall rules
+-------------------
+
+| Firewall rules are the same for v4 and v6, however v6 rules do not show up in the web interface. Also, the web interface will not load via v6.
+| In this example we will limit access to the local device from the wan to one trusted network
+
+.. code-block:: bash
+
+    firewall {
+        group {
+            ipv6-network-group mgmnt_networks_6 {
+                ipv6-network 2002:db8::/48
+            }
+        ipv6-name WAN_LOCAL_6 {
+            default-action drop
+            rule 10 {
+                action accept
+                description "Allow established/related"
+                log disable
+                protocol all
+                state {
+                    established enable
+                    invalid disable
+                    new disable
+                    related enable
+                }
+            }
+            rule 20 {
+                action accept
+                description allow_icmp
+                log disable
+                protocol icmp
+                state {
+                    established enable
+                    invalid disable
+                    new enable
+                    related enable
+                }
+            }
+            rule 30 {
+                action accept
+                description allow_trusted
+                log disable
+                protocol all
+                source {
+                    group {
+                        ipv6-network-group mgmnt_networks_6
+                    }
+                }
+                state {
+                    established enable
+                    invalid disable
+                    new enable
+                    related enable
+                }
+            }
+        }
+      }
+    }
+    interfaces {
+        ethernet eth0 {
+            address 2001:db8::1/64
+            address 192.168.10.1/24
+            duplex auto
+            firewall {
+                local {
+                    ipv6-name WAN_LOCAL_6
+                    name WAN_LOCAL
+                }
+            }
+            ipv6 {
+                router-advert {
+                    prefix 2001:db8::/64 {
+                        autonomous-flag true
+                    }
+                }
+            }
+            speed auto
+        }
+    }
+
+
 IPv6-PD client
 --------------
 | #### Aquiring IPv6 addressing using prefix delegation
