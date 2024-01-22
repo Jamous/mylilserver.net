@@ -297,6 +297,10 @@ interfaces <span class="o">{</span>
 <div class="line">#### Start tcpdump and save to file</div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">tcpdump</span> <span class="pre">-i</span> <span class="pre">eth0</span> <span class="pre">-w</span> <span class="pre">output.pcap</span></code></div>
 </div>
+<div class="line-block">
+<div class="line">#### tftp tcpdump back off device</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">tftp</span> <span class="pre">-p</span> <span class="pre">-l</span> <span class="pre">output.pcap</span> <span class="pre">-r</span> <span class="pre">output.pcap</span> <span class="pre">[IPv4</span> <span class="pre">address]</span></code></div>
+</div>
 </div>
 </div>
 
@@ -312,7 +316,7 @@ interfaces <span class="o">{</span>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Jan 19, 2024.
+      <span class="lastupdated">Last updated on Jan 22, 2024.
       </span></p>
   </div>
 
