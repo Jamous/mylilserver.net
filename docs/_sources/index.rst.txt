@@ -33,12 +33,18 @@ While I have had many servers running on it, everything from Debian to Windows, 
    :caption: Networking Articles
 
    networkArticles/timeout
-   networkArticles/fs
    networkArticles/dhcp
    networkArticles/jncissp
-   networkArticles/mikrotik
-   networkArticles/ubiquiti	
    networkArticles/ubntbprvpn
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Network vendor notes
+
+   networkNotes/calix
+   networkNotes/fs
+   networkNotes/mikrotik
+   networkNotes/ubiquiti
 
 .. toctree::
    :maxdepth: 2

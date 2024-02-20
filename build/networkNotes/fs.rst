@@ -30,6 +30,13 @@ FS S2805S series switches
 	Uploading config file via TFTP...
 	Upload config file via TFTP successfully.
 
+| #### Enabble SSH
+| SSH will not work untill a key has been generated. Generate keys as outline below.
+
+::
+		
+	crypto key generate rsa
+	crypto key refresh
 
 
 Resources
