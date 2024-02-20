@@ -37,7 +37,8 @@ While I have had many servers running on it, everything from Debian to Windows, 
    networkArticles/dhcp
    networkArticles/jncissp
    networkArticles/mikrotik
-   networkArticles/ubiquiti
+   networkArticles/ubiquiti	
+   networkArticles/ubntbprvpn
 
 .. toctree::
    :maxdepth: 2
