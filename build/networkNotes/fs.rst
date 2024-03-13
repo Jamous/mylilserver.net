@@ -38,6 +38,29 @@ FS S2805S series switches
 	crypto key generate rsa
 	crypto key refresh
 
+SNMP
+^^^^
+| ## Hostname
+| ``gbnPlatformOAM:hostName-[1.3.6.1.4.1.52642.1.2.1.1.2.10.0]``
+
+| ## Interface name
+| ``rfc1213:ifDescr-[1.3.6.1.2.1.2.2.1.2.1]``
+
+| ## Interface description
+| ``rfc2233:ifAlias-[1.3.6.1.2.1.31.1.1.1.18.1]``
+
+| ## Interace admin status
+| ``rfc1213:ifAdminStatus-[1.3.6.1.2.1.2.2.1.7.1]``
+
+| ##Iface input PPS
+| ``rfc1213:ifInUcastPkts-[1.3.6.1.2.1.2.2.1.11.1]``
+
+| ##Iface output PPS
+| ``rfc1213:ifOutUcastPkts-[1.3.6.1.2.1.2.2.1.17.1]``
+
+| ## Mac address table (walk this)
+| ``1.3.6.1.4.1.52642.1.2.4.1.2.1.1.1``
+
 
 Resources
 ---------
