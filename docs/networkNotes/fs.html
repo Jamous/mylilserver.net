@@ -133,6 +133,17 @@ TFTP:successfully send 17 blocks, 8431 bytes
 <span class="n">Upload</span> <span class="n">config</span> <span class="n">file</span> <span class="n">via</span> <span class="n">TFTP</span> <span class="n">successfully</span><span class="o">.</span>
 </pre></div>
 </div>
+<p>#### Upload config via TFTP</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>switch-1#load configuration tftp inet [IPv4 address] [name of file]
+Startup config will be updated, are you sure(y/n)? [n]y
+
+Downloading config file via TFTP...
+Download config file via TFTP successfully, need to reboot to take effect.
+switch-1#reboot
+If you do not save the settings, all changes made will be lost.
+Are you sure you want to proceed with the system reboot(y/n)?[n]y
+</pre></div>
+</div>
 <div class="line-block">
 <div class="line">#### Enabble SSH</div>
 <div class="line">SSH will not work untill a key has been generated. Generate keys as outline below.</div>
@@ -196,7 +207,7 @@ TFTP:successfully send 17 blocks, 8431 bytes
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Mar 13, 2024.
+      <span class="lastupdated">Last updated on Mar 20, 2024.
       </span></p>
   </div>
 

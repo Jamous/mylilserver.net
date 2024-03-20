@@ -30,6 +30,17 @@ FS S2805S series switches
 	Uploading config file via TFTP...
 	Upload config file via TFTP successfully.
 
+#### Upload config via TFTP ::
+
+    switch-1#load configuration tftp inet [IPv4 address] [name of file]
+    Startup config will be updated, are you sure(y/n)? [n]y
+
+    Downloading config file via TFTP...
+    Download config file via TFTP successfully, need to reboot to take effect.
+    switch-1#reboot
+    If you do not save the settings, all changes made will be lost.
+    Are you sure you want to proceed with the system reboot(y/n)?[n]y
+
 | #### Enabble SSH
 | SSH will not work untill a key has been generated. Generate keys as outline below.
 
