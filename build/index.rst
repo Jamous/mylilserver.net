@@ -58,6 +58,12 @@ While I have had many servers running on it, everything from Debian to Windows, 
 
 .. toctree::
    :maxdepth: 2
+   :caption: Unix notes
+
+   unixNotes/virsh
+
+.. toctree::
+   :maxdepth: 2
    :caption: Other projects
  
    otherProjects/billboard   
