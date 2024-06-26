@@ -33,6 +33,7 @@ While I have had many servers running on it, everything from Debian to Windows, 
    :caption: Networking Articles
 
    networkArticles/timeout
+   networkArticles/fortigateSipAlg
    networkArticles/dhcp
    networkArticles/jncissp
    networkArticles/ubntbprvpn
