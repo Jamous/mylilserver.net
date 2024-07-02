@@ -58,6 +58,10 @@ Setup new VM
 #### VNC into machine and finish setup
 ``virsh domdisplay vm-name``
 
+| #### Setup virsh console 
+| ``systemctl enable serial-getty@ttyS0.service``
+| ``systemctl start serial-getty@ttyS0.service``
+
 Creating  a VM from an existing template
 ----------------------------------------
 | The steps for this are the same as above, however make these changes to the template

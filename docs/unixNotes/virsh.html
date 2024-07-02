@@ -170,6 +170,11 @@
 </div>
 <p>#### VNC into machine and finish setup
 <code class="docutils literal notranslate"><span class="pre">virsh</span> <span class="pre">domdisplay</span> <span class="pre">vm-name</span></code></p>
+<div class="line-block">
+<div class="line">#### Setup virsh console</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">systemctl</span> <span class="pre">enable</span> <span class="pre">serial-getty&#64;ttyS0.service</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">systemctl</span> <span class="pre">start</span> <span class="pre">serial-getty&#64;ttyS0.service</span></code></div>
+</div>
 </div>
 <div class="section" id="creating-a-vm-from-an-existing-template">
 <h2>Creating  a VM from an existing template<a class="headerlink" href="#creating-a-vm-from-an-existing-template" title="Permalink to this headline"></a></h2>
