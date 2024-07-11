@@ -58,7 +58,14 @@ While I have had many servers running on it, everything from Debian to Windows, 
 
 .. toctree::
    :maxdepth: 2
-   :caption: Unix notes
+   :caption: Unix Articles
+
+   unixArticles/windowsKVM
+   unixArticles/xnee
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Unix Notes
 
    unixNotes/virsh
 

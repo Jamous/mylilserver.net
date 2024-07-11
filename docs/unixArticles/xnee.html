@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Resume &mdash; MyLilServer.net  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>xnee/cnee mouse automation &mdash; MyLilServer.net  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -15,8 +15,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Automate logging into websites" href="../automation/loggerinner.html" />
-    <link rel="prev" title="MyLilServer.net" href="mylilserver.html" /> 
+    <link rel="next" title="Virsh notes" href="../unixNotes/virsh.html" />
+    <link rel="prev" title="Boot windows as KVM on serprate HDD" href="windowsKVM.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -35,10 +35,10 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption"><span class="caption-text">About Jamous</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="media.html">Media</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mylilserver.html">MyLilServer.net</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Resume</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/media.html">Media</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/mylilserver.html">MyLilServer.net</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/resume.html">Resume</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Automation</span></p>
 <ul>
@@ -68,9 +68,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../rnetworks/other.html">Other videos</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Unix Articles</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../unixArticles/windowsKVM.html">Boot windows as KVM on serprate HDD</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unixArticles/xnee.html">xnee/cnee mouse automation</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="windowsKVM.html">Boot windows as KVM on serprate HDD</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">xnee/cnee mouse automation</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Unix Notes</span></p>
 <ul>
@@ -95,9 +95,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Resume</li>
+      <li>xnee/cnee mouse automation</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/about/resume.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/unixArticles/xnee.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -105,87 +105,27 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="resume">
-<h1>Resume<a class="headerlink" href="#resume" title="Permalink to this headline"></a></h1>
-<img alt="../_images/small_suit.png" src="../_images/small_suit.png" />
-<p><strong>Summary</strong></p>
-<p>Jamous has been in the IT field academically for 4 years, and full time professionally for over 2. From his first linux machine, through designing, documenting, and supporting enterprise network solutions Jamous has always wanted to learn more beyond what is required. Armed with years of experience in networking design and implimentation, extensive knowledge of IPv4, IPv6, BGP, OSPF and many other fundamental protocols Jamous has the skills to resolve any problem.</p>
-<p><strong>Education</strong></p>
+  <div class="section" id="xnee-cnee-mouse-automation">
+<h1>xnee/cnee mouse automation<a class="headerlink" href="#xnee-cnee-mouse-automation" title="Permalink to this headline"></a></h1>
+<p>GNU Xnee/cnee is a program that can record and playback mouse and keyboard inputs in x11 environments. Keyboard playback is at the normal rate, however we can playback mouse inputs at faster rates.</p>
 <div class="line-block">
-<div class="line"><em>Virginia Tech</em>, Blacksburg, VA       -       in progres</div>
-<div class="line">Masters of Engineering in Computer Science</div>
+<div class="line">The example below plays the mouse input back at 4x the input speed.</div>
+<div class="line">Record mouse movements <code class="docutils literal notranslate"><span class="pre">cnee</span> <span class="pre">--record</span> <span class="pre">-o</span> <span class="pre">mouse_test</span> <span class="pre">--mouse</span></code></div>
+<div class="line">Playback mouse movements at 4x speed <code class="docutils literal notranslate"><span class="pre">cnee</span> <span class="pre">--replay</span> <span class="pre">-f</span> <span class="pre">mouse_test</span> <span class="pre">--speed-percent</span> <span class="pre">25</span></code></div>
 </div>
 <div class="line-block">
-<div class="line"><em>Radford University</em>, Radford, VA       -       Dec 2020</div>
-<div class="line">Bachelor of Science Degree in Computer Science and Technology</div>
-<div class="line">Concentration: Networking</div>
-<div class="line">GPA: 3.2</div>
+<div class="line">We can also record and play back keyboard movements, but they only run at input speed.</div>
+<div class="line">Record keyboard input <code class="docutils literal notranslate"><span class="pre">cnee</span> <span class="pre">--record</span> <span class="pre">-o</span> <span class="pre">keyboard_test</span></code></div>
+<div class="line">Playback keyboard input <code class="docutils literal notranslate"><span class="pre">cnee</span> <span class="pre">--replay</span> <span class="pre">-f</span> <span class="pre">keyboard_test</span></code></div>
 </div>
-<div class="line-block">
-<div class="line"><em>New River Community College</em>, Dublin, VA       -       May 2018</div>
-<div class="line">AA&amp;S Degree in Computer Science</div>
-<div class="line">GPA: 3.2</div>
-<div class="line">Honors: Dean’s List</div>
-</div>
-<dl class="simple">
-<dt><strong>Certifications</strong></dt><dd><ul class="simple">
-<li><p>Cisco CCNA</p></li>
-<li><p>Juniper JNCIS-SP</p></li>
-<li><p>Juniper JNCIA-Junos</p></li>
-</ul>
-</dd>
-</dl>
-<p><strong>Work Experience</strong></p>
-<div class="line-block">
-<div class="line"><em>Biz Net Technologies Inc</em>    - July 2021 - Present</div>
-<div class="line">Network Engineer</div>
-</div>
-<blockquote>
-<div><ul class="simple">
-<li><p>Maintain an ISP network</p></li>
-<li><p>Support fiber to the home (FTTH) clients</p></li>
-<li><p>Layout upgrade and maintance plans</p></li>
-</ul>
-</div></blockquote>
-<div class="line-block">
-<div class="line"><em>Sycom Technologies</em>       -       July 2019 - July 2021</div>
-<div class="line">Network Engineer</div>
-</div>
-<blockquote>
-<div><ul class="simple">
-<li><p>Work directly with clients to manage and repair internal corporate networks</p></li>
-<li><p>Build and troubleshoot multi-vendor networks</p></li>
-<li><p>Create Peer to Peer and client VPN connections</p></li>
-</ul>
-</div></blockquote>
-<div class="line-block">
-<div class="line"><em>Virginia Tech Corporate Research Center</em>       -       July 2019 – July 2021</div>
-<div class="line">Network Administrator</div>
-</div>
-<blockquote>
-<div><ul class="simple">
-<li><p>Manage multi 20+ node spanning tree network</p></li>
-<li><p>Maintain 40 Gb/s backbone</p></li>
-<li><p>Manage active data connections for over 120 companies</p></li>
-<li><p>Extensive use of Cisco Routing and switching on enterprise equipment</p></li>
-<li><p>Design and deployment of new networks and subnets</p></li>
-</ul>
-</div></blockquote>
-<dl class="simple">
-<dt><strong>Leadership and Engagement</strong></dt><dd><ul class="simple">
-<li><p>Eagle scout, Boy Scouts of America, Troop 720</p></li>
-<li><p>Alpha Phi Omega, National Service Fraternity, actively engaged in community service initiatives.</p></li>
-</ul>
-</dd>
-</dl>
 </div>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="mylilserver.html" class="btn btn-neutral float-left" title="MyLilServer.net" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../automation/loggerinner.html" class="btn btn-neutral float-right" title="Automate logging into websites" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="windowsKVM.html" class="btn btn-neutral float-left" title="Boot windows as KVM on serprate HDD" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../unixNotes/virsh.html" class="btn btn-neutral float-right" title="Virsh notes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
