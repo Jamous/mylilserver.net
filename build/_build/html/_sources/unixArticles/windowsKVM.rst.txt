@@ -7,6 +7,17 @@ Because there are two seperate boot partitions, we wont need to do anything spec
 
 Here my disk is named ``/dev/nvme0n1``
 
+We need to enable ipv4 and ipv6 forwarding. Uncomment these two lines in /etc/sysctl.conf ::
+
+ sudo nano /etc/sysctl.conf
+ net.ipv4.ip_forward=1
+ net.ipv6.conf.all.forwarding=1
+
+
+| Reload system config for this to take effect. 
+| ``sudo sysctl --system```
+
+
 We are going to setup a network bridge. Add this to ``/etc/network/interfaces``, then restart the service with ``sudo systemctl restart networking`` ::
 
   # The bridge interface

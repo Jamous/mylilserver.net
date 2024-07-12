@@ -111,6 +111,16 @@
 In my setup Windows 10 is installed on the factory m.2 mvne drive, with Debian 12 on a septate SSD. During the setup of Debian I removed the nmve drive to make sure each disk has its own uefi boot partition.
 Because there are two seperate boot partitions, we wont need to do anything special, we can just point the kvm to use the disk directly.</p>
 <p>Here my disk is named <code class="docutils literal notranslate"><span class="pre">/dev/nvme0n1</span></code></p>
+<p>We need to enable ipv4 and ipv6 forwarding. Uncomment these two lines in /etc/sysctl.conf</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">nano</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">sysctl</span><span class="o">.</span><span class="n">conf</span>
+<span class="n">net</span><span class="o">.</span><span class="n">ipv4</span><span class="o">.</span><span class="n">ip_forward</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">net</span><span class="o">.</span><span class="n">ipv6</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">all</span><span class="o">.</span><span class="n">forwarding</span><span class="o">=</span><span class="mi">1</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">Reload system config for this to take effect.</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">sysctl</span> <span class="pre">--system`</span></code></div>
+</div>
 <p>We are going to setup a network bridge. Add this to <code class="docutils literal notranslate"><span class="pre">/etc/network/interfaces</span></code>, then restart the service with <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">systemctl</span> <span class="pre">restart</span> <span class="pre">networking</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># The bridge interface</span>
 <span class="n">auto</span> <span class="n">br0</span>
@@ -281,7 +291,7 @@ Because there are two seperate boot partitions, we wont need to do anything spec
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Jul 11, 2024.
+      <span class="lastupdated">Last updated on Jul 12, 2024.
       </span></p>
   </div>
 
