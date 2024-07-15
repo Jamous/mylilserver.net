@@ -61,6 +61,7 @@ While I have had many servers running on it, everything from Debian to Windows, 
    :caption: Unix Articles
 
    unixArticles/windowsKVM
+   unixArticles/openvpn
    unixArticles/xnee
 
 .. toctree::
