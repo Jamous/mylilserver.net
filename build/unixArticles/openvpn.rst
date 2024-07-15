@@ -118,7 +118,7 @@ Setup Yealink OpenVPN client config
     client
     dev tun
     proto udp
-    remote 216.252.192.61 1194
+    remote 10.0.0.61 1194
     resolv-retry infinite
     nobind
     persist-key
