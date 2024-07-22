@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About &mdash; MyLilServer.net  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>HTTPS over SSH tunnels &mdash; MyLilServer.net  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -15,8 +15,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="GNS3 videos" href="GNS3.html" />
-    <link rel="prev" title="Ubiquiti Edgerouter notes" href="../networkNotes/ubiquiti.html" /> 
+    <link rel="next" title="IPv6 SLAAC and DHCP - Juniper" href="dhcp.html" />
+    <link rel="prev" title="Disabling SIP-ALG on FortiOS" href="fortigateSipAlg.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,13 +46,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../automation/ssh.html">Network automation via SSH</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Networking Articles</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../networkArticles/timeout.html">Cisco AnyConnect idle timeout</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../networkArticles/fortigateSipAlg.html">Disabling SIP-ALG on FortiOS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../networkArticles/sshtunnel.html">HTTPS over SSH tunnels</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../networkArticles/dhcp.html">IPv6 SLAAC and DHCP - Juniper</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../networkArticles/jncissp.html">JNCIS-SP Study Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../networkArticles/ubntbprvpn.html">Ubiquiti Edgerouter VPN with Policy Based routing</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="timeout.html">Cisco AnyConnect idle timeout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fortigateSipAlg.html">Disabling SIP-ALG on FortiOS</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">HTTPS over SSH tunnels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dhcp.html">IPv6 SLAAC and DHCP - Juniper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jncissp.html">JNCIS-SP Study Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ubntbprvpn.html">Ubiquiti Edgerouter VPN with Policy Based routing</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Network vendor notes</span></p>
 <ul>
@@ -62,11 +62,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../networkNotes/ubiquiti.html">Ubiquiti Edgerouter notes</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Regular Networks</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="GNS3.html">GNS3 videos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Juniper.html">Juniper videos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="other.html">Other videos</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rnetworks/rnetworks.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rnetworks/GNS3.html">GNS3 videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rnetworks/Juniper.html">Juniper videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rnetworks/other.html">Other videos</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Unix Articles</span></p>
 <ul>
@@ -97,9 +97,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>About</li>
+      <li>HTTPS over SSH tunnels</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/rnetworks/rnetworks.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/networkArticles/sshtunnel.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -107,18 +107,34 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="about">
-<h1>About<a class="headerlink" href="#about" title="Permalink to this headline"></a></h1>
-<p>Regular Networks is a project by Jamous Bitrick, a Network Engineer with Biz Net Technologies Inc and graduate student in Virginia Tech’s Masters of Engineering (MEng) program. The goal of this project is to further my understanding of the technology and share what I have learned</p>
-<p>Other projects can be viewed at <a class="reference external" href="https://mylilserver.net">mylilserver.net</a> and on <a class="reference external" href="https://www.youtube.com/channel/UC7_Vc_NlRBzThtb9Uy8irtw">youtube</a></p>
+  <div class="section" id="https-over-ssh-tunnels">
+<h1>HTTPS over SSH tunnels<a class="headerlink" href="#https-over-ssh-tunnels" title="Permalink to this headline"></a></h1>
+<p>Managing devices at remote sites without a VPN can be tricky. I frequently find myself needing to access devices behind a remote router, in most cases a Ubiquite Edgerouter or other unix based router.
+If both devices support SSH this is simple, SSH to the router then SSH to the end device.
+Sometimes the end device only supports HTTP or other obscure management protocols, in which case we look to SSH Tunneling.</p>
+<div class="line-block">
+<div class="line">SSH Tunneling allows us to port forward across a ssh tunnel. Here is the command, feel free to modify as you see fit.</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">-L</span> <span class="pre">[local</span> <span class="pre">port]:[remote</span> <span class="pre">device]:[remote</span> <span class="pre">device</span> <span class="pre">port]</span> <span class="pre">[username]&#64;[remote</span> <span class="pre">ssh</span> <span class="pre">tunnel</span> <span class="pre">host]</span></code></div>
+</div>
+<div class="line-block">
+<div class="line">For example, lets say we have a remote router, 172.16.251.2, with a device behind it that can only be managed via https at 10.16.251.11. Lets forward that https management port back across the ssh tunnel.</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">-L</span> <span class="pre">8443:10.16.251.11:443</span> <span class="pre">admin&#64;172.16.251.2</span></code></div>
+<div class="line">From this point we can access the web management through our local web browser</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">https://127.0.0.1:8443</span></code></div>
+</div>
+<div class="line-block">
+<div class="line">Here is the same example, just with http instead of https.</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">-L</span> <span class="pre">8080:10.16.251.11:80</span> <span class="pre">admin&#64;172.16.251.2</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:8080</span></code></div>
+</div>
 </div>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../networkNotes/ubiquiti.html" class="btn btn-neutral float-left" title="Ubiquiti Edgerouter notes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="GNS3.html" class="btn btn-neutral float-right" title="GNS3 videos" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="fortigateSipAlg.html" class="btn btn-neutral float-left" title="Disabling SIP-ALG on FortiOS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="dhcp.html" class="btn btn-neutral float-right" title="IPv6 SLAAC and DHCP - Juniper" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
