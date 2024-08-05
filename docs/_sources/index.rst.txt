@@ -15,21 +15,6 @@ While I have had many servers running on it, everything from Debian to Windows, 
 
 .. toctree::
    :maxdepth: 2
-   :caption: About Jamous
-   
-   about/media
-   about/mylilserver
-   about/resume
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Automation
-
-   automation/loggerinner
-   automation/ssh
-
-.. toctree::
-   :maxdepth: 2
    :caption: Networking Articles
 
    networkArticles/timeout
@@ -38,24 +23,6 @@ While I have had many servers running on it, everything from Debian to Windows, 
    networkArticles/dhcp
    networkArticles/jncissp
    networkArticles/ubntbprvpn
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Network vendor notes
-
-   networkNotes/calix
-   networkNotes/fs
-   networkNotes/mikrotik
-   networkNotes/ubiquiti
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Regular Networks
- 
-   rnetworks/rnetworks
-   rnetworks/GNS3
-   rnetworks/Juniper
-   rnetworks/other
 
 .. toctree::
    :maxdepth: 2
@@ -68,12 +35,25 @@ While I have had many servers running on it, everything from Debian to Windows, 
 
 .. toctree::
    :maxdepth: 2
+   :caption: Network vendor notes
+
+   networkNotes/calix
+   networkNotes/fs
+   networkNotes/mikrotik
+   networkNotes/ubiquiti
+
+.. toctree::
+   :maxdepth: 2
    :caption: Unix Notes
 
+   unixNotes/thirdlane
    unixNotes/virsh
 
 .. toctree::
    :maxdepth: 2
    :caption: Other projects
- 
+
+   otherProjects/media
+   otherProjects/mylilserver
    otherProjects/billboard   
+   otherProjects/resume 
