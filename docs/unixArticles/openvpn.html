@@ -1,21 +1,27 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OpenVPN on Thirdlane PBX server for Yealink phones &mdash; MyLilServer.net  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <title>OpenVPN on Thirdlane PBX server for Yealink phones &mdash; MyLilServer.net  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="xnee/cnee mouse automation" href="xnee.html" />
+    <link rel="next" title="Starting Iperf3 remotely using xinitd" href="iperfxinitd.html" />
     <link rel="prev" title="Boot windows as KVM on serprate HDD" href="windowsKVM.html" /> 
 </head>
 
@@ -24,28 +30,32 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> MyLilServer.net
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MyLilServer.net
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">About Jamous</span></p>
+              <p class="caption" role="heading"><span class="caption-text">About Jamous</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../about/media.html">Media</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about/mylilserver.html">MyLilServer.net</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about/resume.html">Resume</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Automation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Automation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../automation/loggerinner.html">Automate logging into websites</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../automation/ssh.html">Network automation via SSH</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Networking Articles</span></p>
+<p class="caption" role="heading"><span class="caption-text">Networking Articles</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../networkArticles/timeout.html">Cisco AnyConnect idle timeout</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../networkArticles/fortigateSipAlg.html">Disabling SIP-ALG on FortiOS</a></li>
@@ -54,21 +64,21 @@
 <li class="toctree-l1"><a class="reference internal" href="../networkArticles/jncissp.html">JNCIS-SP Study Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../networkArticles/ubntbprvpn.html">Ubiquiti Edgerouter VPN with Policy Based routing</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Network vendor notes</span></p>
+<p class="caption" role="heading"><span class="caption-text">Network vendor notes</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../networkNotes/calix.html">Calix notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../networkNotes/fs.html">FS switch notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../networkNotes/mikrotik.html">Mirkotik notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../networkNotes/ubiquiti.html">Ubiquiti Edgerouter notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Regular Networks</span></p>
+<p class="caption" role="heading"><span class="caption-text">Regular Networks</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rnetworks/rnetworks.html">About</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rnetworks/GNS3.html">GNS3 videos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rnetworks/Juniper.html">Juniper videos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rnetworks/other.html">Other videos</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Unix Articles</span></p>
+<p class="caption" role="heading"><span class="caption-text">Unix Articles</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="windowsKVM.html">Boot windows as KVM on serprate HDD</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">OpenVPN on Thirdlane PBX server for Yealink phones</a><ul>
@@ -78,13 +88,14 @@
 <li class="toctree-l2"><a class="reference internal" href="#setup-yealink-openvpn-client-config">Setup Yealink OpenVPN client config</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="iperfxinitd.html">Starting Iperf3 remotely using xinitd</a></li>
 <li class="toctree-l1"><a class="reference internal" href="xnee.html">xnee/cnee mouse automation</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Unix Notes</span></p>
+<p class="caption" role="heading"><span class="caption-text">Unix Notes</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../unixNotes/virsh.html">Virsh notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Other projects</span></p>
+<p class="caption" role="heading"><span class="caption-text">Other projects</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../otherProjects/billboard.html">Raspbery Pi Digital Billboard</a></li>
 </ul>
@@ -102,8 +113,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>OpenVPN on Thirdlane PBX server for Yealink phones</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">OpenVPN on Thirdlane PBX server for Yealink phones</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/unixArticles/openvpn.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -113,11 +124,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="openvpn-on-thirdlane-pbx-server-for-yealink-phones">
-<h1>OpenVPN on Thirdlane PBX server for Yealink phones<a class="headerlink" href="#openvpn-on-thirdlane-pbx-server-for-yealink-phones" title="Permalink to this headline"></a></h1>
+  <section id="openvpn-on-thirdlane-pbx-server-for-yealink-phones">
+<h1>OpenVPN on Thirdlane PBX server for Yealink phones<a class="headerlink" href="#openvpn-on-thirdlane-pbx-server-for-yealink-phones" title="Link to this heading"></a></h1>
 <p>In this article we are going to install OpenVPN on a Thirdlane PBX server. The server will be Alma Linux 8, the perfered distribution for Thirdlane PBX at the time of writing this article.</p>
-<div class="section" id="installing-and-configuring-openvpn">
-<h2>Installing and configuring OpenVPN<a class="headerlink" href="#installing-and-configuring-openvpn" title="Permalink to this headline"></a></h2>
+<section id="installing-and-configuring-openvpn">
+<h2>Installing and configuring OpenVPN<a class="headerlink" href="#installing-and-configuring-openvpn" title="Link to this heading"></a></h2>
 <p>## Install and enable EPEL, then install openvpn and cd to /etc/openvpn/server. Check update will just update the repos without installing packages, you can substitute dnf update if you like.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dnf</span> <span class="n">install</span> <span class="n">epel</span><span class="o">-</span><span class="n">release</span> <span class="o">-</span><span class="n">y</span>
 <span class="n">dnf</span> <span class="n">check</span><span class="o">-</span><span class="n">update</span>
@@ -126,20 +137,20 @@
 </pre></div>
 </div>
 <p>## Setup new PKI and generate dh key pair and root ca cert. build-ca requires a password, you will need this to interact with the CA, keep it in a secure place.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">easy</span><span class="o">-</span><span class="n">rsa</span><span class="o">/</span><span class="mf">3.0</span><span class="o">.</span><span class="mi">8</span><span class="o">/</span><span class="n">easyrsa</span> <span class="n">init</span><span class="o">-</span><span class="n">pki</span>
-<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">easy</span><span class="o">-</span><span class="n">rsa</span><span class="o">/</span><span class="mf">3.0</span><span class="o">.</span><span class="mi">8</span><span class="o">/</span><span class="n">easyrsa</span> <span class="n">gen</span><span class="o">-</span><span class="n">dh</span>
-<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">easy</span><span class="o">-</span><span class="n">rsa</span><span class="o">/</span><span class="mf">3.0</span><span class="o">.</span><span class="mi">8</span><span class="o">/</span><span class="n">easyrsa</span> <span class="n">build</span><span class="o">-</span><span class="n">ca</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">easy</span><span class="o">-</span><span class="n">rsa</span><span class="o">/</span><span class="mf">3.0.8</span><span class="o">/</span><span class="n">easyrsa</span> <span class="n">init</span><span class="o">-</span><span class="n">pki</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">easy</span><span class="o">-</span><span class="n">rsa</span><span class="o">/</span><span class="mf">3.0.8</span><span class="o">/</span><span class="n">easyrsa</span> <span class="n">gen</span><span class="o">-</span><span class="n">dh</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">easy</span><span class="o">-</span><span class="n">rsa</span><span class="o">/</span><span class="mf">3.0.8</span><span class="o">/</span><span class="n">easyrsa</span> <span class="n">build</span><span class="o">-</span><span class="n">ca</span>
 </pre></div>
 </div>
 <p>## Generate server and client certs and keys. These commands are all interactive and will need to be entered one at a time.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">easy</span><span class="o">-</span><span class="n">rsa</span><span class="o">/</span><span class="mf">3.0</span><span class="o">.</span><span class="mi">8</span><span class="o">/</span><span class="n">easyrsa</span> <span class="n">gen</span><span class="o">-</span><span class="n">req</span> <span class="n">server</span> <span class="n">nopass</span>
-<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">easy</span><span class="o">-</span><span class="n">rsa</span><span class="o">/</span><span class="mf">3.0</span><span class="o">.</span><span class="mi">8</span><span class="o">/</span><span class="n">easyrsa</span> <span class="n">sign</span><span class="o">-</span><span class="n">req</span> <span class="n">server</span> <span class="n">server</span>
-<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">easy</span><span class="o">-</span><span class="n">rsa</span><span class="o">/</span><span class="mf">3.0</span><span class="o">.</span><span class="mi">8</span><span class="o">/</span><span class="n">easyrsa</span> <span class="n">gen</span><span class="o">-</span><span class="n">req</span> <span class="n">client</span> <span class="n">nopass</span>
-<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">easy</span><span class="o">-</span><span class="n">rsa</span><span class="o">/</span><span class="mf">3.0</span><span class="o">.</span><span class="mi">8</span><span class="o">/</span><span class="n">easyrsa</span> <span class="n">sign</span><span class="o">-</span><span class="n">req</span> <span class="n">client</span> <span class="n">client</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">easy</span><span class="o">-</span><span class="n">rsa</span><span class="o">/</span><span class="mf">3.0.8</span><span class="o">/</span><span class="n">easyrsa</span> <span class="n">gen</span><span class="o">-</span><span class="n">req</span> <span class="n">server</span> <span class="n">nopass</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">easy</span><span class="o">-</span><span class="n">rsa</span><span class="o">/</span><span class="mf">3.0.8</span><span class="o">/</span><span class="n">easyrsa</span> <span class="n">sign</span><span class="o">-</span><span class="n">req</span> <span class="n">server</span> <span class="n">server</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">easy</span><span class="o">-</span><span class="n">rsa</span><span class="o">/</span><span class="mf">3.0.8</span><span class="o">/</span><span class="n">easyrsa</span> <span class="n">gen</span><span class="o">-</span><span class="n">req</span> <span class="n">client</span> <span class="n">nopass</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">easy</span><span class="o">-</span><span class="n">rsa</span><span class="o">/</span><span class="mf">3.0.8</span><span class="o">/</span><span class="n">easyrsa</span> <span class="n">sign</span><span class="o">-</span><span class="n">req</span> <span class="n">client</span> <span class="n">client</span>
 </pre></div>
 </div>
 <p>## Configure /etc/openvpn/server/server.conf as follows, you can change the server ip range.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">local</span> <span class="mf">10.0</span><span class="o">.</span><span class="mf">0.61</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">local</span> <span class="mf">10.0.0.61</span>
 <span class="n">port</span> <span class="mi">1194</span>
 <span class="n">proto</span> <span class="n">udp</span>
 <span class="n">dev</span> <span class="n">tun</span>
@@ -149,7 +160,7 @@
 <span class="n">cert</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">openvpn</span><span class="o">/</span><span class="n">server</span><span class="o">/</span><span class="n">pki</span><span class="o">/</span><span class="n">issued</span><span class="o">/</span><span class="n">server</span><span class="o">.</span><span class="n">crt</span>
 <span class="n">key</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">openvpn</span><span class="o">/</span><span class="n">server</span><span class="o">/</span><span class="n">pki</span><span class="o">/</span><span class="n">private</span><span class="o">/</span><span class="n">server</span><span class="o">.</span><span class="n">key</span>
 <span class="n">dh</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">openvpn</span><span class="o">/</span><span class="n">server</span><span class="o">/</span><span class="n">pki</span><span class="o">/</span><span class="n">dh</span><span class="o">.</span><span class="n">pem</span>
-<span class="n">server</span> <span class="mf">10.8</span><span class="o">.</span><span class="mf">0.0</span> <span class="mf">255.255</span><span class="o">.</span><span class="mf">255.0</span>
+<span class="n">server</span> <span class="mf">10.8.0.0</span> <span class="mf">255.255.255.0</span>
 <span class="n">ifconfig</span><span class="o">-</span><span class="n">pool</span><span class="o">-</span><span class="n">persist</span> <span class="n">ipp</span><span class="o">.</span><span class="n">txt</span>
 <span class="n">client</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">client</span>
 <span class="n">keepalive</span> <span class="mi">10</span> <span class="mi">120</span>
@@ -158,7 +169,7 @@
 <span class="n">status</span> <span class="n">openvpn</span><span class="o">-</span><span class="n">status</span><span class="o">.</span><span class="n">log</span>
 <span class="n">verb</span> <span class="mi">3</span>
 <span class="n">tls</span><span class="o">-</span><span class="n">version</span><span class="o">-</span><span class="nb">min</span> <span class="mf">1.0</span>
-<span class="n">management</span> <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span> <span class="mi">5555</span>
+<span class="n">management</span> <span class="mf">127.0.0.1</span> <span class="mi">5555</span>
 <span class="n">duplicate</span><span class="o">-</span><span class="n">cn</span>
 </pre></div>
 </div>
@@ -171,9 +182,9 @@
 <span class="n">systemctl</span> <span class="n">status</span> <span class="n">openvpn</span><span class="o">-</span><span class="n">server</span><span class="nd">@server</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="installing-and-configuring-dnsmask">
-<h2>Installing and configuring dnsmask<a class="headerlink" href="#installing-and-configuring-dnsmask" title="Permalink to this headline"></a></h2>
+</section>
+<section id="installing-and-configuring-dnsmask">
+<h2>Installing and configuring dnsmask<a class="headerlink" href="#installing-and-configuring-dnsmask" title="Link to this heading"></a></h2>
 <div class="line-block">
 <div class="line">## We will setup a dnsmask server on the PBX server to push the new DNS address to clients.</div>
 <div class="line">## Install dnsmasq</div>
@@ -184,7 +195,7 @@
 </div>
 <p>## Add this line to the end of /etc/dnsmasq.conf. This will be the dns record we push to the phones. You can add multiple records here.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># DNS entry to redirect PBX traffic</span>
-<span class="n">address</span><span class="o">=/</span><span class="n">pbx2</span><span class="o">.</span><span class="n">bnt</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="mf">10.192</span><span class="o">.</span><span class="mf">61.1</span>
+<span class="n">address</span><span class="o">=/</span><span class="n">pbx2</span><span class="o">.</span><span class="n">bnt</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="mf">10.192.61.1</span>
 </pre></div>
 </div>
 <p>## Start and enable dnsmask service</p>
@@ -192,9 +203,9 @@
 <span class="n">systemctl</span> <span class="n">status</span> <span class="n">dnsmasq</span><span class="o">.</span><span class="n">service</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="open-up-iptables-firewalld">
-<h2>Open up iptables firewalld<a class="headerlink" href="#open-up-iptables-firewalld" title="Permalink to this headline"></a></h2>
+</section>
+<section id="open-up-iptables-firewalld">
+<h2>Open up iptables firewalld<a class="headerlink" href="#open-up-iptables-firewalld" title="Link to this heading"></a></h2>
 <p>## Alma linux 8 uses firewalld by default, thirdlane disables this in favor of iptables. Lets make a backup of the current iptables and then edit the file.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">sysconfig</span><span class="o">/</span><span class="n">iptables</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">sysconfig</span><span class="o">/</span><span class="n">iptables</span><span class="o">.</span><span class="n">back</span>
 <span class="n">nano</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">sysconfig</span><span class="o">/</span><span class="n">iptables</span>
@@ -203,7 +214,7 @@
 <p>## Add these lines near the end of the file, before the final commit</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Allow connections to Openvpn and dns ports</span>
 <span class="o">-</span><span class="n">A</span> <span class="n">INPUT</span> <span class="o">-</span><span class="n">p</span> <span class="n">udp</span> <span class="o">--</span><span class="n">dport</span> <span class="mi">1194</span> <span class="o">-</span><span class="n">j</span> <span class="n">ACCEPT</span>
-<span class="o">-</span><span class="n">A</span> <span class="n">INPUT</span> <span class="o">-</span><span class="n">p</span> <span class="n">udp</span> <span class="o">-</span><span class="n">s</span> <span class="mf">10.192</span><span class="o">.</span><span class="mf">61.0</span><span class="o">/</span><span class="mi">24</span> <span class="o">--</span><span class="n">dport</span> <span class="mi">53</span> <span class="o">-</span><span class="n">j</span> <span class="n">ACCEPT</span>
+<span class="o">-</span><span class="n">A</span> <span class="n">INPUT</span> <span class="o">-</span><span class="n">p</span> <span class="n">udp</span> <span class="o">-</span><span class="n">s</span> <span class="mf">10.192.61.0</span><span class="o">/</span><span class="mi">24</span> <span class="o">--</span><span class="n">dport</span> <span class="mi">53</span> <span class="o">-</span><span class="n">j</span> <span class="n">ACCEPT</span>
 </pre></div>
 </div>
 <p>## Restart iptables and verify changes</p>
@@ -211,9 +222,9 @@
 <span class="n">iptables</span> <span class="o">-</span><span class="n">L</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="setup-yealink-openvpn-client-config">
-<h2>Setup Yealink OpenVPN client config<a class="headerlink" href="#setup-yealink-openvpn-client-config" title="Permalink to this headline"></a></h2>
+</section>
+<section id="setup-yealink-openvpn-client-config">
+<h2>Setup Yealink OpenVPN client config<a class="headerlink" href="#setup-yealink-openvpn-client-config" title="Link to this heading"></a></h2>
 <p>## Setup the directory for client config. The folder structure of this directory is very important. The config file must also be called vpn.cnf.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">openvpn</span><span class="o">/</span><span class="n">server</span><span class="o">/</span>
 <span class="n">mkdir</span> <span class="n">client</span>
@@ -231,7 +242,7 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">client</span>
 <span class="n">dev</span> <span class="n">tun</span>
 <span class="n">proto</span> <span class="n">udp</span>
-<span class="n">remote</span> <span class="mf">10.0</span><span class="o">.</span><span class="mf">0.61</span> <span class="mi">1194</span>
+<span class="n">remote</span> <span class="mf">10.0.0.61</span> <span class="mi">1194</span>
 <span class="n">resolv</span><span class="o">-</span><span class="n">retry</span> <span class="n">infinite</span>
 <span class="n">nobind</span>
 <span class="n">persist</span><span class="o">-</span><span class="n">key</span>
@@ -255,22 +266,22 @@
 </div>
 <p>## To setup the VPN on the pnone, navigate to Network, advanced, enable VPN and set to OpenVPN if available. Phones without the OpenVPN option use it by default. Browse for the openvpn.tar file and upload. The phone may prompt you to reboot, select yes. Save the config and reboot the phone (Settings - Upgrade - Reboot).</p>
 <p>This has been tested with Yealink t27p, t27g, and t53w phones.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="windowsKVM.html" class="btn btn-neutral float-left" title="Boot windows as KVM on serprate HDD" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="xnee.html" class="btn btn-neutral float-right" title="xnee/cnee mouse automation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="iperfxinitd.html" class="btn btn-neutral float-right" title="Starting Iperf3 remotely using xinitd" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Jul 22, 2024.
+      <span class="lastupdated">Last updated on Aug 05, 2024.
       </span></p>
   </div>
 

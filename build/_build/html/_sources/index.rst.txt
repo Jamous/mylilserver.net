@@ -63,6 +63,7 @@ While I have had many servers running on it, everything from Debian to Windows, 
 
    unixArticles/windowsKVM
    unixArticles/openvpn
+   unixArticles/iperfxinitd
    unixArticles/xnee
 
 .. toctree::

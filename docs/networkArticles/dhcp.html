@@ -1,17 +1,23 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IPv6 SLAAC and DHCP - Juniper &mdash; MyLilServer.net  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <title>IPv6 SLAAC and DHCP - Juniper &mdash; MyLilServer.net  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -24,28 +30,32 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> MyLilServer.net
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MyLilServer.net
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">About Jamous</span></p>
+              <p class="caption" role="heading"><span class="caption-text">About Jamous</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../about/media.html">Media</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about/mylilserver.html">MyLilServer.net</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about/resume.html">Resume</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Automation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Automation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../automation/loggerinner.html">Automate logging into websites</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../automation/ssh.html">Network automation via SSH</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Networking Articles</span></p>
+<p class="caption" role="heading"><span class="caption-text">Networking Articles</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="timeout.html">Cisco AnyConnect idle timeout</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fortigateSipAlg.html">Disabling SIP-ALG on FortiOS</a></li>
@@ -67,31 +77,32 @@
 <li class="toctree-l1"><a class="reference internal" href="jncissp.html">JNCIS-SP Study Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ubntbprvpn.html">Ubiquiti Edgerouter VPN with Policy Based routing</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Network vendor notes</span></p>
+<p class="caption" role="heading"><span class="caption-text">Network vendor notes</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../networkNotes/calix.html">Calix notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../networkNotes/fs.html">FS switch notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../networkNotes/mikrotik.html">Mirkotik notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../networkNotes/ubiquiti.html">Ubiquiti Edgerouter notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Regular Networks</span></p>
+<p class="caption" role="heading"><span class="caption-text">Regular Networks</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rnetworks/rnetworks.html">About</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rnetworks/GNS3.html">GNS3 videos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rnetworks/Juniper.html">Juniper videos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rnetworks/other.html">Other videos</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Unix Articles</span></p>
+<p class="caption" role="heading"><span class="caption-text">Unix Articles</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../unixArticles/windowsKVM.html">Boot windows as KVM on serprate HDD</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../unixArticles/openvpn.html">OpenVPN on Thirdlane PBX server for Yealink phones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unixArticles/iperfxinitd.html">Starting Iperf3 remotely using xinitd</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../unixArticles/xnee.html">xnee/cnee mouse automation</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Unix Notes</span></p>
+<p class="caption" role="heading"><span class="caption-text">Unix Notes</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../unixNotes/virsh.html">Virsh notes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Other projects</span></p>
+<p class="caption" role="heading"><span class="caption-text">Other projects</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../otherProjects/billboard.html">Raspbery Pi Digital Billboard</a></li>
 </ul>
@@ -109,8 +120,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>IPv6 SLAAC and DHCP - Juniper</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">IPv6 SLAAC and DHCP - Juniper</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/networkArticles/dhcp.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -120,10 +131,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="ipv6-slaac-and-dhcp-juniper">
-<h1>IPv6 SLAAC and DHCP - Juniper<a class="headerlink" href="#ipv6-slaac-and-dhcp-juniper" title="Permalink to this headline"></a></h1>
-<div class="section" id="types-of-ipv6-addresses-in-windows-10">
-<h2>Types of IPv6 addresses in Windows 10<a class="headerlink" href="#types-of-ipv6-addresses-in-windows-10" title="Permalink to this headline"></a></h2>
+  <section id="ipv6-slaac-and-dhcp-juniper">
+<h1>IPv6 SLAAC and DHCP - Juniper<a class="headerlink" href="#ipv6-slaac-and-dhcp-juniper" title="Link to this heading"></a></h1>
+<section id="types-of-ipv6-addresses-in-windows-10">
+<h2>Types of IPv6 addresses in Windows 10<a class="headerlink" href="#types-of-ipv6-addresses-in-windows-10" title="Link to this heading"></a></h2>
 <blockquote>
 <div><ul class="simple">
 <li><dl class="simple">
@@ -173,9 +184,9 @@
 </ul>
 </div></blockquote>
 <img alt="../_images/windows_addresses_1.png" src="../_images/windows_addresses_1.png" />
-</div>
-<div class="section" id="the-process-of-addressing-an-ipv6-node">
-<h2>The process of addressing an IPv6 node<a class="headerlink" href="#the-process-of-addressing-an-ipv6-node" title="Permalink to this headline"></a></h2>
+</section>
+<section id="the-process-of-addressing-an-ipv6-node">
+<h2>The process of addressing an IPv6 node<a class="headerlink" href="#the-process-of-addressing-an-ipv6-node" title="Link to this heading"></a></h2>
 <blockquote>
 <div><ol class="arabic simple">
 <li><p>Once connected, a new node creates a Link Local address for neighbor discovery</p></li>
@@ -216,9 +227,9 @@
 <li><p>From this point the node will finish autoconfiguring using either SLAAC or DHCPv6</p></li>
 </ol>
 </div></blockquote>
-</div>
-<div class="section" id="types-of-stateless-address-autoconfiguration-slaac">
-<h2>Types of Stateless Address Autoconfiguration (SLAAC)<a class="headerlink" href="#types-of-stateless-address-autoconfiguration-slaac" title="Permalink to this headline"></a></h2>
+</section>
+<section id="types-of-stateless-address-autoconfiguration-slaac">
+<h2>Types of Stateless Address Autoconfiguration (SLAAC)<a class="headerlink" href="#types-of-stateless-address-autoconfiguration-slaac" title="Link to this heading"></a></h2>
 <blockquote>
 <div><ul class="simple">
 <li><dl class="simple">
@@ -244,9 +255,9 @@
 </li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="ipv6-solicited-node-multicast-addresses">
-<h2>IPv6 solicited-node multicast addresses<a class="headerlink" href="#ipv6-solicited-node-multicast-addresses" title="Permalink to this headline"></a></h2>
+</section>
+<section id="ipv6-solicited-node-multicast-addresses">
+<h2>IPv6 solicited-node multicast addresses<a class="headerlink" href="#ipv6-solicited-node-multicast-addresses" title="Link to this heading"></a></h2>
 <blockquote>
 <div><ul class="simple">
 <li><dl class="simple">
@@ -267,9 +278,9 @@
 </ul>
 </div></blockquote>
 <img alt="../_images/table_1.png" src="../_images/table_1.png" />
-</div>
-<div class="section" id="router-advertisement">
-<h2>Router Advertisement<a class="headerlink" href="#router-advertisement" title="Permalink to this headline"></a></h2>
+</section>
+<section id="router-advertisement">
+<h2>Router Advertisement<a class="headerlink" href="#router-advertisement" title="Link to this heading"></a></h2>
 <blockquote>
 <div><ul class="simple">
 <li><dl class="simple">
@@ -319,9 +330,9 @@
 </ul>
 </div></blockquote>
 <img alt="../_images/RA_2.png" src="../_images/RA_2.png" />
-</div>
-<div class="section" id="configuring-static-ipv6-addresses">
-<h2>Configuring static IPv6 addresses<a class="headerlink" href="#configuring-static-ipv6-addresses" title="Permalink to this headline"></a></h2>
+</section>
+<section id="configuring-static-ipv6-addresses">
+<h2>Configuring static IPv6 addresses<a class="headerlink" href="#configuring-static-ipv6-addresses" title="Link to this heading"></a></h2>
 <blockquote>
 <div><ul class="simple">
 <li><p>We can configure static IP address in IPv6 just like in IPv4, the only consideration is the top 128 addresses in a /64 subnet are reserved anycast addresses.</p></li>
@@ -354,7 +365,7 @@ This setup is fairly straightforward, you will need too:</p>
     <span class="n">ge</span><span class="o">-</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">1</span> <span class="p">{</span>
         <span class="n">unit</span> <span class="mi">0</span> <span class="p">{</span>
             <span class="n">family</span> <span class="n">inet</span> <span class="p">{</span>
-                <span class="n">address</span> <span class="mf">10.0</span><span class="o">.</span><span class="mf">0.1</span><span class="o">/</span><span class="mi">24</span><span class="p">;</span>
+                <span class="n">address</span> <span class="mf">10.0.0.1</span><span class="o">/</span><span class="mi">24</span><span class="p">;</span>
             <span class="p">}</span>
             <span class="n">family</span> <span class="n">inet6</span> <span class="p">{</span>
                 <span class="n">address</span> <span class="mi">2001</span><span class="p">:</span><span class="n">db8</span><span class="p">::</span><span class="mi">1</span><span class="o">/</span><span class="mi">64</span><span class="p">;</span>
@@ -370,9 +381,9 @@ This setup is fairly straightforward, you will need too:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="configure-stateful-autoconfiguration-with-windows-dhcpv6-in-juniper">
-<h2>Configure stateful autoconfiguration with Windows DHCPv6 in Juniper<a class="headerlink" href="#configure-stateful-autoconfiguration-with-windows-dhcpv6-in-juniper" title="Permalink to this headline"></a></h2>
+</section>
+<section id="configure-stateful-autoconfiguration-with-windows-dhcpv6-in-juniper">
+<h2>Configure stateful autoconfiguration with Windows DHCPv6 in Juniper<a class="headerlink" href="#configure-stateful-autoconfiguration-with-windows-dhcpv6-in-juniper" title="Link to this heading"></a></h2>
 <blockquote>
 <div><ul class="simple">
 <li><dl class="simple">
@@ -447,9 +458,9 @@ This setup is fairly straightforward, you will need too:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="lab-setup">
-<h2>Lab setup<a class="headerlink" href="#lab-setup" title="Permalink to this headline"></a></h2>
+</section>
+<section id="lab-setup">
+<h2>Lab setup<a class="headerlink" href="#lab-setup" title="Link to this heading"></a></h2>
 <dl class="simple">
 <dt>Everything in this document was tested and verified working in a GNS3 environment.</dt><dd><ul class="simple">
 <li><p>You can view a recorded walkthrough of this lab here: <a class="reference external" href="https://www.youtube.com/watch?v=vFBpYX2VE0A">https://www.youtube.com/watch?v=vFBpYX2VE0A</a></p></li>
@@ -491,10 +502,10 @@ This setup is fairly straightforward, you will need too:</p>
 <img alt="../_images/lab_7.png" src="../_images/lab_7.png" />
 <img alt="../_images/lab_8.png" src="../_images/lab_8.png" />
 <p>Juniper set commands</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">interfaces</span> <span class="n">ge</span><span class="o">-</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">1</span> <span class="n">unit</span> <span class="mi">0</span> <span class="n">family</span> <span class="n">inet</span> <span class="n">address</span> <span class="mf">10.0</span><span class="o">.</span><span class="mf">0.1</span><span class="o">/</span><span class="mi">24</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">interfaces</span> <span class="n">ge</span><span class="o">-</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">1</span> <span class="n">unit</span> <span class="mi">0</span> <span class="n">family</span> <span class="n">inet</span> <span class="n">address</span> <span class="mf">10.0.0.1</span><span class="o">/</span><span class="mi">24</span>
 <span class="nb">set</span> <span class="n">interfaces</span> <span class="n">ge</span><span class="o">-</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">1</span> <span class="n">unit</span> <span class="mi">0</span> <span class="n">family</span> <span class="n">inet6</span> <span class="n">address</span> <span class="mi">2001</span><span class="p">:</span><span class="n">db8</span><span class="p">::</span><span class="mi">1</span><span class="o">/</span><span class="mi">64</span>
 <span class="nb">set</span> <span class="n">interfaces</span> <span class="n">ge</span><span class="o">-</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">2</span> <span class="n">unit</span> <span class="mi">0</span> <span class="n">family</span> <span class="n">inet6</span> <span class="n">address</span> <span class="mi">2002</span><span class="p">:</span><span class="n">db8</span><span class="p">::</span><span class="mi">1</span><span class="o">/</span><span class="mi">64</span>
-<span class="nb">set</span> <span class="n">interfaces</span> <span class="n">ge</span><span class="o">-</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">3</span> <span class="n">unit</span> <span class="mi">0</span> <span class="n">family</span> <span class="n">inet</span> <span class="n">address</span> <span class="mf">172.16</span><span class="o">.</span><span class="mf">0.1</span><span class="o">/</span><span class="mi">24</span>
+<span class="nb">set</span> <span class="n">interfaces</span> <span class="n">ge</span><span class="o">-</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">3</span> <span class="n">unit</span> <span class="mi">0</span> <span class="n">family</span> <span class="n">inet</span> <span class="n">address</span> <span class="mf">172.16.0.1</span><span class="o">/</span><span class="mi">24</span>
 <span class="nb">set</span> <span class="n">protocols</span> <span class="n">router</span><span class="o">-</span><span class="n">advertisement</span> <span class="n">interface</span> <span class="n">ge</span><span class="o">-</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mf">1.0</span> <span class="n">prefix</span> <span class="mi">2001</span><span class="p">:</span><span class="n">db8</span><span class="p">::</span><span class="o">/</span><span class="mi">64</span> <span class="n">no</span><span class="o">-</span><span class="n">autonomous</span>
 </pre></div>
 </div>
@@ -503,7 +514,7 @@ This setup is fairly straightforward, you will need too:</p>
     <span class="n">ge</span><span class="o">-</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">1</span> <span class="p">{</span>
         <span class="n">unit</span> <span class="mi">0</span> <span class="p">{</span>
             <span class="n">family</span> <span class="n">inet</span> <span class="p">{</span>
-                <span class="n">address</span> <span class="mf">10.0</span><span class="o">.</span><span class="mf">0.1</span><span class="o">/</span><span class="mi">24</span><span class="p">;</span>
+                <span class="n">address</span> <span class="mf">10.0.0.1</span><span class="o">/</span><span class="mi">24</span><span class="p">;</span>
             <span class="p">}</span>
             <span class="n">family</span> <span class="n">inet6</span> <span class="p">{</span>
                 <span class="n">address</span> <span class="mi">2001</span><span class="p">:</span><span class="n">db8</span><span class="p">::</span><span class="mi">1</span><span class="o">/</span><span class="mi">64</span><span class="p">;</span>
@@ -520,7 +531,7 @@ This setup is fairly straightforward, you will need too:</p>
     <span class="n">ge</span><span class="o">-</span><span class="mi">0</span><span class="o">/</span><span class="mi">0</span><span class="o">/</span><span class="mi">3</span> <span class="p">{</span>
         <span class="n">unit</span> <span class="mi">0</span> <span class="p">{</span>
             <span class="n">family</span> <span class="n">inet</span> <span class="p">{</span>
-                <span class="n">address</span> <span class="mf">172.16</span><span class="o">.</span><span class="mf">0.1</span><span class="o">/</span><span class="mi">24</span><span class="p">;</span>
+                <span class="n">address</span> <span class="mf">172.16.0.1</span><span class="o">/</span><span class="mi">24</span><span class="p">;</span>
             <span class="p">}</span>
         <span class="p">}</span>
     <span class="p">}</span>
@@ -536,9 +547,9 @@ This setup is fairly straightforward, you will need too:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="examples-of-packets-discussed-in-this-article">
-<h2>Examples of packets discussed in this article<a class="headerlink" href="#examples-of-packets-discussed-in-this-article" title="Permalink to this headline"></a></h2>
+</section>
+<section id="examples-of-packets-discussed-in-this-article">
+<h2>Examples of packets discussed in this article<a class="headerlink" href="#examples-of-packets-discussed-in-this-article" title="Link to this heading"></a></h2>
 <p>Neighbor Solicitation message</p>
 <img alt="../_images/ex_1.png" src="../_images/ex_1.png" />
 <p>Neighbor Advertisement message</p>
@@ -547,14 +558,14 @@ This setup is fairly straightforward, you will need too:</p>
 <img alt="../_images/ex_3.png" src="../_images/ex_3.png" />
 <p>Router advertisement</p>
 <img alt="../_images/ex_4.png" src="../_images/ex_4.png" />
-</div>
-<div class="section" id="ipv6-windows-domain-with-juniper-vmx-video">
-<h2>IPv6 Windows domain with Juniper vMX video<a class="headerlink" href="#ipv6-windows-domain-with-juniper-vmx-video" title="Permalink to this headline"></a></h2>
+</section>
+<section id="ipv6-windows-domain-with-juniper-vmx-video">
+<h2>IPv6 Windows domain with Juniper vMX video<a class="headerlink" href="#ipv6-windows-domain-with-juniper-vmx-video" title="Link to this heading"></a></h2>
 <div class="video_wrapper" style="">
 <iframe allowfullscreen="true" src="https://www.youtube.com/embed/vFBpYX2VE0A" style="border: 0; height: 345px; width: 560px">
-</iframe></div></div>
-<div class="section" id="resources">
-<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline"></a></h2>
+</iframe></div></section>
+<section id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Link to this heading"></a></h2>
 <blockquote>
 <div><ul class="simple">
 <li><p>Article on Windows temporary addresses: <a class="reference external" href="https://rakhesh.com/networks/why-multiple-temporary-ipv6-addresses-when-using-slaac/">https://rakhesh.com/networks/why-multiple-temporary-ipv6-addresses-when-using-slaac/</a></p></li>
@@ -588,8 +599,8 @@ This setup is fairly straightforward, you will need too:</p>
 <li><p>Join the discussion over on Spiceworks: <a class="reference external" href="https://community.spiceworks.com/topic/2344441-ipv6-slaac-and-dhcpv6-inside-of-a-windows-domain-with-juniper-routers">https://community.spiceworks.com/topic/2344441-ipv6-slaac-and-dhcpv6-inside-of-a-windows-domain-with-juniper-routers</a></p></li>
 </ul>
 </div></blockquote>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -603,7 +614,7 @@ This setup is fairly straightforward, you will need too:</p>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Jul 22, 2024.
+      <span class="lastupdated">Last updated on Aug 05, 2024.
       </span></p>
   </div>
 
