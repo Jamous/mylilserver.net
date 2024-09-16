@@ -15,7 +15,7 @@ We need to enable ipv4 and ipv6 forwarding. Uncomment these two lines in /etc/sy
 
 
 | Reload system config for this to take effect. 
-| ``sudo sysctl --system```
+| ``sudo sysctl --system``
 
 
 We are going to setup a network bridge. Add this to ``/etc/network/interfaces``, then restart the service with ``sudo systemctl restart networking`` ::
