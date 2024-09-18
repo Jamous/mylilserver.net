@@ -14,10 +14,10 @@ This artile applies to:
 
 You can log into any of these Gigaspire units using these credentials. This will not require resetting the amdin password
 
-| Username: ```support```
-| Password: ```[admin password]!5upporT```
+| Username: ``support``
+| Password: ``[admin password]!5upporT``
 
 | Exampl
-| Admin password: ```11f7e19b```
-| Username: ```support```
-| Password: ```11f7e19b!5upporT```
+| Admin password: ``11f7e19b``
+| Username: ``support``
+| Password: ``11f7e19b!5upporT``

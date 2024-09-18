@@ -35,13 +35,13 @@ While I have had many servers running on it, everything from Debian to Windows, 
 
 .. toctree::
    :maxdepth: 2
-   :caption: Network vendor notes
+   :caption: Network notes
 
    networkNotes/calix
    networkNotes/fs
    networkNotes/mikrotik
    networkNotes/ubiquiti
-
+   networkNotes/wireshark
 .. toctree::
    :maxdepth: 2
    :caption: Unix Notes

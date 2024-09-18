@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JNCIS-SP Study Guide &mdash; MyLilServer.net  documentation</title>
+  <title>Wireshark notes &mdash; MyLilServer.net  documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
 
@@ -21,8 +21,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Ubiquiti Edgerouter VPN with Policy Based routing" href="ubntbprvpn.html" />
-    <link rel="prev" title="IPv6 SLAAC and DHCP - Juniper" href="dhcp.html" /> 
+    <link rel="next" title="Thirdlane PBX" href="../unixNotes/thirdlane.html" />
+    <link rel="prev" title="Ubiquiti Edgerouter notes" href="ubiquiti.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -45,13 +45,13 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Networking Articles</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="timeout.html">Cisco AnyConnect idle timeout</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fortigateSipAlg.html">Disabling SIP-ALG on FortiOS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sshtunnel.html">HTTPS over SSH tunnels</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dhcp.html">IPv6 SLAAC and DHCP - Juniper</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">JNCIS-SP Study Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ubntbprvpn.html">Ubiquiti Edgerouter VPN with Policy Based routing</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../networkArticles/timeout.html">Cisco AnyConnect idle timeout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../networkArticles/fortigateSipAlg.html">Disabling SIP-ALG on FortiOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../networkArticles/sshtunnel.html">HTTPS over SSH tunnels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../networkArticles/dhcp.html">IPv6 SLAAC and DHCP - Juniper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../networkArticles/jncissp.html">JNCIS-SP Study Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../networkArticles/ubntbprvpn.html">Ubiquiti Edgerouter VPN with Policy Based routing</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Unix Articles</span></p>
 <ul>
@@ -61,12 +61,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../unixArticles/xnee.html">xnee/cnee mouse automation</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Network notes</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../networkNotes/calix.html">Calix notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../networkNotes/fs.html">FS switch notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../networkNotes/mikrotik.html">Mirkotik notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../networkNotes/ubiquiti.html">Ubiquiti Edgerouter notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../networkNotes/wireshark.html">Wireshark notes</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="calix.html">Calix notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fs.html">FS switch notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mikrotik.html">Mirkotik notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ubiquiti.html">Ubiquiti Edgerouter notes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Wireshark notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setting-time-range-display-filters">Setting time range display filters</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Unix Notes</span></p>
 <ul>
@@ -95,9 +98,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">JNCIS-SP Study Guide</li>
+      <li class="breadcrumb-item active">Wireshark notes</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/networkArticles/jncissp.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/networkNotes/wireshark.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -105,22 +108,22 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="jncis-sp-study-guide">
-<h1>JNCIS-SP Study Guide<a class="headerlink" href="#jncis-sp-study-guide" title="Link to this heading"></a></h1>
-<p>Back in 2013 Juniper released 3 JNCIS-SP study guide PDF books. They are no longer listed on Juniper’s website, so I am sharing them here, as they are a great resource. You can view each book by clicking the respective link below.</p>
-<div class="line-block">
-<div class="line"><a class="reference download internal" download="" href="../_downloads/d213857534455c9d455aa16183d1f941/JNCIS-SP-Part1_2013.pdf"><code class="xref download docutils literal notranslate"><span class="pre">JNCIS-SP</span> <span class="pre">study</span> <span class="pre">guide</span> <span class="pre">part</span> <span class="pre">1</span></code></a>.</div>
-<div class="line"><a class="reference download internal" download="" href="../_downloads/77b4b8994eb5b4b95caf634abd8803fb/JNCIS-SP-Part2_2013.pdf"><code class="xref download docutils literal notranslate"><span class="pre">JNCIS-SP</span> <span class="pre">study</span> <span class="pre">guide</span> <span class="pre">part</span> <span class="pre">2</span></code></a>.</div>
-<div class="line"><a class="reference download internal" download="" href="../_downloads/f6259221ccd472e22266ef9720072502/JNCIS-SP-Part3_2013.pdf"><code class="xref download docutils literal notranslate"><span class="pre">JNCIS-SP</span> <span class="pre">study</span> <span class="pre">guide</span> <span class="pre">part</span> <span class="pre">3</span></code></a>.</div>
+  <section id="wireshark-notes">
+<h1>Wireshark notes<a class="headerlink" href="#wireshark-notes" title="Link to this heading"></a></h1>
+<section id="setting-time-range-display-filters">
+<h2>Setting time range display filters<a class="headerlink" href="#setting-time-range-display-filters" title="Link to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">frame</span><span class="o">.</span><span class="n">time</span> <span class="o">&gt;=</span> <span class="s2">&quot;Sep 17, 2024 01:00:00&quot;</span> <span class="o">&amp;&amp;</span> <span class="n">frame</span><span class="o">.</span><span class="n">time</span> <span class="o">&lt;=</span> <span class="s2">&quot;Sep 17, 2024 02:00:00&quot;</span>
+</pre></div>
 </div>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="dhcp.html" class="btn btn-neutral float-left" title="IPv6 SLAAC and DHCP - Juniper" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="ubntbprvpn.html" class="btn btn-neutral float-right" title="Ubiquiti Edgerouter VPN with Policy Based routing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="ubiquiti.html" class="btn btn-neutral float-left" title="Ubiquiti Edgerouter notes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../unixNotes/thirdlane.html" class="btn btn-neutral float-right" title="Thirdlane PBX" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
