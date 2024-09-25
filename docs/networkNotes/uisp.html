@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wireshark notes &mdash; MyLilServer.net  documentation</title>
+  <title>Ubiquiti UISP notes &mdash; MyLilServer.net  documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
 
@@ -21,8 +21,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Thirdlane PBX" href="../unixNotes/thirdlane.html" />
-    <link rel="prev" title="Ubiquiti UISP notes" href="uisp.html" /> 
+    <link rel="next" title="Wireshark notes" href="wireshark.html" />
+    <link rel="prev" title="Ubiquiti Edgerouter notes" href="ubiquiti.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -66,11 +66,11 @@
 <li class="toctree-l1"><a class="reference internal" href="fs.html">FS switch notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mikrotik.html">Mirkotik notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ubiquiti.html">Ubiquiti Edgerouter notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="uisp.html">Ubiquiti UISP notes</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Wireshark notes</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#setting-time-range-display-filters">Setting time range display filters</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Ubiquiti UISP notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#nanobeam-5ac">Nanobeam 5AC</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="wireshark.html">Wireshark notes</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Unix Notes</span></p>
 <ul>
@@ -99,9 +99,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Wireshark notes</li>
+      <li class="breadcrumb-item active">Ubiquiti UISP notes</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/networkNotes/wireshark.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/networkNotes/uisp.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -109,13 +109,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="wireshark-notes">
-<h1>Wireshark notes<a class="headerlink" href="#wireshark-notes" title="Link to this heading"></a></h1>
-<section id="setting-time-range-display-filters">
-<h2>Setting time range display filters<a class="headerlink" href="#setting-time-range-display-filters" title="Link to this heading"></a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">frame</span><span class="o">.</span><span class="n">time</span> <span class="o">&gt;=</span> <span class="s2">&quot;Sep 17, 2024 01:00:00&quot;</span> <span class="o">&amp;&amp;</span> <span class="n">frame</span><span class="o">.</span><span class="n">time</span> <span class="o">&lt;=</span> <span class="s2">&quot;Sep 17, 2024 02:00:00&quot;</span>
-</pre></div>
-</div>
+  <section id="ubiquiti-uisp-notes">
+<h1>Ubiquiti UISP notes<a class="headerlink" href="#ubiquiti-uisp-notes" title="Link to this heading"></a></h1>
+<section id="nanobeam-5ac">
+<h2>Nanobeam 5AC<a class="headerlink" href="#nanobeam-5ac" title="Link to this heading"></a></h2>
+<p>DHCP is not enabled by default on the Nanobeam 5AC radios. You will need to access them directly at <code class="docutils literal notranslate"><span class="pre">192.168.1.20</span></code></p>
 </section>
 </section>
 
@@ -123,8 +121,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="uisp.html" class="btn btn-neutral float-left" title="Ubiquiti UISP notes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../unixNotes/thirdlane.html" class="btn btn-neutral float-right" title="Thirdlane PBX" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="ubiquiti.html" class="btn btn-neutral float-left" title="Ubiquiti Edgerouter notes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="wireshark.html" class="btn btn-neutral float-right" title="Wireshark notes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

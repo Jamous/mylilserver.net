@@ -41,7 +41,9 @@ While I have had many servers running on it, everything from Debian to Windows, 
    networkNotes/fs
    networkNotes/mikrotik
    networkNotes/ubiquiti
+   networkNotes/uisp
    networkNotes/wireshark
+
 .. toctree::
    :maxdepth: 2
    :caption: Unix Notes
