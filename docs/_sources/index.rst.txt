@@ -22,6 +22,8 @@ While I have had many servers running on it, everything from Debian to Windows, 
    networkArticles/sshtunnel
    networkArticles/dhcp
    networkArticles/jncissp
+   networkArticles/mac
+   networkArticles/sweep
    networkArticles/ubntbprvpn
 
 .. toctree::
@@ -32,6 +34,14 @@ While I have had many servers running on it, everything from Debian to Windows, 
    unixArticles/openvpn
    unixArticles/iperfxinitd
    unixArticles/xnee
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Go articles
+
+   golang/smtprelay
+   golang/pingSweep
+   golang/scrapligoDrivers
 
 .. toctree::
    :maxdepth: 2

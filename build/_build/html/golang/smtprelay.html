@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Golang open smtp relay &mdash; MyLilServer.net  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Pingsweep icmp sweep package" href="pingSweep.html" />
+    <link rel="prev" title="xnee/cnee mouse automation" href="../unixArticles/xnee.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MyLilServer.net
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Networking Articles</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../networkArticles/timeout.html">Cisco AnyConnect idle timeout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../networkArticles/fortigateSipAlg.html">Disabling SIP-ALG on FortiOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../networkArticles/sshtunnel.html">HTTPS over SSH tunnels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../networkArticles/dhcp.html">IPv6 SLAAC and DHCP - Juniper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../networkArticles/jncissp.html">JNCIS-SP Study Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../networkArticles/mac.html">Mac network utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../networkArticles/sweep.html">Sweep network utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../networkArticles/ubntbprvpn.html">Ubiquiti Edgerouter VPN with Policy Based routing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Unix Articles</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../unixArticles/windowsKVM.html">Boot windows as KVM on serprate HDD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unixArticles/openvpn.html">OpenVPN on Thirdlane PBX server for Yealink phones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unixArticles/iperfxinitd.html">Starting Iperf3 remotely using xinitd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unixArticles/xnee.html">xnee/cnee mouse automation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Go articles</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Golang open smtp relay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pingSweep.html">Pingsweep icmp sweep package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scrapligoDrivers.html">Scrapligo platform drivers</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Network notes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../networkNotes/calix.html">Calix notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../networkNotes/fortinet.html">Fortinet Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../networkNotes/fs.html">FS switch notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../networkNotes/mikrotik.html">Mirkotik notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../networkNotes/ubiquiti.html">Ubiquiti Edgerouter notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../networkNotes/uisp.html">Ubiquiti UISP notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../networkNotes/wireshark.html">Wireshark notes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Unix Notes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../unixNotes/thirdlane.html">Thirdlane PBX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unixNotes/virsh.html">Virsh notes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Other projects</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../otherProjects/media.html">Media</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../otherProjects/mylilserver.html">MyLilServer.net</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../otherProjects/billboard.html">Raspbery Pi Digital Billboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../otherProjects/resume.html">Resume</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MyLilServer.net</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Golang open smtp relay</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/golang/smtprelay.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="golang-open-smtp-relay">
+<h1>Golang open smtp relay<a class="headerlink" href="#golang-open-smtp-relay" title="Link to this heading"></a></h1>
+<p>In this code I show how to send an Email using Go though an open SMTP relay. No auth, no SSL/TLS, no StartTLS.</p>
+<p>This is modified code from <a class="reference external" href="https://pkg.go.dev/net/smtp">https://pkg.go.dev/net/smtp</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">package</span> <span class="n">main</span>
+
+<span class="o">/*</span>
+<span class="n">This</span> <span class="n">program</span> <span class="n">send</span> <span class="n">an</span> <span class="n">email</span> <span class="n">though</span> <span class="n">an</span> <span class="nb">open</span><span class="p">,</span> <span class="n">unecrypted</span> <span class="n">SMTP</span> <span class="n">relay</span><span class="o">.</span>
+<span class="o">*/</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+        <span class="s2">&quot;fmt&quot;</span>
+        <span class="s2">&quot;log&quot;</span>
+        <span class="s2">&quot;net/smtp&quot;</span>
+<span class="p">)</span>
+
+<span class="n">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+        <span class="o">//</span><span class="n">Construct</span> <span class="n">email</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">pkg</span><span class="o">.</span><span class="n">go</span><span class="o">.</span><span class="n">dev</span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="n">smtp</span>
+        <span class="n">to</span> <span class="o">:=</span> <span class="s2">&quot;me@example.com&quot;</span>
+        <span class="kn">from</span> <span class="o">:=</span> <span class="s2">&quot;go-alert@example.com&quot;</span>
+        <span class="n">subject</span> <span class="o">:=</span> <span class="s2">&quot;This is an example email from golang&quot;</span>
+        <span class="n">body</span> <span class="o">:=</span> <span class="s2">&quot;This email does not use SSL/TLS or StartTLS&quot;</span>
+        <span class="n">smtpServer</span> <span class="o">:=</span> <span class="s2">&quot;smtp.example.com&quot;</span>
+        <span class="n">port</span> <span class="o">:=</span> <span class="s2">&quot;25&quot;</span>
+
+        <span class="o">//</span><span class="n">Formate</span> <span class="n">email</span>
+        <span class="n">server</span> <span class="o">:=</span> <span class="n">fmt</span><span class="o">.</span><span class="n">Sprintf</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">:</span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">smtpServer</span><span class="p">,</span> <span class="n">port</span><span class="p">)</span>
+        <span class="n">message</span> <span class="o">:=</span> <span class="p">[]</span><span class="n">byte</span><span class="p">(</span><span class="n">fmt</span><span class="o">.</span><span class="n">Sprintf</span><span class="p">(</span><span class="s2">&quot;To: </span><span class="si">%s</span><span class="se">\r\n</span><span class="s2">Subject: </span><span class="si">%s</span><span class="se">\r\n\r\n</span><span class="si">%s</span><span class="se">\r\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">to</span><span class="p">,</span> <span class="n">subject</span><span class="p">,</span> <span class="n">body</span><span class="p">))</span>
+
+        <span class="o">//</span> <span class="n">Connect</span> <span class="n">to</span> <span class="n">the</span> <span class="n">remote</span> <span class="n">SMTP</span> <span class="n">server</span><span class="o">.</span>
+        <span class="n">c</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">smtp</span><span class="o">.</span><span class="n">Dial</span><span class="p">(</span><span class="n">server</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="n">nil</span> <span class="p">{</span>
+                <span class="n">log</span><span class="o">.</span><span class="n">Fatal</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+        <span class="p">}</span>
+
+        <span class="o">//</span> <span class="n">Set</span> <span class="n">the</span> <span class="n">sender</span> <span class="ow">and</span> <span class="n">recipient</span> <span class="n">first</span>
+        <span class="k">if</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">c</span><span class="o">.</span><span class="n">Mail</span><span class="p">(</span><span class="n">from</span><span class="p">);</span> <span class="n">err</span> <span class="o">!=</span> <span class="n">nil</span> <span class="p">{</span>
+                <span class="n">log</span><span class="o">.</span><span class="n">Fatal</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">c</span><span class="o">.</span><span class="n">Rcpt</span><span class="p">(</span><span class="n">to</span><span class="p">);</span> <span class="n">err</span> <span class="o">!=</span> <span class="n">nil</span> <span class="p">{</span>
+                <span class="n">log</span><span class="o">.</span><span class="n">Fatal</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+        <span class="p">}</span>
+
+        <span class="o">//</span> <span class="n">Send</span> <span class="n">the</span> <span class="n">email</span> <span class="n">body</span><span class="o">.</span>
+        <span class="n">wc</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">c</span><span class="o">.</span><span class="n">Data</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="n">nil</span> <span class="p">{</span>
+                <span class="n">log</span><span class="o">.</span><span class="n">Fatal</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="n">_</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">wc</span><span class="o">.</span><span class="n">Write</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="n">nil</span> <span class="p">{</span>
+                <span class="n">log</span><span class="o">.</span><span class="n">Fatal</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="n">err</span> <span class="o">=</span> <span class="n">wc</span><span class="o">.</span><span class="n">Close</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="n">nil</span> <span class="p">{</span>
+                <span class="n">log</span><span class="o">.</span><span class="n">Fatal</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+        <span class="p">}</span>
+
+        <span class="o">//</span> <span class="n">Send</span> <span class="n">the</span> <span class="n">QUIT</span> <span class="n">command</span> <span class="ow">and</span> <span class="n">close</span> <span class="n">the</span> <span class="n">connection</span><span class="o">.</span>
+        <span class="n">err</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">Quit</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="n">nil</span> <span class="p">{</span>
+                <span class="n">log</span><span class="o">.</span><span class="n">Fatal</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+        <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>You can also view this over on Github at <a class="reference external" href="https://github.com/Jamous/Golang_smtp_relay">https://github.com/Jamous/Golang_smtp_relay</a></p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../unixArticles/xnee.html" class="btn btn-neutral float-left" title="xnee/cnee mouse automation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pingSweep.html" class="btn btn-neutral float-right" title="Pingsweep icmp sweep package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      <span class="lastupdated">Last updated on Oct 16, 2024.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
