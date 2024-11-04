@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sweep network utility &mdash; MyLilServer.net  documentation</title>
+  <title>Troubleshoot Fortigate IPsec VPN &mdash; MyLilServer.net  documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
 
@@ -21,8 +21,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Troubleshoot Fortigate IPsec VPN" href="fortissl.html" />
-    <link rel="prev" title="Mac network utility" href="mac.html" /> 
+    <link rel="next" title="Ubiquiti Edgerouter VPN with Policy Based routing" href="ubntbprvpn.html" />
+    <link rel="prev" title="Sweep network utility" href="sweep.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -52,8 +52,8 @@
 <li class="toctree-l1"><a class="reference internal" href="dhcp.html">IPv6 SLAAC and DHCP - Juniper</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jncissp.html">JNCIS-SP Study Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mac.html">Mac network utility</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Sweep network utility</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fortissl.html">Troubleshoot Fortigate IPsec VPN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sweep.html">Sweep network utility</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Troubleshoot Fortigate IPsec VPN</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ubntbprvpn.html">Ubiquiti Edgerouter VPN with Policy Based routing</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Unix Articles</span></p>
@@ -106,9 +106,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Sweep network utility</li>
+      <li class="breadcrumb-item active">Troubleshoot Fortigate IPsec VPN</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/networkArticles/sweep.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/networkArticles/fortissl.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -116,21 +116,40 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="sweep-network-utility">
-<h1>Sweep network utility<a class="headerlink" href="#sweep-network-utility" title="Link to this heading"></a></h1>
-<p>Sweep is a utility I made to ping every IPv4 address in every active network directly connected to a device, to include VPN tunnels. Sweep is useful for network discovery and filling out IPv4 arp tables. It does this by sending one ICMP echo request, then closing the connection. This program will set off some antivirus programs.</p>
-<p>Compiled binaries are located under bin/</p>
-<p>Sweep implements Pingsweep, which you can see here. <a class="reference external" href="https://github.com/Jamous/pingsweep">https://github.com/Jamous/pingsweep</a></p>
-<p>Video <a class="reference external" href="https://www.youtube.com/watch?v=SvIUSOy-Suc">https://www.youtube.com/watch?v=SvIUSOy-Suc</a></p>
-<p>View the github here: <a class="reference external" href="https://github.com/Jamous/sweep">https://github.com/Jamous/sweep</a></p>
+  <section id="troubleshoot-fortigate-ipsec-vpn">
+<h1>Troubleshoot Fortigate IPsec VPN<a class="headerlink" href="#troubleshoot-fortigate-ipsec-vpn" title="Link to this heading"></a></h1>
+<p>I have built quite a few IPsec client VPNs, and most go smoothly. During a recent deployment, building an IPsec client vpn and using SAML for authentication, I ran into some rode blocks.
+These are the diagnostic tools I used to help weed out the problems. Ill include all the diagnostic commands first, then explain what every one does.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">diag</span> <span class="n">debug</span> <span class="n">reset</span>
+<span class="n">fnsysctl</span> <span class="n">killall</span> <span class="n">iked</span>
+<span class="n">diagnose</span> <span class="n">vpn</span> <span class="n">ike</span> <span class="n">log</span><span class="o">-</span><span class="nb">filter</span> <span class="n">src</span><span class="o">-</span><span class="n">addr4</span> <span class="p">[</span><span class="n">ip</span><span class="p">]</span>
+<span class="n">diagnose</span> <span class="n">debug</span> <span class="n">application</span> <span class="n">ike</span> <span class="o">-</span><span class="mi">1</span>
+<span class="n">diagnose</span> <span class="n">debug</span> <span class="n">application</span> <span class="n">samld</span> <span class="o">-</span><span class="mi">1</span>
+<span class="n">diag</span> <span class="n">debug</span> <span class="n">app</span> <span class="n">fnbamd</span> <span class="o">-</span><span class="mi">1</span>
+<span class="n">diag</span> <span class="n">debug</span> <span class="n">application</span> <span class="n">eap_proxy</span> <span class="o">-</span><span class="mi">1</span>
+<span class="n">diag</span> <span class="n">debug</span> <span class="n">enable</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">Now, lets go through these line by line</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">diag</span> <span class="pre">debug</span> <span class="pre">reset</span></code>: resets all debug configs, in case any were currently running.</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">fnsysctl</span> <span class="pre">killall</span> <span class="pre">iked</span></code>: This kills the IKE process on the system. This is useful to clear out any hairballs that may be lurking. Similar to pkill.</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">diagnose</span> <span class="pre">vpn</span> <span class="pre">ike</span> <span class="pre">log-filter</span> <span class="pre">src-addr4</span> <span class="pre">[ip]</span></code>: Specifies the source address we wish to see logs for in our debug console.</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">diagnose</span> <span class="pre">debug</span> <span class="pre">application</span> <span class="pre">ike</span> <span class="pre">-1</span></code>: Sets IKE (the protocol behind IPsec) to debug mode.</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">diagnose</span> <span class="pre">debug</span> <span class="pre">application</span> <span class="pre">samld</span> <span class="pre">-1</span></code>: Sets SAML to debug mode. Useful if using SAML authentication, does not make a difference otherwise.</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">diag</span> <span class="pre">debug</span> <span class="pre">app</span> <span class="pre">fnbamd</span> <span class="pre">-1</span></code>: Sets fndbam to debug mode. Fnbdam is for debugging RADIUS, LDAP, and TACACS authentication.</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">diag</span> <span class="pre">debug</span> <span class="pre">application</span> <span class="pre">eap_proxy</span> <span class="pre">-1</span></code>: Sets EAP Proxy to debug mode. This is the authentication proxy, where the fortigate is not preforming the authentication.</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">diag</span> <span class="pre">debug</span> <span class="pre">enable</span></code>: Enables debug mode.</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">diag</span> <span class="pre">debug</span> <span class="pre">disable</span></code>: Once complete disables the debug messages from going to console. All messages will auto stop after 30 minutes.</div>
+</div>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="mac.html" class="btn btn-neutral float-left" title="Mac network utility" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="fortissl.html" class="btn btn-neutral float-right" title="Troubleshoot Fortigate IPsec VPN" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="sweep.html" class="btn btn-neutral float-left" title="Sweep network utility" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ubntbprvpn.html" class="btn btn-neutral float-right" title="Ubiquiti Edgerouter VPN with Policy Based routing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

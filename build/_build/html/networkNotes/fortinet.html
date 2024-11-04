@@ -53,6 +53,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../networkArticles/jncissp.html">JNCIS-SP Study Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../networkArticles/mac.html">Mac network utility</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../networkArticles/sweep.html">Sweep network utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../networkArticles/fortissl.html">Troubleshoot Fortigate IPsec VPN</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../networkArticles/ubntbprvpn.html">Ubiquiti Edgerouter VPN with Policy Based routing</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Unix Articles</span></p>
@@ -73,6 +74,7 @@
 <li class="toctree-l1"><a class="reference internal" href="calix.html">Calix notes</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Fortinet Notes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#fortigate-default-address">Fortigate default address</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fortigate-system-controll">Fortigate system controll</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="fs.html">FS switch notes</a></li>
@@ -124,6 +126,18 @@
 <h2>Fortigate default address<a class="headerlink" href="#fortigate-default-address" title="Link to this heading"></a></h2>
 <p>By default the fortigate LAN interface is at <code class="docutils literal notranslate"><span class="pre">192.168.1.99</span></code></p>
 </section>
+<section id="fortigate-system-controll">
+<h2>Fortigate system controll<a class="headerlink" href="#fortigate-system-controll" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>You can interact with fortigate services as unix services using <code class="docutils literal notranslate"><span class="pre">fnsysctl</span></code>. See examples below</dt><dd><ul class="simple">
+<li><p>View all processes (equivelent to ps -ax): <code class="docutils literal notranslate"><span class="pre">fnsysctl</span> <span class="pre">ps</span></code></p></li>
+<li><p>Kill all processes (equivelent to pkill) <code class="docutils literal notranslate"><span class="pre">fnsysctl</span> <span class="pre">killall</span> <span class="pre">&lt;process_name&gt;</span></code></p></li>
+<li><p>View interfacs (similar to ip a): <code class="docutils literal notranslate"><span class="pre">fnsysctl</span> <span class="pre">ifconfig</span></code></p></li>
+<li><p>View interface error: <code class="docutils literal notranslate"><span class="pre">fnsysctl</span> <span class="pre">ifconfig</span> <span class="pre">&lt;nic-name&gt;</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</section>
 </section>
 
 
@@ -138,7 +152,7 @@
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Oct 16, 2024.
+      <span class="lastupdated">Last updated on Nov 04, 2024.
       </span></p>
   </div>
 
