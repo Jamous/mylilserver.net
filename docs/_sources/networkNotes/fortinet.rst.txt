@@ -12,7 +12,7 @@ You can view traffic flows through the fortigate. This will show firewall police
         * Filter for protocol 1 (icmp) ``diagnose debug flow filter proto 1``
         * Set host to filter for (source or destination) ``diagnose debug flow filter addr 172.0.0.2``
         * Enable timestamps ``diagnose debug console timestamp enable``
-        * Set number of flows to catch. I am setting this high because I can control the flows. ``diagnose debug flow trace start 1000``
+        * Set number of flows to catch. ``diagnose debug flow trace start 1000``
         * Enable the filter ``diagnose debug enable``
         * Show the filter ``diag debug flow filter``
 
