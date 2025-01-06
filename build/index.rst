@@ -60,6 +60,7 @@ While I have had many servers running on it, everything from Debian to Windows, 
    :maxdepth: 2
    :caption: Unix Notes
 
+   unixNotes/lxc
    unixNotes/thirdlane
    unixNotes/virsh
 
