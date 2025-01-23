@@ -46,6 +46,12 @@ While I have had many servers running on it, everything from Debian to Windows, 
 
 .. toctree::
    :maxdepth: 2
+   :caption: Windows articles
+
+   windowsArticles/clear_malwarebytes
+
+.. toctree::
+   :maxdepth: 2
    :caption: Network notes
 
    networkNotes/calix
