@@ -22,6 +22,11 @@ Build vm
 
 	virt-install --name vm-example --osinfo debian11 --ram 2048 --vcpus 2 --disk path=/root/vm-example/vm-example.img,bus=virtio,size=20 --graphics none --cdrom /root/iso/debian-12.5.0-amd64-DVD-1.iso --network bridge:br0
 
+| Another example named windows11. This will also create the disk with size 60. To install virtio drivers you will need to edit the vm ``virsh edit windows11``.
+
+::
+
+	sudo virt-install --name windows11 --osinfo win11 --ram 4096 --vcpus 4 --disk path=/root/vm-example/windows11.qcow2,format=qcow2,bus=virtio,size=60 --graphics none --cdrom /root/vm-example/Win11_24H2_English_x64.iso --boot cdrom,hd --network bridge:br0 --graphics vnc,listen=0.0.0.0
 
 Setup new VM
 ------------
