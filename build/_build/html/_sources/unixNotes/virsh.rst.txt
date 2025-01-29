@@ -16,7 +16,7 @@ Create and resize kvm image
 Build vm
 ---------
 | Build a vm named vm-example, mount debian 12 iso and connect to bridge br0.
-| osinfo can be found with ``osinfo-query os`` 
+| osinfo can be found with ``virt-install --osinfo list`` 
 
  ::
 
