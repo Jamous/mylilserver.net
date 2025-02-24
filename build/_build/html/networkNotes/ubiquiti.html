@@ -85,6 +85,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#ipv6-firewall-rules">IPv6 firewall rules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ipv6-pd-client">IPv6-PD client</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ipv6-pd-server">IPv6-PD server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ssh-key-authentication">SSH key authentication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#usefull-commands">Usefull commands</a></li>
 </ul>
 </li>
@@ -322,6 +323,18 @@ interfaces<span class="w"> </span><span class="o">{</span>
 <section id="ipv6-pd-server">
 <h2>IPv6-PD server<a class="headerlink" href="#ipv6-pd-server" title="Link to this heading"></a></h2>
 </section>
+<section id="ssh-key-authentication">
+<h2>SSH key authentication<a class="headerlink" href="#ssh-key-authentication" title="Link to this heading"></a></h2>
+<div class="line-block">
+<div class="line">You can set Edgerouters to allow ssh key based autnetication using the configs below.</div>
+<div class="line">Key <code class="docutils literal notranslate"><span class="pre">ecdsa-sha2-nistp256</span> <span class="pre">MIIJKAIBAAKCAgEAl0Dm</span> <span class="pre">user&#64;computer</span></code></div>
+</div>
+<p>Set commands</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">system</span> <span class="n">login</span> <span class="n">user</span> <span class="n">ubnt</span> <span class="n">authentication</span> <span class="n">public</span><span class="o">-</span><span class="n">keys</span> <span class="n">user</span><span class="nd">@computer</span> <span class="n">key</span> <span class="n">MIIJKAIBAAKCAgEAl0Dm</span>
+<span class="nb">set</span> <span class="n">system</span> <span class="n">login</span> <span class="n">user</span> <span class="n">ubnt</span> <span class="n">authentication</span> <span class="n">public</span><span class="o">-</span><span class="n">keys</span> <span class="n">user</span><span class="nd">@computer</span> <span class="nb">type</span> <span class="n">ecdsa</span><span class="o">-</span><span class="n">sha2</span><span class="o">-</span><span class="n">nistp256</span>
+</pre></div>
+</div>
+</section>
 <section id="usefull-commands">
 <h2>Usefull commands<a class="headerlink" href="#usefull-commands" title="Link to this heading"></a></h2>
 <div class="line-block">
@@ -347,7 +360,7 @@ interfaces<span class="w"> </span><span class="o">{</span>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Jan 29, 2025.
+      <span class="lastupdated">Last updated on Feb 24, 2025.
       </span></p>
   </div>
 

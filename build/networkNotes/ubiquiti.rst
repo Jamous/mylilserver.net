@@ -190,6 +190,16 @@ Complete config example ::
 IPv6-PD server
 --------------
 
+SSH key authentication
+----------------------
+| You can set Edgerouters to allow ssh key based autnetication using the configs below.
+| Key ``ecdsa-sha2-nistp256 MIIJKAIBAAKCAgEAl0Dm user@computer``
+
+Set commands ::
+
+    set system login user ubnt authentication public-keys user@computer key MIIJKAIBAAKCAgEAl0Dm
+    set system login user ubnt authentication public-keys user@computer type ecdsa-sha2-nistp256
+
 
 Usefull commands
 ----------------
