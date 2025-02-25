@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Librenms: Directly querying mysql database &mdash; MyLilServer.net  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="OpenVPN on Thirdlane PBX server for Yealink phones" href="openvpn.html" />
+    <link rel="prev" title="Boot windows as KVM on serprate HDD" href="windowsKVM.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MyLilServer.net
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Networking Articles</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../networkArticles/timeout.html">Cisco AnyConnect idle timeout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../networkArticles/fortigateSipAlg.html">Disabling SIP-ALG on FortiOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../networkArticles/sshtunnel.html">HTTPS over SSH tunnels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../networkArticles/dhcp.html">IPv6 SLAAC and DHCP - Juniper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../networkArticles/jncissp.html">JNCIS-SP Study Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../networkArticles/mac.html">Mac network utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../networkArticles/sweep.html">Sweep network utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../networkArticles/fortissl.html">Troubleshoot Fortigate IPsec VPN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../networkArticles/ubntbprvpn.html">Ubiquiti Edgerouter VPN with Policy Based routing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Unix Articles</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="windowsKVM.html">Boot windows as KVM on serprate HDD</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Librenms: Directly querying mysql database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openvpn.html">OpenVPN on Thirdlane PBX server for Yealink phones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iperfxinitd.html">Starting Iperf3 remotely using xinitd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="xnee.html">xnee/cnee mouse automation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Go articles</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../golang/smtprelay.html">Golang open smtp relay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../golang/pingSweep.html">Pingsweep icmp sweep package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../golang/scrapligoDrivers.html">Scrapligo platform drivers</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Windows articles</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../windowsArticles/clear_malwarebytes.html">Clearing Malwarebytes log</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Network notes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../networkNotes/calix.html">Calix notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../networkNotes/fortinet.html">Fortinet Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../networkNotes/fs.html">FS switch notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../networkNotes/mikrotik.html">Mirkotik notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../networkNotes/ubiquiti.html">Ubiquiti Edgerouter notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../networkNotes/uisp.html">Ubiquiti UISP notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../networkNotes/wireshark.html">Wireshark notes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Unix Notes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../unixNotes/lxc.html">Linux Containers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unixNotes/thirdlane.html">Thirdlane PBX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unixNotes/virsh.html">Virsh notes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Other projects</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../otherProjects/media.html">Media</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../otherProjects/mylilserver.html">MyLilServer.net</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../otherProjects/billboard.html">Raspbery Pi Digital Billboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../otherProjects/resume.html">Resume</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MyLilServer.net</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Librenms: Directly querying mysql database</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/unixArticles/librenms.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="librenms-directly-querying-mysql-database">
+<h1>Librenms: Directly querying mysql database<a class="headerlink" href="#librenms-directly-querying-mysql-database" title="Link to this heading"></a></h1>
+<div class="line-block">
+<div class="line">You can troubleshoot librenms alert rules directly inside of the mysql database.</div>
+<div class="line">To enter librenms mysql database, as root launch mysql, then enter the librenms database.</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mysql</span>
+<span class="n">use</span> <span class="n">librenms</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>From here you can get your device ID, and then querry against that device. Alert rules use a <code class="docutils literal notranslate"><span class="pre">?</span></code>, you have to replace this. <code class="docutils literal notranslate"><span class="pre">?</span></code> is usually in place of a device id.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SELECT</span> <span class="n">device_id</span><span class="p">,</span> <span class="n">hostname</span> <span class="n">FROM</span> <span class="n">devices</span><span class="p">;</span>
+<span class="n">SELECT</span> <span class="o">*</span> <span class="n">FROM</span> <span class="n">devices</span><span class="p">,</span><span class="n">services</span> <span class="n">WHERE</span> <span class="p">(</span><span class="n">devices</span><span class="o">.</span><span class="n">device_id</span> <span class="o">=</span> <span class="mi">61</span> <span class="n">AND</span> <span class="n">devices</span><span class="o">.</span><span class="n">device_id</span> <span class="o">=</span> <span class="n">services</span><span class="o">.</span><span class="n">device_id</span><span class="p">)</span> \<span class="n">G</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Full output</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@vm</span><span class="o">-</span><span class="n">librenms</span> <span class="o">~</span> <span class="c1"># mysql</span>
+<span class="n">Welcome</span> <span class="n">to</span> <span class="n">the</span> <span class="n">MariaDB</span> <span class="n">monitor</span><span class="o">.</span>  <span class="n">Commands</span> <span class="n">end</span> <span class="k">with</span> <span class="p">;</span> <span class="ow">or</span> \<span class="n">g</span><span class="o">.</span>
+<span class="n">Your</span> <span class="n">MariaDB</span> <span class="n">connection</span> <span class="nb">id</span> <span class="ow">is</span> <span class="mi">46591</span>
+<span class="n">Server</span> <span class="n">version</span><span class="p">:</span> <span class="mf">10.11.6</span><span class="o">-</span><span class="n">MariaDB</span><span class="o">-</span><span class="mi">0</span><span class="o">+</span><span class="n">deb12u1</span><span class="o">-</span><span class="n">log</span> <span class="n">Debian</span> <span class="mi">12</span>
+
+<span class="n">Copyright</span> <span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="mi">2000</span><span class="p">,</span> <span class="mi">2018</span><span class="p">,</span> <span class="n">Oracle</span><span class="p">,</span> <span class="n">MariaDB</span> <span class="n">Corporation</span> <span class="n">Ab</span> <span class="ow">and</span> <span class="n">others</span><span class="o">.</span>
+
+<span class="n">Type</span> <span class="s1">&#39;help;&#39;</span> <span class="ow">or</span> <span class="s1">&#39;\h&#39;</span> <span class="k">for</span> <span class="n">help</span><span class="o">.</span> <span class="n">Type</span> <span class="s1">&#39;\c&#39;</span> <span class="n">to</span> <span class="n">clear</span> <span class="n">the</span> <span class="n">current</span> <span class="nb">input</span> <span class="n">statement</span><span class="o">.</span>
+
+<span class="n">MariaDB</span> <span class="p">[(</span><span class="n">none</span><span class="p">)]</span><span class="o">&gt;</span> <span class="n">USE</span> <span class="n">librenms</span><span class="p">;</span>
+<span class="n">Reading</span> <span class="n">table</span> <span class="n">information</span> <span class="k">for</span> <span class="n">completion</span> <span class="n">of</span> <span class="n">table</span> <span class="ow">and</span> <span class="n">column</span> <span class="n">names</span>
+<span class="n">You</span> <span class="n">can</span> <span class="n">turn</span> <span class="n">off</span> <span class="n">this</span> <span class="n">feature</span> <span class="n">to</span> <span class="n">get</span> <span class="n">a</span> <span class="n">quicker</span> <span class="n">startup</span> <span class="k">with</span> <span class="o">-</span><span class="n">A</span>
+
+<span class="n">Database</span> <span class="n">changed</span>
+<span class="n">MariaDB</span> <span class="p">[</span><span class="n">librenms</span><span class="p">]</span><span class="o">&gt;</span> <span class="n">SELECT</span> <span class="n">device_id</span><span class="p">,</span> <span class="n">hostname</span> <span class="n">FROM</span> <span class="n">devices</span><span class="p">;</span>
+<span class="o">+-----------+------------------------------+</span>
+<span class="o">|</span> <span class="n">device_id</span> <span class="o">|</span> <span class="n">hostname</span>                     <span class="o">|</span>
+<span class="o">+-----------+------------------------------+</span>
+<span class="o">|</span>        <span class="mi">61</span> <span class="o">|</span> <span class="n">imail04</span><span class="o">.</span><span class="n">bnt</span><span class="o">.</span><span class="n">com</span>              <span class="o">|</span>
+<span class="o">+-----------+------------------------------+</span>
+<span class="mi">1</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">set</span> <span class="p">(</span><span class="mf">0.001</span> <span class="n">sec</span><span class="p">)</span>
+
+<span class="n">MariaDB</span> <span class="p">[</span><span class="n">librenms</span><span class="p">]</span><span class="o">&gt;</span> <span class="n">SELECT</span> <span class="o">*</span> <span class="n">FROM</span> <span class="n">devices</span><span class="p">,</span><span class="n">services</span> <span class="n">WHERE</span> <span class="p">(</span><span class="n">devices</span><span class="o">.</span><span class="n">device_id</span> <span class="o">=</span> <span class="mi">61</span> <span class="n">AND</span> <span class="n">devices</span><span class="o">.</span><span class="n">device_id</span> <span class="o">=</span> <span class="n">services</span><span class="o">.</span><span class="n">device_id</span><span class="p">)</span> \<span class="n">G</span><span class="p">;</span>
+<span class="o">***************************</span> <span class="mf">1.</span> <span class="n">row</span> <span class="o">***************************</span>
+                <span class="n">device_id</span><span class="p">:</span> <span class="mi">61</span>
+                <span class="n">inserted</span><span class="p">:</span> <span class="mi">2024</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">19</span> <span class="mi">10</span><span class="p">:</span><span class="mi">23</span><span class="p">:</span><span class="mi">32</span>
+                <span class="n">hostname</span><span class="p">:</span> <span class="n">mail</span>
+                <span class="n">sysName</span><span class="p">:</span> <span class="n">mail_example</span>
+                <span class="n">display</span><span class="p">:</span> <span class="n">NULL</span>
+                    <span class="n">ip</span><span class="p">:</span> <span class="mf">192.168.0.29</span>
+                <span class="n">overwrite_ip</span><span class="p">:</span>
+                <span class="n">community</span><span class="p">:</span> <span class="n">NULL</span>
+                <span class="n">authlevel</span><span class="p">:</span> <span class="n">NULL</span>
+                <span class="n">authname</span><span class="p">:</span> <span class="n">NULL</span>
+                <span class="n">authpass</span><span class="p">:</span> <span class="n">NULL</span>
+                <span class="n">authalgo</span><span class="p">:</span> <span class="n">NULL</span>
+            <span class="n">cryptopass</span><span class="p">:</span> <span class="n">NULL</span>
+            <span class="n">cryptoalgo</span><span class="p">:</span> <span class="n">NULL</span>
+                <span class="n">snmpver</span><span class="p">:</span> <span class="n">v2c</span>
+                    <span class="n">port</span><span class="p">:</span> <span class="mi">161</span>
+                <span class="n">transport</span><span class="p">:</span> <span class="n">udp</span>
+                <span class="n">timeout</span><span class="p">:</span> <span class="n">NULL</span>
+                <span class="n">retries</span><span class="p">:</span> <span class="n">NULL</span>
+            <span class="n">snmp_disable</span><span class="p">:</span> <span class="mi">1</span>
+            <span class="n">bgpLocalAs</span><span class="p">:</span> <span class="n">NULL</span>
+            <span class="n">sysObjectID</span><span class="p">:</span> <span class="n">NULL</span>
+                <span class="n">sysDescr</span><span class="p">:</span> <span class="n">NULL</span>
+            <span class="n">sysContact</span><span class="p">:</span> <span class="n">NULL</span>
+                <span class="n">version</span><span class="p">:</span> <span class="n">NULL</span>
+                <span class="n">hardware</span><span class="p">:</span>
+                <span class="n">features</span><span class="p">:</span> <span class="n">NULL</span>
+            <span class="n">location_id</span><span class="p">:</span> <span class="n">NULL</span>
+                    <span class="n">os</span><span class="p">:</span> <span class="n">windows</span>
+                <span class="n">status</span><span class="p">:</span> <span class="mi">1</span>
+            <span class="n">status_reason</span><span class="p">:</span>
+                <span class="n">ignore</span><span class="p">:</span> <span class="mi">0</span>
+                <span class="n">disabled</span><span class="p">:</span> <span class="mi">0</span>
+                <span class="n">uptime</span><span class="p">:</span> <span class="n">NULL</span>
+            <span class="n">agent_uptime</span><span class="p">:</span> <span class="mi">0</span>
+            <span class="n">last_polled</span><span class="p">:</span> <span class="mi">2025</span><span class="o">-</span><span class="mi">02</span><span class="o">-</span><span class="mi">25</span> <span class="mi">10</span><span class="p">:</span><span class="mi">51</span><span class="p">:</span><span class="mi">15</span>
+    <span class="n">last_poll_attempted</span><span class="p">:</span> <span class="n">NULL</span>
+    <span class="n">last_polled_timetaken</span><span class="p">:</span> <span class="mf">1.3264119625092</span>
+<span class="n">last_discovered_timetaken</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="n">last_discovered</span><span class="p">:</span> <span class="mi">2025</span><span class="o">-</span><span class="mi">02</span><span class="o">-</span><span class="mi">25</span> <span class="mi">07</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="mi">23</span>
+                <span class="n">last_ping</span><span class="p">:</span> <span class="mi">2025</span><span class="o">-</span><span class="mi">02</span><span class="o">-</span><span class="mi">25</span> <span class="mi">10</span><span class="p">:</span><span class="mi">51</span><span class="p">:</span><span class="mi">15</span>
+    <span class="n">last_ping_timetaken</span><span class="p">:</span> <span class="mi">251</span>
+                <span class="n">purpose</span><span class="p">:</span> <span class="n">Server</span> <span class="mi">2019</span>
+                    <span class="nb">type</span><span class="p">:</span> <span class="n">server</span>
+                <span class="n">serial</span><span class="p">:</span> <span class="n">NULL</span>
+                    <span class="n">icon</span><span class="p">:</span> <span class="n">NULL</span>
+            <span class="n">poller_group</span><span class="p">:</span> <span class="mi">0</span>
+    <span class="n">override_sysLocation</span><span class="p">:</span> <span class="mi">0</span>
+                    <span class="n">notes</span><span class="p">:</span> <span class="n">NULL</span>
+    <span class="n">port_association_mode</span><span class="p">:</span> <span class="mi">3</span>
+                <span class="n">max_depth</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="n">disable_notify</span><span class="p">:</span> <span class="mi">0</span>
+            <span class="n">ignore_status</span><span class="p">:</span> <span class="mi">0</span>
+            <span class="n">service_id</span><span class="p">:</span> <span class="mi">2</span>
+                <span class="n">device_id</span><span class="p">:</span> <span class="mi">61</span>
+            <span class="n">service_ip</span><span class="p">:</span> <span class="mf">192.168.1.29</span>
+            <span class="n">service_type</span><span class="p">:</span> <span class="n">smtp</span>
+            <span class="n">service_desc</span><span class="p">:</span> <span class="n">Check</span> <span class="k">if</span> <span class="n">SMTP</span> <span class="ow">is</span> <span class="n">alive</span>
+            <span class="n">service_param</span><span class="p">:</span>
+        <span class="n">service_ignore</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="n">service_status</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="n">service_changed</span><span class="p">:</span> <span class="mi">1739752202</span>
+        <span class="n">service_message</span><span class="p">:</span> <span class="n">SMTP</span> <span class="n">OK</span> <span class="o">-</span> <span class="mf">0.262</span> <span class="n">sec</span><span class="o">.</span> <span class="n">response</span> <span class="n">time</span>
+        <span class="n">service_disabled</span><span class="p">:</span> <span class="mi">0</span>
+            <span class="n">service_ds</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;time&quot;</span><span class="p">:</span><span class="s2">&quot;s&quot;</span><span class="p">}</span>
+    <span class="n">service_template_id</span><span class="p">:</span> <span class="mi">0</span>
+            <span class="n">service_name</span><span class="p">:</span> <span class="n">imail04</span> <span class="n">SMTP</span> <span class="n">check</span>
+<span class="mi">1</span> <span class="n">rows</span> <span class="ow">in</span> <span class="nb">set</span> <span class="p">(</span><span class="mf">0.001</span> <span class="n">sec</span><span class="p">)</span>
+
+<span class="n">MariaDB</span> <span class="p">[</span><span class="n">librenms</span><span class="p">]</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="windowsKVM.html" class="btn btn-neutral float-left" title="Boot windows as KVM on serprate HDD" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="openvpn.html" class="btn btn-neutral float-right" title="OpenVPN on Thirdlane PBX server for Yealink phones" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      <span class="lastupdated">Last updated on Feb 25, 2025.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
