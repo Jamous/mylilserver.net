@@ -200,6 +200,12 @@ Set commands ::
     set system login user ubnt authentication public-keys user@computer key MIIJKAIBAAKCAgEAl0Dm
     set system login user ubnt authentication public-keys user@computer type ecdsa-sha2-nistp256
 
+Restarting dhcp
+---------------
+You can restart the dhcp and dhcpv6 services with these commands ::
+
+    /etc/init.d/dhcpdv6 restart
+    /etc/init.d/dhcpd restart
 
 Usefull commands
 ----------------

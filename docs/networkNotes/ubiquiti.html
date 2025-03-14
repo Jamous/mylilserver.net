@@ -52,6 +52,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../networkArticles/dhcp.html">IPv6 SLAAC and DHCP - Juniper</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../networkArticles/jncissp.html">JNCIS-SP Study Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../networkArticles/mac.html">Mac network utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../networkArticles/ubntservices.html">Manaing EdgeOS services</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../networkArticles/sweep.html">Sweep network utility</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../networkArticles/fortissl.html">Troubleshoot Fortigate IPsec VPN</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../networkArticles/ubntbprvpn.html">Ubiquiti Edgerouter VPN with Policy Based routing</a></li>
@@ -87,6 +88,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#ipv6-pd-client">IPv6-PD client</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ipv6-pd-server">IPv6-PD server</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ssh-key-authentication">SSH key authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#restarting-dhcp">Restarting dhcp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#usefull-commands">Usefull commands</a></li>
 </ul>
 </li>
@@ -336,6 +338,14 @@ interfaces<span class="w"> </span><span class="o">{</span>
 </pre></div>
 </div>
 </section>
+<section id="restarting-dhcp">
+<h2>Restarting dhcp<a class="headerlink" href="#restarting-dhcp" title="Link to this heading"></a></h2>
+<p>You can restart the dhcp and dhcpv6 services with these commands</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">init</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">dhcpdv6</span> <span class="n">restart</span>
+<span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">init</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">dhcpd</span> <span class="n">restart</span>
+</pre></div>
+</div>
+</section>
 <section id="usefull-commands">
 <h2>Usefull commands<a class="headerlink" href="#usefull-commands" title="Link to this heading"></a></h2>
 <div class="line-block">
@@ -361,7 +371,7 @@ interfaces<span class="w"> </span><span class="o">{</span>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Feb 25, 2025.
+      <span class="lastupdated">Last updated on Mar 14, 2025.
       </span></p>
   </div>
 

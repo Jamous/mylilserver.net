@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thirdlane PBX &mdash; MyLilServer.net  documentation</title>
+  <title>Manaing EdgeOS services &mdash; MyLilServer.net  documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
 
@@ -21,8 +21,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Virsh notes" href="virsh.html" />
-    <link rel="prev" title="Linux Containers" href="lxc.html" /> 
+    <link rel="next" title="Sweep network utility" href="sweep.html" />
+    <link rel="prev" title="Mac network utility" href="mac.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -45,17 +45,21 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Networking Articles</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../networkArticles/timeout.html">Cisco AnyConnect idle timeout</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../networkArticles/fortigateSipAlg.html">Disabling SIP-ALG on FortiOS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../networkArticles/sshtunnel.html">HTTPS over SSH tunnels</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../networkArticles/dhcp.html">IPv6 SLAAC and DHCP - Juniper</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../networkArticles/jncissp.html">JNCIS-SP Study Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../networkArticles/mac.html">Mac network utility</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../networkArticles/ubntservices.html">Manaing EdgeOS services</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../networkArticles/sweep.html">Sweep network utility</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../networkArticles/fortissl.html">Troubleshoot Fortigate IPsec VPN</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../networkArticles/ubntbprvpn.html">Ubiquiti Edgerouter VPN with Policy Based routing</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="timeout.html">Cisco AnyConnect idle timeout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fortigateSipAlg.html">Disabling SIP-ALG on FortiOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sshtunnel.html">HTTPS over SSH tunnels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dhcp.html">IPv6 SLAAC and DHCP - Juniper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jncissp.html">JNCIS-SP Study Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mac.html">Mac network utility</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Manaing EdgeOS services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#restarting-dhcp">Restarting dhcp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#restarting-dhcpv6">Restarting dhcpv6</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sweep.html">Sweep network utility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fortissl.html">Troubleshoot Fortigate IPsec VPN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ubntbprvpn.html">Ubiquiti Edgerouter VPN with Policy Based routing</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Unix Articles</span></p>
 <ul>
@@ -86,13 +90,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../networkNotes/wireshark.html">Wireshark notes</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Unix Notes</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="lxc.html">Linux Containers</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Thirdlane PBX</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#sms-troubleshooting">SMS troubleshooting</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="virsh.html">Virsh notes</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../unixNotes/lxc.html">Linux Containers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unixNotes/thirdlane.html">Thirdlane PBX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unixNotes/virsh.html">Virsh notes</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Other projects</span></p>
 <ul>
@@ -116,9 +117,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Thirdlane PBX</li>
+      <li class="breadcrumb-item active">Manaing EdgeOS services</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/unixNotes/thirdlane.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/networkArticles/ubntservices.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -126,15 +127,37 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="thirdlane-pbx">
-<h1>Thirdlane PBX<a class="headerlink" href="#thirdlane-pbx" title="Link to this heading"></a></h1>
-<p>Notes on thirdlane PBX</p>
-<section id="sms-troubleshooting">
-<h2>SMS troubleshooting<a class="headerlink" href="#sms-troubleshooting" title="Link to this heading"></a></h2>
-<p>SMS are processed at api-server-ng service - it’s dockerized - you can see it’s logs with <code class="docutils literal notranslate"><span class="pre">journalctl</span> <span class="pre">-u</span> <span class="pre">api-server-ng</span></code> or <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">logs</span> <span class="pre">api-server-ng</span></code></p>
-<p>Make api-server-ng logging more verbose, edit /etc/sysconfig/api-server-ng.local
-<code class="docutils literal notranslate"><span class="pre">TL_LOG_LEVEL=debug</span></code>
-<code class="docutils literal notranslate"><span class="pre">systemctl</span> <span class="pre">restart</span> <span class="pre">api-server-ng.service</span></code></p>
+  <section id="manaing-edgeos-services">
+<h1>Manaing EdgeOS services<a class="headerlink" href="#manaing-edgeos-services" title="Link to this heading"></a></h1>
+<p>I see a lot of articles suggesting rebooting the Ubiquiti EdgeRouters frequently, however in some service provider applications this is not an option. Thankfully, since EdgeOS is built on Debian, we can restart individual services when there is an issue instead of rebooting the entire router. This also means you can edit system configurations similar to Debian, though this is not recommended for stability.</p>
+<p>Starting in later firmware versions, EdgeOS began integrating Systemd. We can restart some services by restarting, or stopping and starting the systemd unit. Below is an example of how to find the name of a service and restart it.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ubnt@ubnt:~$ systemctl | grep dhcp
+vyatta-dhcpd.service                                                                                                                         loaded active running   EdgeOS DHCP Server
+vyatta-dhcpdv6.service                                                                                                                       loaded active running   EdgeOS DHCPv6 Server
+ubnt@ubnt:~$ sudo systemctl stop vyatta-dhcpd.service
+ubnt@ubnt:~$ sudo systemctl start vyatta-dhcpd.service
+</pre></div>
+</div>
+<p>There are wrappers for controlling systemd services in /etc/init.d to support legacy code. These wrappers are sometimes easier to restart and provide additional context and control over the services. In the case of dhcpd it is easier to use these wrappers. For example, the wrapper for dhcpd states “note I am disabling restart because no sig will cause dnsmasq to re-read it’s config file. This is not good since I think it loses it’s cache file on complete restart.”</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ubnt@ubnt:~$ /etc/init.d/dhcpd restart
+</pre></div>
+</div>
+<p>This example works with more then just dhcp. I will include examples of more services this will work with below.</p>
+<section id="restarting-dhcp">
+<h2>Restarting dhcp<a class="headerlink" href="#restarting-dhcp" title="Link to this heading"></a></h2>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ubnt@ubnt:~$ /etc/init.d/dhcpd restart
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="restarting-dhcpv6">
+<h2>Restarting dhcpv6<a class="headerlink" href="#restarting-dhcpv6" title="Link to this heading"></a></h2>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ubnt@ubnt:~$ /etc/init.d/dhcpdv6 restart
+</pre></div>
+</div>
+</div></blockquote>
 </section>
 </section>
 
@@ -142,8 +165,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="lxc.html" class="btn btn-neutral float-left" title="Linux Containers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="virsh.html" class="btn btn-neutral float-right" title="Virsh notes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="mac.html" class="btn btn-neutral float-left" title="Mac network utility" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="sweep.html" class="btn btn-neutral float-right" title="Sweep network utility" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
