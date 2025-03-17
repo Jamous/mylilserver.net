@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fortinet Notes &mdash; MyLilServer.net  documentation</title>
+  <title>Containerlab notes &mdash; MyLilServer.net  documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
 
@@ -21,8 +21,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="FS switch notes" href="fs.html" />
-    <link rel="prev" title="Containerlab notes" href="containerlab.html" /> 
+    <link rel="next" title="Fortinet Notes" href="fortinet.html" />
+    <link rel="prev" title="Calix notes" href="calix.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -78,13 +78,13 @@
 <p class="caption" role="heading"><span class="caption-text">Network notes</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="calix.html">Calix notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="containerlab.html">Containerlab notes</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Fortinet Notes</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#fortigate-default-address">Fortigate default address</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#fortigate-flow-debugging">Fortigate flow debugging</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#fortigate-system-controll">Fortigate system controll</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Containerlab notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#managing-images">Managing images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cisco-vios">Cisco vios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#juniper-vmx">Juniper vMX</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="fortinet.html">Fortinet Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fs.html">FS switch notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mikrotik.html">Mirkotik notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ubiquiti.html">Ubiquiti Edgerouter notes</a></li>
@@ -119,9 +119,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Fortinet Notes</li>
+      <li class="breadcrumb-item active">Containerlab notes</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/networkNotes/fortinet.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/networkNotes/containerlab.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -129,45 +129,81 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="fortinet-notes">
-<h1>Fortinet Notes<a class="headerlink" href="#fortinet-notes" title="Link to this heading"></a></h1>
-<section id="fortigate-default-address">
-<h2>Fortigate default address<a class="headerlink" href="#fortigate-default-address" title="Link to this heading"></a></h2>
-<p>By default the fortigate LAN interface is at <code class="docutils literal notranslate"><span class="pre">192.168.1.99</span></code></p>
-</section>
-<section id="fortigate-flow-debugging">
-<h2>Fortigate flow debugging<a class="headerlink" href="#fortigate-flow-debugging" title="Link to this heading"></a></h2>
-<dl class="simple">
-<dt>You can view traffic flows through the fortigate. This will show firewall polices, routing, and nat actions on packet. See example below</dt><dd><ul class="simple">
-<li><p>Reset the flow filter <code class="docutils literal notranslate"><span class="pre">diag</span> <span class="pre">debug</span> <span class="pre">flow</span> <span class="pre">filter</span> <span class="pre">clear</span></code></p></li>
-<li><p>Filter for protocol 1 (icmp) <code class="docutils literal notranslate"><span class="pre">diagnose</span> <span class="pre">debug</span> <span class="pre">flow</span> <span class="pre">filter</span> <span class="pre">proto</span> <span class="pre">1</span></code></p></li>
-<li><p>Set host to filter for (source or destination) <code class="docutils literal notranslate"><span class="pre">diagnose</span> <span class="pre">debug</span> <span class="pre">flow</span> <span class="pre">filter</span> <span class="pre">addr</span> <span class="pre">172.0.0.2</span></code></p></li>
-<li><p>Enable timestamps <code class="docutils literal notranslate"><span class="pre">diagnose</span> <span class="pre">debug</span> <span class="pre">console</span> <span class="pre">timestamp</span> <span class="pre">enable</span></code></p></li>
-<li><p>Set number of flows to catch. <code class="docutils literal notranslate"><span class="pre">diagnose</span> <span class="pre">debug</span> <span class="pre">flow</span> <span class="pre">trace</span> <span class="pre">start</span> <span class="pre">1000</span></code></p></li>
-<li><p>Enable the filter <code class="docutils literal notranslate"><span class="pre">diagnose</span> <span class="pre">debug</span> <span class="pre">enable</span></code></p></li>
-<li><p>Show the filter <code class="docutils literal notranslate"><span class="pre">diag</span> <span class="pre">debug</span> <span class="pre">flow</span> <span class="pre">filter</span></code></p></li>
-</ul>
-</dd>
-</dl>
-<p>An example I have used. I like to leave off the timestamps, they create too many logs.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">diag</span> <span class="n">debug</span> <span class="n">flow</span> <span class="nb">filter</span> <span class="n">clear</span>
-<span class="n">diagnose</span> <span class="n">debug</span> <span class="n">flow</span> <span class="nb">filter</span> <span class="n">addr</span> <span class="mf">172.0.0.2</span>
-<span class="n">diagnose</span> <span class="n">debug</span> <span class="n">flow</span> <span class="n">trace</span> <span class="n">start</span> <span class="mi">1000</span>
-<span class="n">diagnose</span> <span class="n">debug</span> <span class="n">enable</span>
+  <section id="containerlab-notes">
+<h1>Containerlab notes<a class="headerlink" href="#containerlab-notes" title="Link to this heading"></a></h1>
+<p>Bring up a lab</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">containerlab</span> <span class="n">deploy</span>
+</pre></div>
+</div>
+<p>Bringing down a lab</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">containerlab</span> <span class="n">destroy</span>
+</pre></div>
+</div>
+<section id="managing-images">
+<h2>Managing images<a class="headerlink" href="#managing-images" title="Link to this heading"></a></h2>
+<div class="line-block">
+<div class="line">All images are docker images. You can mnnage them as below.</div>
+<div class="line">Listing images</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@r620</span><span class="p">:</span><span class="o">~</span><span class="c1"># docker images</span>
+<span class="n">REPOSITORY</span>                            <span class="n">TAG</span>        <span class="n">IMAGE</span> <span class="n">ID</span>       <span class="n">CREATED</span>          <span class="n">SIZE</span>
+<span class="n">vrnetlab</span><span class="o">/</span><span class="n">cisco_vios</span>                   <span class="mf">15.6.7</span>     <span class="n">c2639dfa6e6d</span>   <span class="mi">37</span> <span class="n">minutes</span> <span class="n">ago</span>   <span class="mi">545</span><span class="n">MB</span>
+</pre></div>
+</div>
+<p>Removing images</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">rmi</span> <span class="n">c2639dfa6e6d</span>
+</pre></div>
+</div>
+<p>Saving an image</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">image</span> <span class="n">save</span> <span class="n">c2639dfa6e6d</span> <span class="o">-</span><span class="n">o</span> <span class="n">vios</span>
 </pre></div>
 </div>
 </section>
-<section id="fortigate-system-controll">
-<h2>Fortigate system controll<a class="headerlink" href="#fortigate-system-controll" title="Link to this heading"></a></h2>
-<dl class="simple">
-<dt>You can interact with fortigate services as unix services using <code class="docutils literal notranslate"><span class="pre">fnsysctl</span></code>. See examples below</dt><dd><ul class="simple">
-<li><p>View all processes (equivelent to ps -ax): <code class="docutils literal notranslate"><span class="pre">fnsysctl</span> <span class="pre">ps</span></code></p></li>
-<li><p>Kill all processes (equivelent to pkill) <code class="docutils literal notranslate"><span class="pre">fnsysctl</span> <span class="pre">killall</span> <span class="pre">&lt;process_name&gt;</span></code></p></li>
-<li><p>View interfacs (similar to ip a): <code class="docutils literal notranslate"><span class="pre">fnsysctl</span> <span class="pre">ifconfig</span></code></p></li>
-<li><p>View interface error: <code class="docutils literal notranslate"><span class="pre">fnsysctl</span> <span class="pre">ifconfig</span> <span class="pre">&lt;nic-name&gt;</span></code></p></li>
-</ul>
-</dd>
-</dl>
+<section id="cisco-vios">
+<h2>Cisco vios<a class="headerlink" href="#cisco-vios" title="Link to this heading"></a></h2>
+<div class="line-block">
+<div class="line">Username: <code class="docutils literal notranslate"><span class="pre">admin</span></code></div>
+<div class="line">Password: <code class="docutils literal notranslate"><span class="pre">admin</span></code></div>
+<div class="line">cisco.clab.yaml</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name</span><span class="p">:</span> <span class="n">cisco</span>
+
+<span class="n">topology</span><span class="p">:</span>
+<span class="n">nodes</span><span class="p">:</span>
+    <span class="n">vios</span><span class="p">:</span>
+    <span class="n">kind</span><span class="p">:</span> <span class="n">linux</span>
+    <span class="n">image</span><span class="p">:</span> <span class="n">vrnetlab</span><span class="o">/</span><span class="n">cisco_vios</span><span class="p">:</span><span class="mf">15.6.7</span>
+    <span class="n">env</span><span class="p">:</span>
+        <span class="n">HOSTNAME</span><span class="p">:</span> <span class="n">vios</span>
+
+<span class="n">links</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">endpoints</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;vios:eth1&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Documentation: <a class="reference external" href="https://github.com/hellt/vrnetlab/tree/master/vios">https://github.com/hellt/vrnetlab/tree/master/vios</a></p>
+</section>
+<section id="juniper-vmx">
+<h2>Juniper vMX<a class="headerlink" href="#juniper-vmx" title="Link to this heading"></a></h2>
+<div class="line-block">
+<div class="line">Username <code class="docutils literal notranslate"><span class="pre">admin</span></code></div>
+<div class="line">Password <code class="docutils literal notranslate"><span class="pre">admin&#64;123</span></code></div>
+<div class="line">vmx.clab.yml</div>
+</div>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name</span><span class="p">:</span> <span class="n">vmx</span>
+
+<span class="n">topology</span><span class="p">:</span>
+<span class="n">nodes</span><span class="p">:</span>
+    <span class="n">vmx</span><span class="p">:</span>
+    <span class="n">kind</span><span class="p">:</span> <span class="n">juniper_vmx</span>
+    <span class="n">image</span><span class="p">:</span> <span class="n">vrnetlab</span><span class="o">/</span><span class="n">juniper_vmx</span><span class="p">:</span><span class="mf">21.2</span><span class="n">R3</span><span class="mf">.8</span>
+
+<span class="n">links</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">endpoints</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;vmx:eth1&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Documentation <a class="reference external" href="https://github.com/hellt/vrnetlab/tree/master/vmx">https://github.com/hellt/vrnetlab/tree/master/vmx</a></p>
 </section>
 </section>
 
@@ -175,8 +211,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="containerlab.html" class="btn btn-neutral float-left" title="Containerlab notes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="fs.html" class="btn btn-neutral float-right" title="FS switch notes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="calix.html" class="btn btn-neutral float-left" title="Calix notes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="fortinet.html" class="btn btn-neutral float-right" title="Fortinet Notes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

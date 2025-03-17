@@ -57,6 +57,7 @@ While I have had many servers running on it, everything from Debian to Windows, 
    :caption: Network notes
 
    networkNotes/calix
+   networkNotes/containerlab
    networkNotes/fortinet
    networkNotes/fs
    networkNotes/mikrotik
