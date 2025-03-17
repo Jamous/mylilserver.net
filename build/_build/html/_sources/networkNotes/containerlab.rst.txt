@@ -26,7 +26,7 @@ Removing images ::
 
 Saving an image ::
 
-	docker image save c2639dfa6e6d -o vios
+	docker save c2639dfa6e6d | gzip > docker_cisco_vios_15_6_7.tar.gz
 
 Cisco vios
 ----------
@@ -39,11 +39,11 @@ Cisco vios
     name: cisco
 
     topology:
-    nodes:
+      nodes:
         vios:
-        kind: linux
-        image: vrnetlab/cisco_vios:15.6.7
-        env:
+          kind: linux
+          image: vrnetlab/cisco_vios:15.6.7
+          env:
             HOSTNAME: vios
 
     links:
@@ -62,10 +62,10 @@ Juniper vMX
     name: vmx
 
     topology:
-    nodes:
+      nodes:
         vmx:
-        kind: juniper_vmx
-        image: vrnetlab/juniper_vmx:21.2R3.8
+          kind: juniper_vmx
+          image: vrnetlab/juniper_vmx:21.2R3.8
 
     links:
         - endpoints: ["vmx:eth1"]

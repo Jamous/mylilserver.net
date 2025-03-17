@@ -155,7 +155,7 @@
 </pre></div>
 </div>
 <p>Saving an image</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">image</span> <span class="n">save</span> <span class="n">c2639dfa6e6d</span> <span class="o">-</span><span class="n">o</span> <span class="n">vios</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">save</span> <span class="n">c2639dfa6e6d</span> <span class="o">|</span> <span class="n">gzip</span> <span class="o">&gt;</span> <span class="n">docker_cisco_vios_15_6_7</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
 </pre></div>
 </div>
 </section>
@@ -169,11 +169,11 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name</span><span class="p">:</span> <span class="n">cisco</span>
 
 <span class="n">topology</span><span class="p">:</span>
-<span class="n">nodes</span><span class="p">:</span>
+  <span class="n">nodes</span><span class="p">:</span>
     <span class="n">vios</span><span class="p">:</span>
-    <span class="n">kind</span><span class="p">:</span> <span class="n">linux</span>
-    <span class="n">image</span><span class="p">:</span> <span class="n">vrnetlab</span><span class="o">/</span><span class="n">cisco_vios</span><span class="p">:</span><span class="mf">15.6.7</span>
-    <span class="n">env</span><span class="p">:</span>
+      <span class="n">kind</span><span class="p">:</span> <span class="n">linux</span>
+      <span class="n">image</span><span class="p">:</span> <span class="n">vrnetlab</span><span class="o">/</span><span class="n">cisco_vios</span><span class="p">:</span><span class="mf">15.6.7</span>
+      <span class="n">env</span><span class="p">:</span>
         <span class="n">HOSTNAME</span><span class="p">:</span> <span class="n">vios</span>
 
 <span class="n">links</span><span class="p">:</span>
@@ -193,10 +193,10 @@
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name</span><span class="p">:</span> <span class="n">vmx</span>
 
 <span class="n">topology</span><span class="p">:</span>
-<span class="n">nodes</span><span class="p">:</span>
+  <span class="n">nodes</span><span class="p">:</span>
     <span class="n">vmx</span><span class="p">:</span>
-    <span class="n">kind</span><span class="p">:</span> <span class="n">juniper_vmx</span>
-    <span class="n">image</span><span class="p">:</span> <span class="n">vrnetlab</span><span class="o">/</span><span class="n">juniper_vmx</span><span class="p">:</span><span class="mf">21.2</span><span class="n">R3</span><span class="mf">.8</span>
+      <span class="n">kind</span><span class="p">:</span> <span class="n">juniper_vmx</span>
+      <span class="n">image</span><span class="p">:</span> <span class="n">vrnetlab</span><span class="o">/</span><span class="n">juniper_vmx</span><span class="p">:</span><span class="mf">21.2</span><span class="n">R3</span><span class="mf">.8</span>
 
 <span class="n">links</span><span class="p">:</span>
     <span class="o">-</span> <span class="n">endpoints</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;vmx:eth1&quot;</span><span class="p">]</span>
