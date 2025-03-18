@@ -49,7 +49,33 @@ Cisco vios
     links:
         - endpoints: ["vios:eth1"]
 
-Documentation: `https://github.com/hellt/vrnetlab/tree/master/vios <https://github.com/hellt/vrnetlab/tree/master/vios>`_
+| Documentation: 
+| `containerlab vios <https://containerlab.dev/rn/0.58/#cisco-vios>`_
+| `vrnetlab vios <https://github.com/hellt/vrnetlab/tree/master/vios>`_
+
+
+Fortigate
+---------
+| Username: ``admin``
+| Password: ``admin``
+| fortigate.clab.yml
+
+::
+
+    name: fortigate
+
+    topology:
+      nodes:
+        fortigate:
+          kind: fortinet_fortigate
+          image: vrnetlab/vr-fortios:7.0.15
+
+    links:
+        - endpoints: ["fortigate:eth1", "fortigate:eth2"]
+
+| Documentation:
+| `containerlab fortigate <https://containerlab.dev/manual/kinds/fortinet_fortigate/>`_
+| `vrnetlab fortigate <https://github.com/hellt/vrnetlab/tree/master/fortigate>`_
 
 Juniper vMX
 -----------
@@ -70,5 +96,7 @@ Juniper vMX
     links:
         - endpoints: ["vmx:eth1"]
 
-Documentation `https://github.com/hellt/vrnetlab/tree/master/vmx <https://github.com/hellt/vrnetlab/tree/master/vmx>`_
+| Documentation 
+| `containerlab vmx <https://containerlab.dev/manual/kinds/vr-vmx/>`_
+| `vrnetlab vmx <https://github.com/hellt/vrnetlab/tree/master/vmx>`_
 

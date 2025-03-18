@@ -81,6 +81,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Containerlab notes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#managing-images">Managing images</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#cisco-vios">Cisco vios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fortigate">Fortigate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#juniper-vmx">Juniper vMX</a></li>
 </ul>
 </li>
@@ -180,7 +181,36 @@
     <span class="o">-</span> <span class="n">endpoints</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;vios:eth1&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>Documentation: <a class="reference external" href="https://github.com/hellt/vrnetlab/tree/master/vios">https://github.com/hellt/vrnetlab/tree/master/vios</a></p>
+<div class="line-block">
+<div class="line">Documentation:</div>
+<div class="line"><a class="reference external" href="https://containerlab.dev/rn/0.58/#cisco-vios">containerlab vios</a></div>
+<div class="line"><a class="reference external" href="https://github.com/hellt/vrnetlab/tree/master/vios">vrnetlab vios</a></div>
+</div>
+</section>
+<section id="fortigate">
+<h2>Fortigate<a class="headerlink" href="#fortigate" title="Link to this heading"></a></h2>
+<div class="line-block">
+<div class="line">Username: <code class="docutils literal notranslate"><span class="pre">admin</span></code></div>
+<div class="line">Password: <code class="docutils literal notranslate"><span class="pre">admin</span></code></div>
+<div class="line">fortigate.clab.yml</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name</span><span class="p">:</span> <span class="n">fortigate</span>
+
+<span class="n">topology</span><span class="p">:</span>
+  <span class="n">nodes</span><span class="p">:</span>
+    <span class="n">fortigate</span><span class="p">:</span>
+      <span class="n">kind</span><span class="p">:</span> <span class="n">fortinet_fortigate</span>
+      <span class="n">image</span><span class="p">:</span> <span class="n">vrnetlab</span><span class="o">/</span><span class="n">vr</span><span class="o">-</span><span class="n">fortios</span><span class="p">:</span><span class="mf">7.0.15</span>
+
+<span class="n">links</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">endpoints</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;fortigate:eth1&quot;</span><span class="p">,</span> <span class="s2">&quot;fortigate:eth2&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">Documentation:</div>
+<div class="line"><a class="reference external" href="https://containerlab.dev/manual/kinds/fortinet_fortigate/">containerlab fortigate</a></div>
+<div class="line"><a class="reference external" href="https://github.com/hellt/vrnetlab/tree/master/fortigate">vrnetlab fortigate</a></div>
+</div>
 </section>
 <section id="juniper-vmx">
 <h2>Juniper vMX<a class="headerlink" href="#juniper-vmx" title="Link to this heading"></a></h2>
@@ -203,7 +233,11 @@
 </pre></div>
 </div>
 </div></blockquote>
-<p>Documentation <a class="reference external" href="https://github.com/hellt/vrnetlab/tree/master/vmx">https://github.com/hellt/vrnetlab/tree/master/vmx</a></p>
+<div class="line-block">
+<div class="line">Documentation</div>
+<div class="line"><a class="reference external" href="https://containerlab.dev/manual/kinds/vr-vmx/">containerlab vmx</a></div>
+<div class="line"><a class="reference external" href="https://github.com/hellt/vrnetlab/tree/master/vmx">vrnetlab vmx</a></div>
+</div>
 </section>
 </section>
 
@@ -219,7 +253,7 @@
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Mar 17, 2025.
+      <span class="lastupdated">Last updated on Mar 18, 2025.
       </span></p>
   </div>
 
