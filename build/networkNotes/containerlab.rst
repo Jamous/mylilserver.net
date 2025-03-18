@@ -46,7 +46,7 @@ Cisco vios
           env:
             HOSTNAME: vios
 
-    links:
+      links:
         - endpoints: ["vios:eth1"]
 
 | Documentation: 
@@ -70,7 +70,7 @@ Fortigate
           kind: fortinet_fortigate
           image: vrnetlab/vr-fortios:7.0.15
 
-    links:
+      links:
         - endpoints: ["fortigate:eth1", "fortigate:eth2"]
 
 | Documentation:
@@ -79,8 +79,8 @@ Fortigate
 
 Juniper vMX
 -----------
-| Username ``admin``
-| Password ``admin@123``
+| Username: ``admin``
+| Password: ``admin@123``
 | vmx.clab.yml
 
  :: 
@@ -93,10 +93,33 @@ Juniper vMX
           kind: juniper_vmx
           image: vrnetlab/juniper_vmx:21.2R3.8
 
-    links:
+      links:
         - endpoints: ["vmx:eth1"]
 
 | Documentation 
 | `containerlab vmx <https://containerlab.dev/manual/kinds/vr-vmx/>`_
 | `vrnetlab vmx <https://github.com/hellt/vrnetlab/tree/master/vmx>`_
 
+
+Ubuntu
+------
+| Username: ``clab``
+| Password: ``clab@123``
+| ubuntu.clab.yml
+
+::
+
+    name: ubuntu
+    
+    topology:
+      nodes:
+        ubuntu:
+          kind: generic_vm
+          image: vrnetlab/canonical_ubuntu:jammy
+
+      links:
+        - endpoints: ["ubuntu:eth1"]
+
+| Documentation
+| `containerlab ubuntu <https://containerlab.dev/manual/kinds/generic_vm/>`_
+| 'vrnetlab ubuntu <https://github.com/hellt/vrnetlab/tree/master/ubuntu>`_

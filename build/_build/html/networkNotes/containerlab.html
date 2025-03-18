@@ -83,6 +83,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#cisco-vios">Cisco vios</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#fortigate">Fortigate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#juniper-vmx">Juniper vMX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ubuntu">Ubuntu</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="fortinet.html">Fortinet Notes</a></li>
@@ -177,7 +178,7 @@
       <span class="n">env</span><span class="p">:</span>
         <span class="n">HOSTNAME</span><span class="p">:</span> <span class="n">vios</span>
 
-<span class="n">links</span><span class="p">:</span>
+  <span class="n">links</span><span class="p">:</span>
     <span class="o">-</span> <span class="n">endpoints</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;vios:eth1&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -202,7 +203,7 @@
       <span class="n">kind</span><span class="p">:</span> <span class="n">fortinet_fortigate</span>
       <span class="n">image</span><span class="p">:</span> <span class="n">vrnetlab</span><span class="o">/</span><span class="n">vr</span><span class="o">-</span><span class="n">fortios</span><span class="p">:</span><span class="mf">7.0.15</span>
 
-<span class="n">links</span><span class="p">:</span>
+  <span class="n">links</span><span class="p">:</span>
     <span class="o">-</span> <span class="n">endpoints</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;fortigate:eth1&quot;</span><span class="p">,</span> <span class="s2">&quot;fortigate:eth2&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -215,8 +216,8 @@
 <section id="juniper-vmx">
 <h2>Juniper vMX<a class="headerlink" href="#juniper-vmx" title="Link to this heading"></a></h2>
 <div class="line-block">
-<div class="line">Username <code class="docutils literal notranslate"><span class="pre">admin</span></code></div>
-<div class="line">Password <code class="docutils literal notranslate"><span class="pre">admin&#64;123</span></code></div>
+<div class="line">Username: <code class="docutils literal notranslate"><span class="pre">admin</span></code></div>
+<div class="line">Password: <code class="docutils literal notranslate"><span class="pre">admin&#64;123</span></code></div>
 <div class="line">vmx.clab.yml</div>
 </div>
 <blockquote>
@@ -228,7 +229,7 @@
       <span class="n">kind</span><span class="p">:</span> <span class="n">juniper_vmx</span>
       <span class="n">image</span><span class="p">:</span> <span class="n">vrnetlab</span><span class="o">/</span><span class="n">juniper_vmx</span><span class="p">:</span><span class="mf">21.2</span><span class="n">R3</span><span class="mf">.8</span>
 
-<span class="n">links</span><span class="p">:</span>
+  <span class="n">links</span><span class="p">:</span>
     <span class="o">-</span> <span class="n">endpoints</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;vmx:eth1&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -237,6 +238,31 @@
 <div class="line">Documentation</div>
 <div class="line"><a class="reference external" href="https://containerlab.dev/manual/kinds/vr-vmx/">containerlab vmx</a></div>
 <div class="line"><a class="reference external" href="https://github.com/hellt/vrnetlab/tree/master/vmx">vrnetlab vmx</a></div>
+</div>
+</section>
+<section id="ubuntu">
+<h2>Ubuntu<a class="headerlink" href="#ubuntu" title="Link to this heading"></a></h2>
+<div class="line-block">
+<div class="line">Username: <code class="docutils literal notranslate"><span class="pre">clab</span></code></div>
+<div class="line">Password: <code class="docutils literal notranslate"><span class="pre">clab&#64;123</span></code></div>
+<div class="line">ubuntu.clab.yml</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name</span><span class="p">:</span> <span class="n">ubuntu</span>
+
+<span class="n">topology</span><span class="p">:</span>
+  <span class="n">nodes</span><span class="p">:</span>
+    <span class="n">ubuntu</span><span class="p">:</span>
+      <span class="n">kind</span><span class="p">:</span> <span class="n">generic_vm</span>
+      <span class="n">image</span><span class="p">:</span> <span class="n">vrnetlab</span><span class="o">/</span><span class="n">canonical_ubuntu</span><span class="p">:</span><span class="n">jammy</span>
+
+  <span class="n">links</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">endpoints</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ubuntu:eth1&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">Documentation</div>
+<div class="line"><a class="reference external" href="https://containerlab.dev/manual/kinds/generic_vm/">containerlab ubuntu</a></div>
+<div class="line">‘vrnetlab ubuntu &lt;<a class="reference external" href="https://github.com/hellt/vrnetlab/tree/master/ubuntu">https://github.com/hellt/vrnetlab/tree/master/ubuntu</a>&gt;`_</div>
 </div>
 </section>
 </section>
