@@ -9,6 +9,10 @@ Bringing down a lab ::
 
 	containerlab destroy
 
+Restarting an individual container ::
+
+	dcoker restart [container name]
+
 Managing images
 ---------------
 | All images are docker images. You can mnnage them as below.
