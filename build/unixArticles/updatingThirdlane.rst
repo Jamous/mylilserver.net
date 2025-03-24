@@ -1,7 +1,7 @@
 Updating Thirdlane PBX
 ======================
 
-Once installed, Thirdlane provides their own update repositories for pbx their PBX software.
+Once installed, Thirdlane provides their own update repositories for their pbx software.
 You can update an install as seen below ::
 
 	yum clean all
