@@ -36,6 +36,7 @@ While I have had many servers running on it, everything from Debian to Windows, 
    unixArticles/librenms
    unixArticles/openvpn
    unixArticles/iperfxinitd
+   unixArticles/updatingThirdlane
    unixArticles/xnee
 
 .. toctree::
