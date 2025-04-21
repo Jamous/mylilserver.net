@@ -35,6 +35,7 @@ While I have had many servers running on it, everything from Debian to Windows, 
    unixArticles/windowsKVM
    unixArticles/librenms
    unixArticles/openvpn
+   unixArticles/librenmsLocations
    unixArticles/iperfxinitd
    unixArticles/updatingThirdlane
    unixArticles/xnee
