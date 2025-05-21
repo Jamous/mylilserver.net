@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Media &mdash; MyLilServer.net  documentation</title>
+  <title>Custom Audio files in Thirdlane PBX &mdash; MyLilServer.net  documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
 
@@ -21,8 +21,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="MyLilServer.net" href="mylilserver.html" />
-    <link rel="prev" title="Virsh notes" href="../unixNotes/virsh.html" /> 
+    <link rel="next" title="Librenms: Directly querying mysql database" href="librenms.html" />
+    <link rel="prev" title="Boot windows as KVM on serprate HDD" href="windowsKVM.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -58,15 +58,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../networkArticles/ubntbprvpn.html">Ubiquiti Edgerouter VPN with Policy Based routing</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Unix Articles</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../unixArticles/windowsKVM.html">Boot windows as KVM on serprate HDD</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unixArticles/tl-customAudio.html">Custom Audio files in Thirdlane PBX</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unixArticles/librenms.html">Librenms: Directly querying mysql database</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unixArticles/openvpn.html">OpenVPN on Thirdlane PBX server for Yealink phones</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unixArticles/librenmsLocations.html">Removing unused locations from LibreNMS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unixArticles/iperfxinitd.html">Starting Iperf3 remotely using xinitd</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unixArticles/updatingThirdlane.html">Updating Thirdlane PBX</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unixArticles/xnee.html">xnee/cnee mouse automation</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="windowsKVM.html">Boot windows as KVM on serprate HDD</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Custom Audio files in Thirdlane PBX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="librenms.html">Librenms: Directly querying mysql database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openvpn.html">OpenVPN on Thirdlane PBX server for Yealink phones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="librenmsLocations.html">Removing unused locations from LibreNMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iperfxinitd.html">Starting Iperf3 remotely using xinitd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="updatingThirdlane.html">Updating Thirdlane PBX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="xnee.html">xnee/cnee mouse automation</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Go articles</span></p>
 <ul>
@@ -96,11 +96,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../unixNotes/virsh.html">Virsh notes</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Other projects</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Media</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mylilserver.html">MyLilServer.net</a></li>
-<li class="toctree-l1"><a class="reference internal" href="billboard.html">Raspbery Pi Digital Billboard</a></li>
-<li class="toctree-l1"><a class="reference internal" href="resume.html">Resume</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../otherProjects/media.html">Media</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../otherProjects/mylilserver.html">MyLilServer.net</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../otherProjects/billboard.html">Raspbery Pi Digital Billboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../otherProjects/resume.html">Resume</a></li>
 </ul>
 
         </div>
@@ -117,9 +117,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Media</li>
+      <li class="breadcrumb-item active">Custom Audio files in Thirdlane PBX</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/otherProjects/media.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/unixArticles/tl-customAudio.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -127,21 +127,32 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="media">
-<h1>Media<a class="headerlink" href="#media" title="Link to this heading"></a></h1>
-<ul class="simple">
-<li><p><a class="reference external" href="https://www.youtube.com/channel/UC7_Vc_NlRBzThtb9Uy8irtw">Regular Networks, Jamous’ YouTube project</a></p></li>
-<li><p><a class="reference external" href="https://github.com/Jamous">Jamous’ Github</a></p></li>
-<li><p><a class="reference external" href="https://www.linkedin.com/in/jamousbitrick/">Jamous’ LinkedIn</a></p></li>
-</ul>
+  <section id="custom-audio-files-in-thirdlane-pbx">
+<h1>Custom Audio files in Thirdlane PBX<a class="headerlink" href="#custom-audio-files-in-thirdlane-pbx" title="Link to this heading"></a></h1>
+<p>Thirdlane uses asterisk at its core, and asterisk is very inline with the unix philosophy of ‘everything is a file’. With that in mind all recordings are files, including IVRs, audio in hunt lists, and voicemail greetings.
+This means that we can duplicate audio files, for example making the unavailable and busy message the same for one extension, or for all extensions, just copy and rename the files appropriately.</p>
+<p>In this example we have a prerecorded voicemail, voicemail.mp3 we want to apply to an extension. Asterisk will not work with mp3 files, so we will need to convert it to a wav file.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ffmpeg</span> <span class="o">-</span><span class="n">i</span> <span class="nb">input</span><span class="o">.</span><span class="n">mp3</span> <span class="o">-</span><span class="n">ar</span> <span class="mi">8000</span> <span class="o">-</span><span class="n">ac</span> <span class="mi">1</span> <span class="o">-</span><span class="n">codec</span> <span class="n">pcm_s16le</span> <span class="n">output</span><span class="o">.</span><span class="n">wav</span>
+</pre></div>
+</div>
+<p>Once this conversion is complete we can upload it to the server, in this case I want it on extension 1001 for the demo tenant.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">spool</span><span class="o">/</span><span class="n">asterisk</span><span class="o">/</span><span class="n">voicemail</span><span class="o">/</span><span class="n">default</span><span class="o">-</span><span class="n">demo</span><span class="o">/</span><span class="mi">1001</span><span class="o">/</span>
+<span class="n">scp</span> <span class="n">user</span><span class="o">@</span><span class="mf">192.168.1.2</span><span class="p">:</span><span class="o">~/</span><span class="n">output</span><span class="o">.</span><span class="n">wav</span> <span class="n">unavail</span><span class="o">.</span><span class="n">wav</span>
+<span class="n">user</span><span class="o">@</span><span class="mf">192.168.1.2</span><span class="s1">&#39;s password:</span>
+<span class="n">unavail</span><span class="o">.</span><span class="n">wav</span>                                                                                                                                               <span class="mi">100</span><span class="o">%</span>  <span class="mi">150</span><span class="n">KB</span> <span class="mf">795.2</span><span class="n">KB</span><span class="o">/</span><span class="n">s</span>   <span class="mi">00</span><span class="p">:</span><span class="mi">00</span>
+<span class="n">cp</span> <span class="n">unavail</span><span class="o">.</span><span class="n">wav</span> <span class="n">busy</span><span class="o">.</span><span class="n">wav</span>
+<span class="n">cp</span><span class="p">:</span> <span class="n">overwrite</span> <span class="n">Y</span>
+</pre></div>
+</div>
+<p>Thats it, your done!</p>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../unixNotes/virsh.html" class="btn btn-neutral float-left" title="Virsh notes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="mylilserver.html" class="btn btn-neutral float-right" title="MyLilServer.net" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="windowsKVM.html" class="btn btn-neutral float-left" title="Boot windows as KVM on serprate HDD" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="librenms.html" class="btn btn-neutral float-right" title="Librenms: Directly querying mysql database" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
