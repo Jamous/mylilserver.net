@@ -34,6 +34,7 @@ While I have had many servers running on it, everything from Debian to Windows, 
 
    unixArticles/windowsKVM
    unixArticles/tl-customAudio
+   unixArticles/installcms
    unixArticles/librenms
    unixArticles/openvpn
    unixArticles/librenmsLocations
