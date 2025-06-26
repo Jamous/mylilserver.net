@@ -94,6 +94,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="lxc.html">Linux Containers</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Thirdlane PBX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#greetings-and-audio-formats">Greetings and audio formats.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#sms-troubleshooting">SMS troubleshooting</a></li>
 </ul>
 </li>
@@ -134,6 +135,14 @@
   <section id="thirdlane-pbx">
 <h1>Thirdlane PBX<a class="headerlink" href="#thirdlane-pbx" title="Link to this heading"></a></h1>
 <p>Notes on thirdlane PBX</p>
+<section id="greetings-and-audio-formats">
+<h2>Greetings and audio formats.<a class="headerlink" href="#greetings-and-audio-formats" title="Link to this heading"></a></h2>
+<p>You can manually create and upload mailbox greetings per extension.
+The file needs to be .wav, you can convert this using the cli tool ffmpeg.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ffmpeg</span> <span class="o">-</span><span class="n">i</span> <span class="nb">input</span><span class="o">.</span><span class="n">mp3</span> <span class="o">-</span><span class="n">acodec</span> <span class="n">pcm_s16le</span> <span class="o">-</span><span class="n">ac</span> <span class="mi">1</span> <span class="o">-</span><span class="n">ar</span> <span class="mi">8000</span> <span class="n">output</span><span class="o">.</span><span class="n">wav</span>
+</pre></div>
+</div>
+</section>
 <section id="sms-troubleshooting">
 <h2>SMS troubleshooting<a class="headerlink" href="#sms-troubleshooting" title="Link to this heading"></a></h2>
 <p>SMS are processed at api-server-ng service - it’s dockerized - you can see it’s logs with <code class="docutils literal notranslate"><span class="pre">journalctl</span> <span class="pre">-u</span> <span class="pre">api-server-ng</span></code> or <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">logs</span> <span class="pre">api-server-ng</span></code></p>
@@ -155,7 +164,7 @@
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Jun 19, 2025.
+      <span class="lastupdated">Last updated on Jun 26, 2025.
       </span></p>
   </div>
 
