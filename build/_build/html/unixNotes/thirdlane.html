@@ -95,6 +95,7 @@
 <li class="toctree-l1"><a class="reference internal" href="lxc.html">Linux Containers</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Thirdlane PBX</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#greetings-and-audio-formats">Greetings and audio formats.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#restarting-pbxm-watcher-service">Restarting pbxm-watcher service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#sms-troubleshooting">SMS troubleshooting</a></li>
 </ul>
 </li>
@@ -143,6 +144,15 @@ The file needs to be .wav, you can convert this using the cli tool ffmpeg.</p>
 </pre></div>
 </div>
 </section>
+<section id="restarting-pbxm-watcher-service">
+<h2>Restarting pbxm-watcher service<a class="headerlink" href="#restarting-pbxm-watcher-service" title="Link to this heading"></a></h2>
+<p>Sometimes the pbxm-watcher service will fail, and this will result in error logs and user status entries not showing up in the web ui.
+To fix this clear out the cached data and restart this service.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">tarantool</span><span class="o">/</span><span class="n">pbxm</span><span class="o">-</span><span class="n">watcher</span><span class="o">/</span>
+<span class="n">systemctl</span> <span class="n">restart</span> <span class="n">tarantool</span><span class="nd">@pbxm</span><span class="o">-</span><span class="n">watcher</span>
+</pre></div>
+</div>
+</section>
 <section id="sms-troubleshooting">
 <h2>SMS troubleshooting<a class="headerlink" href="#sms-troubleshooting" title="Link to this heading"></a></h2>
 <p>SMS are processed at api-server-ng service - it’s dockerized - you can see it’s logs with <code class="docutils literal notranslate"><span class="pre">journalctl</span> <span class="pre">-u</span> <span class="pre">api-server-ng</span></code> or <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">logs</span> <span class="pre">api-server-ng</span></code></p>
@@ -164,7 +174,7 @@ The file needs to be .wav, you can convert this using the cli tool ffmpeg.</p>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Jun 26, 2025.
+      <span class="lastupdated">Last updated on Jul 02, 2025.
       </span></p>
   </div>
 
