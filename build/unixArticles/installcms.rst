@@ -11,6 +11,7 @@ We can easily install this on debian 12 by installing some missing 32 bit gtk mo
 
 This will install cms at ``~/Calix``
 
-We need to set one enviroment variabels for this application to launch. Below is my working launch command. ::
+We need to set several enviroment variabels for this application to launch. Below is my working launch command. ::
 
-	env -u GTK_MODULES ~/Calix/EMSGui
+	env -u GTK_MODULES _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=lcd" -Dsun.java2d.opengl=true -Dsun.java2d.noddraw=true ~/Calix/EMSGui
+

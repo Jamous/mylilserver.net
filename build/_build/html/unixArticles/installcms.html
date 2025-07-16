@@ -139,8 +139,8 @@ We can easily install this on debian 12 by installing some missing 32 bit gtk mo
 </pre></div>
 </div>
 <p>This will install cms at <code class="docutils literal notranslate"><span class="pre">~/Calix</span></code></p>
-<p>We need to set one enviroment variabels for this application to launch. Below is my working launch command.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">env</span> <span class="o">-</span><span class="n">u</span> <span class="n">GTK_MODULES</span> <span class="o">~/</span><span class="n">Calix</span><span class="o">/</span><span class="n">EMSGui</span>
+<p>We need to set several enviroment variabels for this application to launch. Below is my working launch command.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">env</span> <span class="o">-</span><span class="n">u</span> <span class="n">GTK_MODULES</span> <span class="n">_JAVA_OPTIONS</span><span class="o">=</span><span class="s2">&quot;-Dawt.useSystemAAFontSettings=lcd&quot;</span> <span class="o">-</span><span class="n">Dsun</span><span class="o">.</span><span class="n">java2d</span><span class="o">.</span><span class="n">opengl</span><span class="o">=</span><span class="n">true</span> <span class="o">-</span><span class="n">Dsun</span><span class="o">.</span><span class="n">java2d</span><span class="o">.</span><span class="n">noddraw</span><span class="o">=</span><span class="n">true</span> <span class="o">~/</span><span class="n">Calix</span><span class="o">/</span><span class="n">EMSGui</span>
 </pre></div>
 </div>
 </section>
@@ -157,7 +157,7 @@ We can easily install this on debian 12 by installing some missing 32 bit gtk mo
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Jul 02, 2025.
+      <span class="lastupdated">Last updated on Jul 16, 2025.
       </span></p>
   </div>
 
