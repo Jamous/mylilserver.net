@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HTTPS over SSH tunnels &mdash; MyLilServer.net  documentation</title>
+  <title>Calix Gigaspire support account &mdash; MyLilServer.net  documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
 
@@ -21,8 +21,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="IPv6 SLAAC and DHCP - Juniper" href="dhcp.html" />
-    <link rel="prev" title="Disabling SIP-ALG on FortiOS" href="fortigateSipAlg.html" /> 
+    <link rel="next" title="Cisco AnyConnect idle timeout" href="timeout.html" />
+    <link rel="prev" title="The home of Jamous Bitrick" href="../index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,10 +46,10 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Networking Articles</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="calix.html">Calix Gigaspire support account</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Calix Gigaspire support account</a></li>
 <li class="toctree-l1"><a class="reference internal" href="timeout.html">Cisco AnyConnect idle timeout</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fortigateSipAlg.html">Disabling SIP-ALG on FortiOS</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">HTTPS over SSH tunnels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sshtunnel.html">HTTPS over SSH tunnels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dhcp.html">IPv6 SLAAC and DHCP - Juniper</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jncissp.html">JNCIS-SP Study Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mac.html">Mac network utility</a></li>
@@ -120,9 +120,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">HTTPS over SSH tunnels</li>
+      <li class="breadcrumb-item active">Calix Gigaspire support account</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/networkArticles/sshtunnel.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/networkArticles/calix.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -130,25 +130,28 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="https-over-ssh-tunnels">
-<h1>HTTPS over SSH tunnels<a class="headerlink" href="#https-over-ssh-tunnels" title="Link to this heading"></a></h1>
-<p>Managing devices at remote sites without a VPN can be tricky. I frequently find myself needing to access devices behind a remote router, in most cases a Ubiquite Edgerouter or other unix based router.
-If both devices support SSH this is simple, SSH to the router then SSH to the end device.
-Sometimes the end device only supports HTTP or other obscure management protocols, in which case we look to SSH Tunneling.</p>
+  <section id="calix-gigaspire-support-account">
+<h1>Calix Gigaspire support account<a class="headerlink" href="#calix-gigaspire-support-account" title="Link to this heading"></a></h1>
+<dl class="simple">
+<dt>This artile applies to:</dt><dd><ul class="simple">
+<li><p>Calix Gigaspire u6.1</p></li>
+<li><p>Calix Gigaspire u6.2</p></li>
+<li><p>Calix Gigaspire u6.x</p></li>
+<li><p>Calix Gigaspire u4</p></li>
+<li><p>Calix Gigaspire u4.m</p></li>
+</ul>
+</dd>
+</dl>
+<p>You can log into any of these Gigaspire units using these credentials. This will not require resetting the amdin password</p>
 <div class="line-block">
-<div class="line">SSH Tunneling allows us to port forward across a ssh tunnel. Here is the command, feel free to modify as you see fit.</div>
-<div class="line"><code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">-L</span> <span class="pre">[local</span> <span class="pre">port]:[remote</span> <span class="pre">device]:[remote</span> <span class="pre">device</span> <span class="pre">port]</span> <span class="pre">[username]&#64;[remote</span> <span class="pre">ssh</span> <span class="pre">tunnel</span> <span class="pre">host]</span></code></div>
+<div class="line">Username: <code class="docutils literal notranslate"><span class="pre">support</span></code></div>
+<div class="line">Password: <code class="docutils literal notranslate"><span class="pre">[admin</span> <span class="pre">password]!5upporT</span></code></div>
 </div>
 <div class="line-block">
-<div class="line">For example, lets say we have a remote router, 172.16.251.2, with a device behind it that can only be managed via https at 10.16.251.11. Lets forward that https management port back across the ssh tunnel.</div>
-<div class="line"><code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">-L</span> <span class="pre">8443:10.16.251.11:443</span> <span class="pre">admin&#64;172.16.251.2</span></code></div>
-<div class="line">From this point we can access the web management through our local web browser</div>
-<div class="line"><code class="docutils literal notranslate"><span class="pre">https://127.0.0.1:8443</span></code></div>
-</div>
-<div class="line-block">
-<div class="line">Here is the same example, just with http instead of https.</div>
-<div class="line"><code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">-L</span> <span class="pre">8080:10.16.251.11:80</span> <span class="pre">admin&#64;172.16.251.2</span></code></div>
-<div class="line"><code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:8080</span></code></div>
+<div class="line">Exampl</div>
+<div class="line">Admin password: <code class="docutils literal notranslate"><span class="pre">11f7e19b</span></code></div>
+<div class="line">Username: <code class="docutils literal notranslate"><span class="pre">support</span></code></div>
+<div class="line">Password: <code class="docutils literal notranslate"><span class="pre">11f7e19b!5upporT</span></code></div>
 </div>
 </section>
 
@@ -156,8 +159,8 @@ Sometimes the end device only supports HTTP or other obscure management protocol
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="fortigateSipAlg.html" class="btn btn-neutral float-left" title="Disabling SIP-ALG on FortiOS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="dhcp.html" class="btn btn-neutral float-right" title="IPv6 SLAAC and DHCP - Juniper" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="The home of Jamous Bitrick" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="timeout.html" class="btn btn-neutral float-right" title="Cisco AnyConnect idle timeout" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

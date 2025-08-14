@@ -17,6 +17,7 @@ While I have had many servers running on it, everything from Debian to Windows, 
    :maxdepth: 2
    :caption: Networking Articles
 
+   networkArticles/calix
    networkArticles/timeout
    networkArticles/fortigateSipAlg
    networkArticles/sshtunnel
