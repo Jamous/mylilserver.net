@@ -76,6 +76,7 @@ While I have had many servers running on it, everything from Debian to Windows, 
    :caption: Unix Notes
 
    unixNotes/lxc
+   unixNotes/mysql
    unixNotes/thirdlane
    unixNotes/virsh
 

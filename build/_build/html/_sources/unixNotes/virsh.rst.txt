@@ -82,3 +82,9 @@ Fix Debian bridge forwarding issues
 | While setting up a virtual machinge on Debian 12 using KVM/Libvrt and Virsh I found that all of my VMs could connect via IPv6, but not via IPv4. I found the solution was to uncomment these two lines in /etc/sysctl.conf
 | ``net.ipv4.ip_forward=1``
 | ``net.ipv6.conf.all.forwarding=1``
+
+
+| To fix this on debian 13 we 
+
+
+
