@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Removing unused locations from LibreNMS &mdash; MyLilServer.net  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
 
   
@@ -137,11 +137,11 @@ To correct this we need to log into the MariaDB instance LibreNMS uses, and remo
 <p>Begin by logging into MariaDB from the LibreNMS server. We will query the locations table to see every location that is avaliable.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mysql</span>
 <span class="n">use</span> <span class="n">librenms</span><span class="p">;</span>
-<span class="n">select</span> <span class="o">*</span> <span class="kn">from</span> <span class="nn">locations</span><span class="p">;</span>
+<span class="n">select</span> <span class="o">*</span> <span class="kn">from</span><span class="w"> </span><span class="nn">locations</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Your output will look something like this. Now we just need to grab the id of the location we want to remove, and remove it.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MariaDB</span> <span class="p">[</span><span class="n">librenms</span><span class="p">]</span><span class="o">&gt;</span> <span class="n">select</span> <span class="o">*</span> <span class="kn">from</span> <span class="nn">locations</span><span class="p">;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MariaDB</span> <span class="p">[</span><span class="n">librenms</span><span class="p">]</span><span class="o">&gt;</span> <span class="n">select</span> <span class="o">*</span> <span class="kn">from</span><span class="w"> </span><span class="nn">locations</span><span class="p">;</span>
 <span class="o">+----+----------------------------+------+------+---------------------+-------------------+</span>
 <span class="o">|</span> <span class="nb">id</span> <span class="o">|</span> <span class="n">location</span>                   <span class="o">|</span> <span class="n">lat</span>  <span class="o">|</span> <span class="n">lng</span>  <span class="o">|</span> <span class="n">timestamp</span>           <span class="o">|</span> <span class="n">fixed_coordinates</span> <span class="o">|</span>
 <span class="o">+----+----------------------------+------+------+---------------------+-------------------+</span>
@@ -153,7 +153,7 @@ To correct this we need to log into the MariaDB instance LibreNMS uses, and remo
 </pre></div>
 </div>
 <p>Here we want to remove the unknown location, we will grab its id and remove it.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">delete</span> <span class="kn">from</span> <span class="nn">locations</span> <span class="n">where</span> <span class="nb">id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">delete</span> <span class="kn">from</span><span class="w"> </span><span class="nn">locations</span> <span class="n">where</span> <span class="nb">id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Thats it, your done!</p>
@@ -171,7 +171,7 @@ To correct this we need to log into the MariaDB instance LibreNMS uses, and remo
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Sep 25, 2025.
+      <span class="lastupdated">Last updated on Feb 11, 2026.
       </span></p>
   </div>
 
