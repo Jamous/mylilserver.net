@@ -1,4 +1,0 @@
-Add all files to git: git add .
-Commit all files: git commit -m 'commit message'
-Update master: git push origin main
-Sync repo: git pull origin main
