@@ -1,11 +1,15 @@
 Ubiquiti Edgerouter notes
 =========================
 
-Show MAC address table
-----------------------
+Show MAC address table - ER-X/ER-X-SFP
+--------------------------------------
 | #### Show MAC address table for switched interfaces: 
 | ``sudo /sbin/switch dump``
 | https://www.reddit.com/r/Ubiquiti/comments/13rmowg/erx_switch_show_mac_table/
+
+Show MAC address table - ER-12
+------------------------------
+``/sbin/bridge fdb show``
 
 
 IPv6 router advertisements to clients (staticly assigned)
