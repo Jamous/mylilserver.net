@@ -11,6 +11,11 @@ Show MAC address table - ER-12
 ------------------------------
 ``/sbin/bridge fdb show``
 
+Backing up config by tftp
+-------------------------
+::
+
+    tftp -p -l /config/config.boot -r 2200-agg-r 216.252.192.39
 
 IPv6 router advertisements to clients (staticly assigned)
 ---------------------------------------------------------

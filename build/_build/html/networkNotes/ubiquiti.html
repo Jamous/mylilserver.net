@@ -89,6 +89,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Ubiquiti Edgerouter notes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#show-mac-address-table-er-x-er-x-sfp">Show MAC address table - ER-X/ER-X-SFP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#show-mac-address-table-er-12">Show MAC address table - ER-12</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#backing-up-config-by-tftp">Backing up config by tftp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ipv6-router-advertisements-to-clients-staticly-assigned">IPv6 router advertisements to clients (staticly assigned)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ipv6-firewall-rules">IPv6 firewall rules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ipv6-pd-client">IPv6-PD client</a></li>
@@ -153,6 +154,12 @@
 <section id="show-mac-address-table-er-12">
 <h2>Show MAC address table - ER-12<a class="headerlink" href="#show-mac-address-table-er-12" title="Link to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">/sbin/bridge</span> <span class="pre">fdb</span> <span class="pre">show</span></code></p>
+</section>
+<section id="backing-up-config-by-tftp">
+<h2>Backing up config by tftp<a class="headerlink" href="#backing-up-config-by-tftp" title="Link to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tftp</span> <span class="o">-</span><span class="n">p</span> <span class="o">-</span><span class="n">l</span> <span class="o">/</span><span class="n">config</span><span class="o">/</span><span class="n">config</span><span class="o">.</span><span class="n">boot</span> <span class="o">-</span><span class="n">r</span> <span class="mi">2200</span><span class="o">-</span><span class="n">agg</span><span class="o">-</span><span class="n">r</span> <span class="mf">216.252.192.39</span>
+</pre></div>
+</div>
 </section>
 <section id="ipv6-router-advertisements-to-clients-staticly-assigned">
 <h2>IPv6 router advertisements to clients (staticly assigned)<a class="headerlink" href="#ipv6-router-advertisements-to-clients-staticly-assigned" title="Link to this heading"></a></h2>
@@ -382,7 +389,7 @@ interfaces<span class="w"> </span><span class="o">{</span>
 
   <div role="contentinfo">
     <p>
-      <span class="lastupdated">Last updated on Feb 27, 2026.
+      <span class="lastupdated">Last updated on May 26, 2026.
       </span></p>
   </div>
 
