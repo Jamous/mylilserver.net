@@ -15,7 +15,7 @@ Backing up config by tftp
 -------------------------
 ::
 
-    tftp -p -l /config/config.boot -r 2200-agg-r 216.252.192.39
+    tftp -p -l /config/config.boot -r agg-r 10.0.0.39
 
 IPv6 router advertisements to clients (staticly assigned)
 ---------------------------------------------------------
